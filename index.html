@@ -391,6 +391,8 @@
       <div class="chipbar" role="tablist" aria-label="Filter works">
         <button class="chip" role="tab" aria-selected="true" aria-pressed="true" data-filter="all">All</button>
         <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
+          data-filter="flowers">Flowers</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
           data-filter="aquarelles">Aquarelles</button>
         <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
           data-filter="landscapes">Landscapes</button>
@@ -460,10 +462,10 @@
     const WORKS_ROOT = "assets/works";
     const CATEGORY_PATHS = {
       aquarelles: `${WORKS_ROOT}/aquarelles`,
+      flowers: `${WORKS_ROOT}/flowers`,
       landscapes: `${WORKS_ROOT}/landscapes`,
-      portraits: `${WORKS_ROOT}/portraits`,
       pets: `${WORKS_ROOT}/pets`,
-      flowers: `${WORKS_ROOT}/flowers`
+      portraits: `${WORKS_ROOT}/portraits`,
     };
     const PAGE_SIZE = 12;
 
@@ -477,6 +479,9 @@
     let FULL_LIST = []; // {name, src, cat}
     let IMAGES = [];
     let page = 0;
+
+    // If you have an explicit chip order/list, include "flowers"
+    const FILTER_ORDER = ["all", "aquarelles", "flowers", "landscapes", "pets", "portraits"];
 
     function setActiveChip(filter) {
       chips.forEach(chip => {

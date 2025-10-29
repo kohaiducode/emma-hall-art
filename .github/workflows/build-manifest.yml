@@ -41,10 +41,3 @@ jobs:
           else
             echo "No changes to commit."
           fi
-
-const CATEGORY_PATHS = {
-  aquarelles: `${WORKS_ROOT}/aquarelles`,
-  landscapes: `${WORKS_ROOT}/landscapes`, 
-  portraits: `${WORKS_ROOT}/portraits`,
-  pets: `${WORKS_ROOT}/pets`,
-};

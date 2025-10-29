@@ -6,7 +6,7 @@ const ROOT = process.cwd();
 const WORKS_ROOT = path.join(ROOT, "assets", "works");
 
 // Keep these in sync with your UI chips
-const CATEGORIES = ["aquarelles", "landscapes", "portraits", "pets", "flowers"];
+const CATEGORIES = ["aquarelles", "flowers", "landscapes", "pets", "portraits"];
 
 // Which files to include
 const IMG_EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
