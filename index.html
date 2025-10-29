@@ -503,7 +503,8 @@
         const el = document.createElement('img');
         el.loading = "lazy";
         el.src = img.src;
-        el.alt = img.name.replace(/\.[a-z0-9]+$/i, '').replace(/[-_]/g, ' ');
+        // strip repeated extensions and prettify
+        el.alt = humanizeName(img.name);
         frag.appendChild(el);
       }
       galleryEl.appendChild(frag);
@@ -528,7 +529,8 @@
         for (const name of files) {
           list.push({
             name,
-            src: `${base}/${name}`,
+            // encode filename segment so spaces etc. don’t 404 on GitHub Pages
+            src: `${base}/${encodeURIComponent(name)}`,
             cat
           });
         }
@@ -603,6 +605,15 @@
         toggleLoadMore(false);
       }
     })();
+
+    // helpers
+    function humanizeName(name) {
+      return name
+        // remove repeated trailing extensions like .jpg.jpeg
+        .replace(/\.(?:jpe?g|png|webp|gif)+$/i, '')
+        .replace(/[-_]+/g, ' ')
+        .trim();
+    }
   </script>
 </body>
 
