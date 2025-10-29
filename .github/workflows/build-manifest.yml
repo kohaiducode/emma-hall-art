@@ -1,0 +1,50 @@
+name: Build works manifest
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "assets/works/**"
+      - ".github/workflows/build-manifest.yml"
+      - "scripts/build-works-manifest.mjs"
+      - "index.html"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate works.json
+        run: |
+          node --version
+          node scripts/build-works-manifest.mjs
+
+      - name: Commit & push manifest if changed
+        run: |
+          if [[ -n "$(git status --porcelain assets/works/works.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add assets/works/works.json
+            git commit -m "chore: update works.json"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
+const CATEGORY_PATHS = {
+  aquarelles: `${WORKS_ROOT}/aquarelles`,
+  landscapes: `${WORKS_ROOT}/landscapes`, 
+  portraits: `${WORKS_ROOT}/portraits`,
+  pets: `${WORKS_ROOT}/pets`,
+};

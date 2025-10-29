@@ -1,0 +1,8 @@
+{
+    "name": "emmahallart",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build:works": "node scripts/build-works-manifest.mjs"
+    }
+}

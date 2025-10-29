@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emma Hall — Painter</title>
+  <meta name="description" content="Works, biography, and contact details for painter Emma Hall." />
+  <!-- Use a relative path so GitHub Pages project sites don't break -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --paper: #fffaf3;
+      --ink: #2f2a28;
+      --muted: #6f635d;
+      --accent: #b86b5e;
+      --frame: #e6dccf;
+      --maxw: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* NAVIGATION: single row, no overlap, never stacks */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 247, 242, .9);
+      border-bottom: 1px solid var(--frame);
+      z-index: 50;
+      width: 100%;
+      backdrop-filter: saturate(140%) blur(6px);
+    }
+
+    .nav {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: nowrap;
+      /* never wrap to a new line */
+      overflow-x: auto;
+      /* gentle horizontal scroll on ultra-narrow */
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(18px, 5vw, 24px);
+      flex: 1 1 auto;
+      /* can shrink */
+      min-width: 0;
+      /* enable ellipsis */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .menu {
+      display: inline-flex;
+      gap: 16px;
+      flex: 0 0 auto;
+      /* do not shrink into next line */
+      white-space: nowrap;
+    }
+
+    .menu a {
+      font-weight: 600;
+      color: var(--ink);
+      padding: 6px 0;
+      display: inline-block;
+    }
+
+    .menu a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      max-width: var(--maxw);
+      margin: 40px auto 24px;
+      padding: 0 18px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 1.04;
+      margin: 0 0 10px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .hero-card {
+      background: var(--paper);
+      border: 2px solid var(--frame);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width:980px) and (min-width:600px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:599px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+
+    section {
+      max-width: var(--maxw);
+      margin: 56px auto;
+      padding: 0 18px;
+    }
+
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 36px;
+      margin: 0 0 6px;
+    }
+
+    /* FILTER CHIPS */
+    .chipbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 14px;
+    }
+
+    .chip {
+      appearance: none;
+      border: 1px solid var(--frame);
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 700;
+      color: rgb(71, 70, 70);
+      cursor: pointer;
+      transition: transform .02s ease-in-out;
+    }
+
+    .chip:hover {
+      filter: brightness(0.97);
+    }
+
+    .chip:active {
+      transform: scale(0.99);
+    }
+
+    .chip[aria-pressed="true"] {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* MASONRY GALLERY */
+    .grid {
+      column-count: 3;
+      column-gap: 4px;
+    }
+
+    @media (max-width:980px) {
+      .grid {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width:600px) {
+      .grid {
+        column-count: 2;
+      }
+    }
+
+    .grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0px;
+      margin-bottom: 4px;
+      break-inside: avoid;
+    }
+
+    .works-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid var(--frame);
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      filter: brightness(0.97);
+    }
+
+    /* CONTACT */
+    .contact {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .panel {
+      background: var(--paper);
+      border: 2px solid var(--frame);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .05);
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background: #fff;
+      border: 1px solid #d8cec0;
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button:hover {
+      filter: brightness(1.05);
+    }
+
+    .form-status {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .ok {
+      color: #196127;
+    }
+
+    .err {
+      color: #b00020;
+    }
+
+    footer {
+      max-width: var(--maxw);
+      margin: 48px auto 60px;
+      padding: 0 18px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .vh {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .notice {
+      background: #fff;
+      border: 1px dashed var(--frame);
+      padding: 14px;
+      border-radius: 10px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">Emma Hall — Painter</div>
+      <div class="menu">
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Emma Hall – A Journey Through Color and Texture</h1>
+        <p>Emma, born in South India, paints mainly in oils and also works with watercolours, charcoal, and
+          pastels. Inspired by her travels to Japan and Italy and her Indian childhood, she uses vibrant colors and a
+          unique knife technique for depth, often painting with her fingers. Her works have been exhibited and sold in
+          Paris, London, Los Angeles, and Milan.</p>
+        <p><a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener">Instagram →
+            @emmahallpaintings</a></p>
+      </div>
+      <div class="hero-card">
+        <img class="hero-img" src="assets/profile/ems.jpg" alt="Oil painting close-up" />
+      </div>
+    </section>
+
+    <section id="works" aria-labelledby="works-heading">
+      <h2 id="works-heading">Works</h2>
+
+      <!-- Filter chips -->
+      <div class="chipbar" role="tablist" aria-label="Filter works">
+        <button class="chip" role="tab" aria-selected="true" aria-pressed="true" data-filter="all">All</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
+          data-filter="aquarelles">Aquarelles</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
+          data-filter="landscapes">Landscapes</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
+          data-filter="portraits">Portraits</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="pets">Pets</button>
+      </div>
+
+      <div id="gallery" class="grid" aria-live="polite"></div>
+
+      <div id="worksNotice" class="notice" style="display:none; max-width:760px;">
+        <strong>Heads up:</strong> I’m looking for <code>assets/works/works.json</code>.
+        Add images into the folders like <code>assets/works/aquarelles/</code> and make sure a
+        <code>works.json</code> list exists so I can show them automatically.
+      </div>
+
+      <div class="works-actions">
+        <button style="color:white; background-color:#b86b5e;" id="loadMore" class="btn" type="button">See more</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div class="panel">
+          <p class="sub">For availability, exhibitions, or commissions, get in touch.</p>
+
+          <!-- Secure, no-CORS form via hidden iframe -->
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+          <form id="contact-form"
+            action="https://script.google.com/macros/s/AKfycbyCsNgmX2W0tM3dFPgaY3xd-1j4E8ri-PK3bCnwIglf4H5DAbGOF1t1OwUmiUY5HpI/exec"
+            method="POST" target="hidden_iframe" onsubmit="onFormSubmit(event)">
+            <label class="vh" for="website">Website</label>
+            <input id="website" name="website" type="text" autocomplete="off" tabindex="-1" aria-hidden="true"
+              style="position:absolute;left:-9999px;">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" autocomplete="name" required />
+            <div style="height:10px"></div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            <div style="height:10px"></div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about the piece or commission you have in mind"
+              required></textarea>
+            <div style="height:12px"></div>
+            <button id="sendBtn" type="submit"><span>Send</span></button>
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> Emma Hall. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // ============================
+    // 🧒 ELI5: How pictures appear
+    // ----------------------------
+    // 1) A tiny list file: assets/works/works.json
+    // 2) We read that list and show images from folders.
+    // 3) A GitHub Action updates the list whenever you add files.
+    // ============================
+
+    const WORKS_ROOT = "assets/works";
+    const CATEGORY_PATHS = {
+      aquarelles: `${WORKS_ROOT}/aquarelles`,
+      landscapes: `${WORKS_ROOT}/landscapes`,
+      portraits: `${WORKS_ROOT}/portraits`,
+      pets: `${WORKS_ROOT}/pets`,
+      flowers: `${WORKS_ROOT}/flowers`
+    };
+    const PAGE_SIZE = 12;
+
+    const galleryEl = document.getElementById('gallery');
+    const loadMoreBtn = document.getElementById('loadMore');
+    const chipbar = document.querySelector('.chipbar');
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    const notice = document.getElementById('worksNotice');
+
+    let CURRENT_FILTER = 'all';
+    let FULL_LIST = []; // {name, src, cat}
+    let IMAGES = [];
+    let page = 0;
+
+    function setActiveChip(filter) {
+      chips.forEach(chip => {
+        const active = chip.dataset.filter === filter;
+        chip.setAttribute('aria-pressed', active ? 'true' : 'false');
+        chip.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+    }
+
+    function applyFilter(list, filter) {
+      return filter === 'all' ? list : list.filter(x => x.cat === filter);
+    }
+
+    function clearGallery() { galleryEl.innerHTML = ''; }
+    function toggleLoadMore(show) { loadMoreBtn.style.display = show ? '' : 'none'; }
+
+    function renderNextPage() {
+      const start = page * PAGE_SIZE;
+      const end = Math.min(start + PAGE_SIZE, IMAGES.length);
+      const slice = IMAGES.slice(start, end);
+
+      const frag = document.createDocumentFragment();
+      for (const img of slice) {
+        const el = document.createElement('img');
+        el.loading = "lazy";
+        el.src = img.src;
+        el.alt = img.name.replace(/\.[a-z0-9]+$/i, '').replace(/[-_]/g, ' ');
+        frag.appendChild(el);
+      }
+      galleryEl.appendChild(frag);
+
+      page++;
+      toggleLoadMore(page * PAGE_SIZE < IMAGES.length);
+    }
+
+    async function loadManifest() {
+      // Cache-busting query avoids stale versions after a deploy
+      const url = `${WORKS_ROOT}/works.json?v=${Date.now()}`;
+      const r = await fetch(url);
+      if (!r.ok) throw new Error('No works.json');
+      return r.json();
+    }
+
+    function buildList(data) {
+      const list = [];
+      for (const [cat, files] of Object.entries(data)) {
+        const base = CATEGORY_PATHS[cat];
+        if (!base) continue;
+        for (const name of files) {
+          list.push({
+            name,
+            src: `${base}/${name}`,
+            cat
+          });
+        }
+      }
+      // natural sort
+      list.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+      return list;
+    }
+
+    chipbar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.chip');
+      if (!btn) return;
+      const filter = btn.dataset.filter;
+      if (!filter || filter === CURRENT_FILTER) return;
+
+      CURRENT_FILTER = filter;
+      setActiveChip(filter);
+      IMAGES = applyFilter(FULL_LIST, CURRENT_FILTER);
+      page = 0;
+      clearGallery();
+      renderNextPage();
+    });
+
+    loadMoreBtn.addEventListener('click', renderNextPage);
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form handling
+    const form = document.getElementById('contact-form');
+    const iframe = document.getElementById('hidden_iframe');
+    const statusEl = document.getElementById('formStatus');
+    const sendBtn = document.getElementById('sendBtn');
+
+    function setStatus(msg, ok = true) {
+      statusEl.textContent = msg;
+      statusEl.className = "form-status " + (ok ? "ok" : "err");
+    }
+
+    function onFormSubmit(e) {
+      const hp = (document.getElementById('website').value || '').trim();
+      if (hp) { setStatus("Thank you!", true); e.target.reset(); return; }
+
+      sendBtn.disabled = true;
+      sendBtn.style.opacity = .7;
+      setStatus("Sending…", true);
+
+      iframe.onload = function () {
+        setStatus("✅ Message sent. Thank you!");
+        form.reset();
+        sendBtn.disabled = false;
+        sendBtn.style.opacity = 1;
+        iframe.onload = null;
+      };
+    }
+    window.onFormSubmit = onFormSubmit; // expose for inline handler
+
+    // Initial load
+    (async function init() {
+      setActiveChip(CURRENT_FILTER);
+      try {
+        const manifest = await loadManifest();
+        FULL_LIST = buildList(manifest);
+        IMAGES = applyFilter(FULL_LIST, CURRENT_FILTER);
+        page = 0;
+        clearGallery();
+        renderNextPage();
+        notice.style.display = 'none';
+      } catch (e) {
+        // Friendly hint if works.json is missing (first-time setup)
+        notice.style.display = '';
+        toggleLoadMore(false);
+      }
+    })();
+  </script>
+</body>
+
+</html>
