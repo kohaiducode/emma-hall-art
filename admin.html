@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Works Admin</title>
+    <style>
+        body {
+            font: 14px/1.4 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .col {
+            flex: 1 1 0;
+            background: #faf7f2;
+            border: 1px solid #e6dccf;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        h2 {
+            margin: 0 0 8px
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-height: 200px;
+            border: 1px dashed #d8cec0;
+            border-radius: 8px;
+            background: #fff
+        }
+
+        li {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: grab
+        }
+
+        li:last-child {
+            border-bottom: 0
+        }
+
+        li.dragging {
+            opacity: .5
+        }
+
+        .thumb {
+            width: 40px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 4px
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 8px;
+            margin: 12px 0
+        }
+
+        button {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background: #fff;
+            cursor: pointer
+        }
+
+        button.primary {
+            background: #b86b5e;
+            color: #fff;
+            border-color: #b86b5e
+        }
+
+        .status {
+            margin-top: 8px
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px
+        }
+
+        .tabs button[aria-pressed="true"] {
+            background: #b86b5e;
+            color: #fff;
+            border-color: #b86b5e
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Works Admin</h1>
+    <div class="toolbar">
+        <div>
+            <label>Upload to category:
+                <select id="catSel"></select>
+            </label>
+            <input id="files" type="file" multiple accept="image/*" />
+            <button id="uploadBtn">Upload</button>
+        </div>
+        <button id="saveBtn" class="primary">Save Order</button>
+        <span id="status" class="status"></span>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+
+    <div id="lists" class="row"></div>
+
+    <script>
+        const API = 'https://script.google.com/macros/s/AKfycbwod5GcmspDi47YZGtWvzewJMYBFYR-eWgsgfoYg3-tcVnDdIC86fgak-fRlLNuuWA/exec';
+        let manifest = {};
+        let current = 'aquarelles';
+
+        async function loadManifest() {
+            const r = await fetch(API + '/manifest');
+            if (!r.ok) throw new Error('manifest');
+            manifest = await r.json();
+        }
+
+        function el(tag, props = {}, ...kids) {
+            const n = document.createElement(tag);
+            Object.assign(n, props);
+            for (const k of kids) n.append(k);
+            return n;
+        }
+
+        function renderTabs() {
+            const tabs = document.getElementById('tabs');
+            tabs.innerHTML = '';
+            Object.keys(manifest).forEach(cat => {
+                const b = el('button', { textContent: cat, onclick() { current = cat; renderLists(); } });
+                b.setAttribute('aria-pressed', cat === current);
+                tabs.append(b);
+            });
+        }
+
+        function renderLists() {
+            const lists = document.getElementById('lists');
+            lists.innerHTML = '';
+            const cat = current;
+            const ul = el('ul', { id: 'ul-' + cat });
+            (manifest[cat] || []).forEach(name => {
+                const li = el('li', { draggable: true });
+                li.addEventListener('dragstart', () => li.classList.add('dragging'));
+                li.addEventListener('dragend', () => li.classList.remove('dragging'));
+                const img = el('img', { className: 'thumb', src: `assets/works/${cat}/${encodeURIComponent(name)}` });
+                li.append(img, el('span', { textContent: name }));
+                ul.append(li);
+            });
+            enableDnd(ul, names => { manifest[cat] = names; });
+            lists.append(el('div', { className: 'col' }, el('h2', { textContent: cat }), ul));
+
+            // Category picker
+            const sel = document.getElementById('catSel');
+            sel.innerHTML = Object.keys(manifest).map(c => `<option>${c}</option>`).join('');
+            sel.value = cat;
+        }
+
+        function enableDnd(ul, onChange) {
+            ul.addEventListener('dragover', e => {
+                e.preventDefault();
+                const after = getDragAfterElement(ul, e.clientY);
+                const dragging = ul.querySelector('.dragging');
+                if (!dragging) return;
+                if (after == null) ul.appendChild(dragging); else ul.insertBefore(dragging, after);
+            });
+            ul.addEventListener('drop', () => {
+                const names = Array.from(ul.querySelectorAll('li span')).map(s => s.textContent);
+                onChange(names);
+            });
+        }
+
+        function getDragAfterElement(container, y) {
+            const els = [...container.querySelectorAll('li:not(.dragging)')];
+            return els.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset, element: child };
+                } else { return closest; }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        async function saveOrder() {
+            const r = await fetch(API + '/update-order', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ manifest })
+            });
+            if (!r.ok) { setStatus('Save failed'); return; }
+            setStatus('Saved ✅');
+        }
+
+        async function upload() {
+            const cat = document.getElementById('catSel').value;
+            const inp = document.getElementById('files');
+            if (!inp.files.length) return setStatus('Select files first');
+            const fd = new FormData();
+            fd.append('category', cat);
+            for (const f of inp.files) fd.append('files', f, f.name);
+            const r = await fetch(API + '/upload', { method: 'POST', body: fd });
+            if (!r.ok) { setStatus('Upload failed'); return; }
+            const data = await r.json();
+            setStatus('Uploaded ' + (data.uploaded ? data.uploaded.length : '?') + ' file(s)');
+            await loadManifest();
+            renderTabs();
+            renderLists();
+            inp.value = '';
+        }
+
+        function setStatus(t) { document.getElementById('status').textContent = t; }
+
+        // init
+        (async function () {
+            try {
+                await loadManifest();
+                renderTabs();
+                renderLists();
+            } catch (e) { setStatus('Failed to load manifest'); console.error(e); }
+        })();
+
+        document.getElementById('saveBtn').addEventListener('click', saveOrder);
+
+        document.getElementById('uploadBtn').addEventListener('click', upload);
+    </script>
+</body>
+
+</html>
