@@ -1,9 +1,11 @@
+<!-- File: admin.html (GAS HtmlService) -->
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8">
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Works Admin</title>
     <style>
         :root {
@@ -64,7 +66,8 @@
         .tabs {
             display: flex;
             gap: 8px;
-            margin: 10px 0
+            margin: 10px 0;
+            flex-wrap: wrap
         }
 
         .tabs button {
@@ -134,11 +137,6 @@
             color: #777
         }
 
-        .help {
-            margin-top: 8px;
-            color: #555
-        }
-
         .small {
             font-size: 12px
         }
@@ -157,7 +155,7 @@
             <label class="small">Upload to category:
                 <select id="catSel"></select>
             </label>
-            <input id="files" type="file" multiple accept="image/*" />
+            <input id="files" type="file" multiple accept="image/*">
             <button id="uploadBtn" class="btn">Upload</button>
         </div>
         <button id="saveBtn" class="btn primary">Save Order</button>
@@ -168,16 +166,17 @@
 
     <div id="lists" class="row"></div>
 
-    <p class="help small">
-        Tip: drag items to reorder. Upload adds files to the selected category and updates
+    <p class="small muted">
+        “All” tab shows a combined preview (read-only). Reorder within each category; your public site reads
         <code>assets/works/works.json</code>.
     </p>
 
     <script>
-        const API = 'https://script.google.com/macros/s/AKfycbzAZ6Qhn8AvMR_c-NINqQG-3z_0NS6ecQ6qMATCFLbeUCljyO3exGL_3WbNpacgllvo/exec'; // <-- set your /exec URL
-
         let manifest = {};
         let current = null;
+
+        // GAS web app /exec URL for uploads (same origin: no CORS)
+        const EXEC_URL = '<?= ScriptApp.getService().getUrl(); ?>';
 
         function el(tag, props = {}, ...kids) {
             const n = document.createElement(tag);
@@ -186,40 +185,83 @@
             return n;
         }
 
-        async function loadManifest() {
-            const r = await fetch(API + '?endpoint=manifest', { method: 'GET', credentials: 'omit' });
-            if (!r.ok) throw new Error('manifest fetch failed');
-            manifest = await r.json();
-            // manifest is JSON string if returned raw; ensure object
-            if (typeof manifest === 'string') { try { manifest = JSON.parse(manifest); } catch (_) { } }
+        function setStatus(t, isErr = false) {
+            const el = document.getElementById('status');
+            el.textContent = t;
+            el.className = 'status ' + (isErr ? 'danger' : 'muted');
+        }
+
+        function loadManifest() {
+            return new Promise((resolve, reject) => {
+                google.script.run.withSuccessHandler(m => {
+                    manifest = m || {};
+                    resolve();
+                }).withFailureHandler(err => {
+                    console.error(err);
+                    reject(err);
+                }).getManifestObj();
+            });
+        }
+
+        function saveOrder() {
+            return new Promise((resolve, reject) => {
+                google.script.run.withSuccessHandler(res => {
+                    if (res && res.ok) { resolve(); }
+                    else { reject(new Error('save failed')); }
+                }).withFailureHandler(err => reject(err))
+                    .saveManifest(manifest);
+            });
         }
 
         function renderTabs() {
             const tabs = document.getElementById('tabs');
             tabs.innerHTML = '';
+
+            // Build tab list: ["all", ...actual categories]
             const cats = Object.keys(manifest);
-            if (!cats.length) {
-                tabs.append(el('span', { textContent: 'No categories found in manifest', className: 'muted' }));
-                return;
-            }
-            if (!current) current = cats[0];
-            cats.forEach(cat => {
-                const b = el('button', { textContent: cat, onclick() { current = cat; renderLists(); } });
+            const tabList = ['all', ...cats];
+
+            if (!current) current = tabList[0];
+
+            tabList.forEach(cat => {
+                const label = cat === 'all' ? 'All (read-only)' : cat;
+                const b = el('button', { textContent: label, onclick() { current = cat; renderLists(); } });
                 b.setAttribute('aria-pressed', cat === current);
                 tabs.append(b);
             });
+
+            // fill upload category selector
+            const sel = document.getElementById('catSel');
+            sel.innerHTML = cats.map(c => `<option>${c}</option>`).join('');
+            if (cats.length) sel.value = cats[0];
         }
 
         function renderLists() {
             const lists = document.getElementById('lists');
             lists.innerHTML = '';
 
-            if (!current || !manifest[current]) {
-                lists.append(el('div', { className: 'col' }, el('p', { className: 'muted', textContent: 'No category selected.' })));
+            if (current === 'all') {
+                // read-only combined preview
+                const ul = el('ul');
+                const combined = [];
+                Object.entries(manifest).forEach(([cat, arr]) => {
+                    arr.forEach(name => combined.push({ cat, name }));
+                });
+                combined.forEach(({ cat, name }) => {
+                    const li = el('li', { draggable: false });
+                    const img = el('img', { className: 'thumb', src: `assets/works/${cat}/${encodeURIComponent(name)}` });
+                    li.append(img, el('span', { textContent: `[${cat}] ${name}` }));
+                    ul.append(li);
+                });
+                lists.append(el('div', { className: 'col' }, el('h3', { textContent: 'All (preview)' }), ul));
                 return;
             }
 
-            // Left: current category reorder list
+            if (!manifest[current]) {
+                lists.append(el('div', { className: 'col' }, el('p', { className: 'muted', textContent: 'No items in this category.' })));
+                return;
+            }
+
             const ul = el('ul', { id: 'ul-' + current });
             (manifest[current] || []).forEach(name => {
                 const li = el('li', { draggable: true });
@@ -229,126 +271,13 @@
                 li.append(img, el('span', { textContent: name }));
                 ul.append(li);
             });
-            enableDnd(ul, names => { manifest[current] = names; });
+            enableDnd(ul, names => { manifest[current] = names; setStatus('Order changed (not saved yet)'); });
 
             // Right: manifest preview (all categories)
-            const all = el('div', { className: 'small' });
+            const preview = el('div', { className: 'small' });
             Object.entries(manifest).forEach(([cat, arr]) => {
-                all.append(
+                preview.append(
                     el('div', {},
                         el('strong', { textContent: cat + ` (${arr.length})` }),
                         el('div', { className: 'muted' }, document.createTextNode(arr.join(', ')))
                     )
-                );
-            });
-
-            lists.append(
-                el('div', { className: 'col' }, el('h3', { textContent: 'Reorder: ' + current }), ul),
-                el('div', { className: 'col' }, el('h3', { textContent: 'Manifest preview' }), all)
-            );
-
-            // Category picker for upload
-            const sel = document.getElementById('catSel');
-            sel.innerHTML = Object.keys(manifest).map(c => `<option>${c}</option>`).join('');
-            sel.value = current;
-        }
-
-        function enableDnd(ul, onChange) {
-            ul.addEventListener('dragover', e => {
-                e.preventDefault();
-                const after = getDragAfterElement(ul, e.clientY);
-                const dragging = ul.querySelector('.dragging');
-                if (!dragging) return;
-                if (after == null) ul.appendChild(dragging);
-                else ul.insertBefore(dragging, after);
-            });
-
-            ul.addEventListener('drop', () => {
-                const names = Array.from(ul.querySelectorAll('li span')).map(s => s.textContent);
-                onChange(names);
-                setStatus('Order changed (not saved yet)');
-            });
-        }
-
-        function getDragAfterElement(container, y) {
-            const els = [...container.querySelectorAll('li:not(.dragging)')];
-            return els.reduce((closest, child) => {
-                const box = child.getBoundingClientRect();
-                const offset = y - box.top - box.height / 2;
-                if (offset < 0 && offset > closest.offset) {
-                    return { offset, element: child };
-                } else {
-                    return closest;
-                }
-            }, { offset: Number.NEGATIVE_INFINITY }).element;
-        }
-
-        async function saveOrder() {
-            try {
-                const r = await fetch(API + '?endpoint=update-order', {
-                    method: 'POST',
-                    // Important: no custom headers → browser sends text/plain → no preflight
-                    body: JSON.stringify({ manifest }),
-                    credentials: 'omit'
-                });
-                if (!r.ok) throw new Error('save failed');
-                setStatus('Saved ✅');
-            } catch (e) {
-                console.error(e);
-                setStatus('Save failed', true);
-            }
-        }
-
-        async function upload() {
-            const cat = document.getElementById('catSel').value;
-            const inp = document.getElementById('files');
-            if (!inp.files.length) return setStatus('Select files first', true);
-
-            const fd = new FormData();
-            fd.append('category', cat);
-            for (const f of inp.files) fd.append('files', f, f.name);
-
-            try {
-                const r = await fetch(API + '?endpoint=upload', {
-                    method: 'POST',
-                    body: fd,
-                    credentials: 'omit'
-                });
-                if (!r.ok) throw new Error('upload failed');
-
-                setStatus('Uploaded ✅');
-                await loadManifest();
-                renderTabs();
-                renderLists();
-                inp.value = '';
-            } catch (e) {
-                console.error(e);
-                setStatus('Upload failed', true);
-            }
-        }
-
-        function setStatus(t, isErr = false) {
-            const el = document.getElementById('status');
-            el.textContent = t;
-            el.className = 'status ' + (isErr ? 'danger' : 'muted');
-        }
-
-        // Init
-        (async function () {
-            try {
-                await loadManifest();
-                renderTabs();
-                renderLists();
-                setStatus('Ready');
-            } catch (e) {
-                console.error(e);
-                setStatus('Failed to load manifest', true);
-            }
-        })();
-
-        document.getElementById('saveBtn').addEventListener('click', saveOrder);
-        document.getElementById('uploadBtn').addEventListener('click', upload);
-    </script>
-</body>
-
-</html>
