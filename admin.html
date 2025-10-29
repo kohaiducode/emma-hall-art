@@ -1,4 +1,3 @@
-<!-- File: admin.html (GAS HtmlService UI) -->
 <!doctype html>
 <html>
 
@@ -173,7 +172,6 @@
     </div>
 
     <div id="tabs" class="tabs"></div>
-
     <div id="lists" class="row"></div>
 
     <p class="small muted">
@@ -184,50 +182,91 @@
 
     <script>
         let manifest = {};
-        let current = 'all'; // 起動時は All から
+        let current = 'all';
 
-        // アップロード用 /exec URL（同一オリジン）
+        // Web App base URL (auto-injected by GAS). If you open this page outside GAS,
+        // the PHP-like scriptlet will still render a literal string, which we detect.
         const EXEC_URL = '<?= ScriptApp.getService().getUrl(); ?>';
+        // Detect if we are in GAS HtmlService (google.script.run exists)
+        const HAS_GSR = !!(window.google && google.script && google.script.run);
 
+        // -------------- Helpers (UI) --------------
         function el(tag, props = {}, ...kids) {
             const n = document.createElement(tag);
             Object.assign(n, props);
             for (const k of kids) n.append(k);
             return n;
         }
-
         function setStatus(t, isErr = false) {
             const el = document.getElementById('status');
             el.textContent = t;
             el.className = 'status ' + (isErr ? 'dangerTxt' : 'muted');
         }
 
+        // -------------- Data access (GSR or REST fallback) --------------
+        function gsGetManifest() {
+            return new Promise((resolve, reject) => {
+                google.script.run.withSuccessHandler(m => resolve(m || {}))
+                    .withFailureHandler(reject)
+                    .getManifestObj();
+            });
+        }
+        function restGetManifest() {
+            return fetch(EXEC_URL + '?endpoint=manifest', { method: 'GET', credentials: 'omit' })
+                .then(r => { if (!r.ok) throw new Error('manifest GET failed'); return r.json(); });
+        }
         function loadManifest() {
-            return new Promise((resolve, reject) => {
-                google.script.run.withSuccessHandler(m => {
-                    manifest = m || {};
-                    if (!manifest._allOrder) manifest._allOrder = [];
-                    resolve();
-                }).withFailureHandler(reject).getManifestObj();
-            });
+            if (HAS_GSR) return gsGetManifest().then(m => manifest = withDefaults(m));
+            // fallback
+            return restGetManifest().then(m => manifest = withDefaults(m));
         }
 
-        function saveOrder() {
+        function gsSaveManifest() {
             return new Promise((resolve, reject) => {
-                google.script.run.withSuccessHandler(res => {
-                    if (res && res.ok) resolve(); else reject(new Error('save failed'));
-                }).withFailureHandler(reject).saveManifest(manifest);
+                google.script.run.withSuccessHandler(res => res && res.ok ? resolve() : reject(new Error('save failed')))
+                    .withFailureHandler(reject)
+                    .saveManifest(manifest);
             });
         }
-
-        function delOne(category, name) {
-            return new Promise((resolve, reject) => {
-                google.script.run.withSuccessHandler(res => {
-                    if (res && res.ok) resolve(); else reject(new Error('delete failed'));
-                }).withFailureHandler(reject).deleteOne(category, name);
+        function restSaveManifest() {
+            return fetch(EXEC_URL + '?endpoint=update-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ manifest })
+            }).then(r => r.json()).then(res => {
+                if (!res.ok) throw new Error('save failed');
             });
         }
+        function saveOrder() { return HAS_GSR ? gsSaveManifest() : restSaveManifest(); }
 
+        function gsDeleteOne(category, name) {
+            return new Promise((resolve, reject) => {
+                google.script.run.withSuccessHandler(res => res && res.ok ? resolve() : reject(new Error('delete failed')))
+                    .withFailureHandler(reject)
+                    .deleteOne(category, name);
+            });
+        }
+        function restDeleteOne(category, name) {
+            return fetch(EXEC_URL + '?endpoint=delete', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ category, name })
+            }).then(r => r.json()).then(res => {
+                if (!res.ok) throw new Error('delete failed');
+            });
+        }
+        function delOne(category, name) { return HAS_GSR ? gsDeleteOne(category, name) : restDeleteOne(category, name); }
+
+        // -------------- Manifest shaping --------------
+        const DEFAULT_CATEGORIES = ['aquarelles', 'flowers', 'landscapes', 'pets', 'portraits'];
+        function withDefaults(m) {
+            m = m || {};
+            DEFAULT_CATEGORIES.forEach(c => { if (!Array.isArray(m[c])) m[c] = []; });
+            if (!Array.isArray(m._allOrder)) m._allOrder = [];
+            return m;
+        }
+
+        // -------------- Rendering --------------
         function renderTabs() {
             const tabs = document.getElementById('tabs');
             tabs.innerHTML = '';
@@ -260,7 +299,7 @@
                     setStatus('Deleting...');
                     try {
                         await delOne(cat, name);
-                        // 画面上からも消す
+                        // remove from local state
                         if (manifest[cat]) manifest[cat] = manifest[cat].filter(n => n !== name);
                         manifest._allOrder = (manifest._allOrder || []).filter(p => p !== `${cat}/${name}`);
                         renderLists();
@@ -304,7 +343,7 @@
 
             if (current === 'all') {
                 const ul = el('ul', { id: 'ul-all' });
-                // _allOrder に従って表示。足りないものは後方に追加（冪等のため）
+                // build ordered list from _allOrder + any missing tails
                 const seen = new Set(manifest._allOrder || []);
                 const rest = [];
                 Object.entries(manifest).forEach(([cat, arr]) => {
@@ -315,45 +354,38 @@
                     }
                 });
                 const ordered = [...(manifest._allOrder || []), ...rest];
-                ul.innerHTML = '';
                 for (const key of ordered) {
                     const [cat, ...nameParts] = key.split('/');
                     const name = nameParts.join('/');
-                    if (!manifest[cat] || !manifest[cat].includes(name)) continue; // manifest と食い違うものはスキップ
+                    if (!manifest[cat] || !manifest[cat].includes(name)) continue;
                     ul.append(makeLi(cat, name, true));
                 }
-                enableDnd(ul, (titles) => {
-                    // titles は "[cat] name" の形なので key を再構築
+                enableDnd(ul, () => {
+                    // Rebuild _allOrder from the images actually in the list (read src)
                     const keys = Array.from(ul.querySelectorAll('li img')).map(img => {
-                        const src = img.getAttribute('src'); // assets/works/<cat>/<name>
-                        const m = src.match(/assets\/works\/([^/]+)\/(.+)$/);
+                        const m = img.getAttribute('src').match(/assets\/works\/([^/]+)\/(.+)$/);
                         return m ? `${decodeURIComponent(m[1])}/${decodeURIComponent(m[2])}` : null;
                     }).filter(Boolean);
                     manifest._allOrder = keys;
                     setStatus('All order changed (not saved yet)');
                 });
-
                 lists.append(el('div', { className: 'col' }, el('h3', { textContent: 'All (drag to reorder)' }), ul));
                 return;
             }
 
-            // 個別カテゴリ
+            // Per-category
             if (!manifest[current]) {
                 lists.append(el('div', { className: 'col' }, el('p', { className: 'muted', textContent: 'No items in this category.' })));
                 return;
             }
             const ul = el('ul', { id: 'ul-' + current });
-            (manifest[current] || []).forEach(name => {
-                ul.append(makeLi(current, name, true));
-            });
+            (manifest[current] || []).forEach(name => ul.append(makeLi(current, name, true)));
             enableDnd(ul, (names) => {
-                // names は同じ見た目文字列（ファイル名）
                 manifest[current] = names;
-                // _allOrder に同じファイルが含まれる場合、相対位置は維持（Allは別タブで編集する想定）
                 setStatus('Order changed (not saved yet)');
             });
 
-            // 簡易プレビュー
+            // Preview
             const preview = el('div', { className: 'small' });
             Object.entries(manifest).forEach(([cat, arr]) => {
                 if (cat === '_allOrder') return;
@@ -371,14 +403,10 @@
             );
         }
 
+        // -------------- Events --------------
         async function onSaveClick() {
-            try {
-                setStatus('Saving...');
-                await saveOrder();
-                setStatus('Saved ✅');
-            } catch (e) {
-                console.error(e); setStatus('Save failed', true);
-            }
+            try { setStatus('Saving...'); await saveOrder(); setStatus('Saved ✅'); }
+            catch (e) { console.error(e); setStatus('Save failed', true); }
         }
 
         async function onUploadClick() {
@@ -406,7 +434,7 @@
             }
         }
 
-        // 起動時
+        // -------------- Init --------------
         (async function () {
             try {
                 await loadManifest();
@@ -417,7 +445,6 @@
                 console.error(e);
                 setStatus('Failed to load manifest', true);
             }
-
             document.getElementById('saveBtn').addEventListener('click', onSaveClick);
             document.getElementById('uploadBtn').addEventListener('click', onUploadClick);
         })();
