@@ -25,12 +25,9 @@
       --maxw: 1100px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html,
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       background: var(--bg);
@@ -38,14 +35,8 @@
       font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     /* NAVIGATION: single row, no overlap, never stacks */
     header {
@@ -66,25 +57,18 @@
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      flex-wrap: nowrap;
-      /* never wrap to a new line */
-      overflow-x: auto;
-      /* gentle horizontal scroll on ultra-narrow */
+      flex-wrap: nowrap;          /* never wrap to a new line */
+      overflow-x: auto;           /* gentle horizontal scroll on ultra-narrow */
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
     }
-
-    .nav::-webkit-scrollbar {
-      display: none;
-    }
+    .nav::-webkit-scrollbar { display: none; }
 
     .brand {
       font-family: "Cormorant Garamond", serif;
       font-size: clamp(18px, 5vw, 24px);
-      flex: 1 1 auto;
-      /* can shrink */
-      min-width: 0;
-      /* enable ellipsis */
+      flex: 1 1 auto;             /* can shrink */
+      min-width: 0;               /* enable ellipsis */
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -93,21 +77,11 @@
     .menu {
       display: inline-flex;
       gap: 16px;
-      flex: 0 0 auto;
-      /* do not shrink into next line */
+      flex: 0 0 auto;             /* do not shrink into next line */
       white-space: nowrap;
     }
-
-    .menu a {
-      font-weight: 600;
-      color: var(--ink);
-      padding: 6px 0;
-      display: inline-block;
-    }
-
-    .menu a:hover {
-      color: var(--accent);
-    }
+    .menu a { font-weight: 600; color: var(--ink); padding: 6px 0; display: inline-block; }
+    .menu a:hover { color: var(--accent); }
 
     /* HERO */
     .hero {
@@ -119,7 +93,6 @@
       gap: 28px;
       align-items: center;
     }
-
     .hero h1 {
       font-family: "Cormorant Garamond", serif;
       font-weight: 700;
@@ -127,12 +100,7 @@
       line-height: 1.04;
       margin: 0 0 10px;
     }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 18px;
-      margin: 0;
-    }
+    .hero p { color: var(--muted); font-size: 18px; margin: 0; }
 
     .hero-card {
       background: var(--paper);
@@ -141,50 +109,19 @@
       overflow: hidden;
       box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
     }
+    .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    .hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    @media (max-width:980px) and (min-width:600px) {
-      .hero {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
+    @media (max-width:980px) and (min-width:600px) { .hero { grid-template-columns: 1fr 1fr; } }
     @media (max-width:599px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
+      .hero { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 34px; }
     }
 
-    section {
-      max-width: var(--maxw);
-      margin: 56px auto;
-      padding: 0 18px;
-    }
-
-    h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 36px;
-      margin: 0 0 6px;
-    }
+    section { max-width: var(--maxw); margin: 56px auto; padding: 0 18px; }
+    h2 { font-family: "Cormorant Garamond", serif; font-size: 36px; margin: 0 0 6px; }
 
     /* FILTER CHIPS */
-    .chipbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0 14px;
-    }
-
+    .chipbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
     .chip {
       appearance: none;
       border: 1px solid var(--frame);
@@ -196,38 +133,14 @@
       cursor: pointer;
       transition: transform .02s ease-in-out;
     }
-
-    .chip:hover {
-      filter: brightness(0.97);
-    }
-
-    .chip:active {
-      transform: scale(0.99);
-    }
-
-    .chip[aria-pressed="true"] {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
+    .chip:hover { filter: brightness(0.97); }
+    .chip:active { transform: scale(0.99); }
+    .chip[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
 
     /* MASONRY GALLERY */
-    .grid {
-      column-count: 3;
-      column-gap: 4px;
-    }
-
-    @media (max-width:980px) {
-      .grid {
-        column-count: 2;
-      }
-    }
-
-    @media (max-width:600px) {
-      .grid {
-        column-count: 2;
-      }
-    }
+    .grid { column-count: 3; column-gap: 4px; }
+    @media (max-width:980px) { .grid { column-count: 2; } }
+    @media (max-width:600px) { .grid { column-count: 2; } }
 
     .grid img {
       width: 100%;
@@ -238,12 +151,7 @@
       break-inside: avoid;
     }
 
-    .works-actions {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
+    .works-actions { display: flex; justify-content: center; margin-top: 20px; }
     .btn {
       appearance: none;
       border: 1px solid var(--frame);
@@ -253,17 +161,10 @@
       font-weight: 700;
       cursor: pointer;
     }
-
-    .btn:hover {
-      filter: brightness(0.97);
-    }
+    .btn:hover { filter: brightness(0.97); }
 
     /* CONTACT */
-    .contact {
-      display: block;
-      margin: 0 auto;
-    }
-
+    .contact { display: block; margin: 0 auto; }
     .panel {
       background: var(--paper);
       border: 2px solid var(--frame);
@@ -272,14 +173,9 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, .05);
     }
 
-    label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
+    label { display: block; font-weight: 700; margin-bottom: 6px; }
 
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
       background: #fff;
       border: 1px solid #d8cec0;
@@ -288,11 +184,7 @@
       padding: 10px 12px;
       font: inherit;
     }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
+    textarea { min-height: 120px; resize: vertical; }
 
     button {
       display: inline-flex;
@@ -306,23 +198,11 @@
       font-weight: 800;
       cursor: pointer;
     }
+    button:hover { filter: brightness(1.05); }
 
-    button:hover {
-      filter: brightness(1.05);
-    }
-
-    .form-status {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .ok {
-      color: #196127;
-    }
-
-    .err {
-      color: #b00020;
-    }
+    .form-status { margin-top: 10px; font-size: 14px; }
+    .ok { color: #196127; }
+    .err { color: #b00020; }
 
     footer {
       max-width: var(--maxw);
@@ -390,14 +270,10 @@
       <!-- Filter chips -->
       <div class="chipbar" role="tablist" aria-label="Filter works">
         <button class="chip" role="tab" aria-selected="true" aria-pressed="true" data-filter="all">All</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
-          data-filter="flowers">Flowers</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
-          data-filter="aquarelles">Aquarelles</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
-          data-filter="landscapes">Landscapes</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false"
-          data-filter="portraits">Portraits</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="flowers">Flowers</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="aquarelles">Aquarelles</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="landscapes">Landscapes</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="portraits">Portraits</button>
         <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="pets">Pets</button>
       </div>
 
@@ -452,11 +328,10 @@
 
   <script>
     // ============================
-    // 🧒 ELI5: How pictures appear
-    // ----------------------------
-    // 1) A tiny list file: assets/works/works.json
+    // 🧒 How pictures appear
+    // 1) assets/works/works.json   (managed by your GAS admin)
     // 2) We read that list and show images from folders.
-    // 3) A GitHub Action updates the list whenever you add files.
+    // 3) "All" order follows manifest._allOrder if present.
     // ============================
 
     const WORKS_ROOT = "assets/works";
@@ -476,12 +351,10 @@
     const notice = document.getElementById('worksNotice');
 
     let CURRENT_FILTER = 'all';
-    let FULL_LIST = []; // {name, src, cat}
+    let MANIFEST = null;      // keep the raw manifest (so we can use _allOrder)
+    let FULL_LIST = [];       // flat: {name, src, cat}
     let IMAGES = [];
     let page = 0;
-
-    // If you have an explicit chip order/list, include "flowers"
-    const FILTER_ORDER = ["all", "aquarelles", "flowers", "landscapes", "pets", "portraits"];
 
     function setActiveChip(filter) {
       chips.forEach(chip => {
@@ -492,7 +365,30 @@
     }
 
     function applyFilter(list, filter) {
-      return filter === 'all' ? list : list.filter(x => x.cat === filter);
+      return filter === 'all' ? list.slice() : list.filter(x => x.cat === filter);
+    }
+
+    function maybeSortForAll(images) {
+      // If manifest has an _allOrder array, sort "all" by that order. Others unchanged.
+      if (CURRENT_FILTER !== 'all') return images;
+      const order = MANIFEST && Array.isArray(MANIFEST._allOrder) ? MANIFEST._allOrder : null;
+      if (order && order.length) {
+        const idx = new Map();
+        order.forEach((key, i) => idx.set(key, i));
+        images.sort((a, b) => {
+          const ka = `${a.cat}/${a.name}`;
+          const kb = `${b.cat}/${b.name}`;
+          const ia = idx.has(ka) ? idx.get(ka) : Number.MAX_SAFE_INTEGER;
+          const ib = idx.has(kb) ? idx.get(kb) : Number.MAX_SAFE_INTEGER;
+          if (ia !== ib) return ia - ib;
+          // fallback: keep stable-ish by filename
+          return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
+        });
+      } else {
+        // fallback when _allOrder is missing: sort by filename for "all"
+        images.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+      }
+      return images;
     }
 
     function clearGallery() { galleryEl.innerHTML = ''; }
@@ -508,7 +404,6 @@
         const el = document.createElement('img');
         el.loading = "lazy";
         el.src = img.src;
-        // strip repeated extensions and prettify
         el.alt = humanizeName(img.name);
         frag.appendChild(el);
       }
@@ -529,20 +424,29 @@
     function buildList(data) {
       const list = [];
       for (const [cat, files] of Object.entries(data)) {
+        if (cat === '_allOrder') continue;        // skip special key
         const base = CATEGORY_PATHS[cat];
-        if (!base) continue;
+        if (!base) continue;                      // ignore unknown categories to avoid 404s
         for (const name of files) {
           list.push({
             name,
-            // encode filename segment so spaces etc. don’t 404 on GitHub Pages
             src: `${base}/${encodeURIComponent(name)}`,
             cat
           });
         }
       }
-      // natural sort
-      list.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+      // Important: DO NOT sort here. Keep per-category order as-is.
       return list;
+    }
+
+    function refreshImagesForFilter() {
+      IMAGES = applyFilter(FULL_LIST, CURRENT_FILTER);
+      if (CURRENT_FILTER === 'all') {
+        IMAGES = maybeSortForAll(IMAGES);
+      }
+      page = 0;
+      clearGallery();
+      renderNextPage();
     }
 
     chipbar.addEventListener('click', (e) => {
@@ -553,10 +457,7 @@
 
       CURRENT_FILTER = filter;
       setActiveChip(filter);
-      IMAGES = applyFilter(FULL_LIST, CURRENT_FILTER);
-      page = 0;
-      clearGallery();
-      renderNextPage();
+      refreshImagesForFilter();
     });
 
     loadMoreBtn.addEventListener('click', renderNextPage);
@@ -597,12 +498,9 @@
     (async function init() {
       setActiveChip(CURRENT_FILTER);
       try {
-        const manifest = await loadManifest();
-        FULL_LIST = buildList(manifest);
-        IMAGES = applyFilter(FULL_LIST, CURRENT_FILTER);
-        page = 0;
-        clearGallery();
-        renderNextPage();
+        MANIFEST = await loadManifest();
+        FULL_LIST = buildList(MANIFEST);
+        refreshImagesForFilter();
         notice.style.display = 'none';
       } catch (e) {
         // Friendly hint if works.json is missing (first-time setup)
@@ -614,8 +512,7 @@
     // helpers
     function humanizeName(name) {
       return name
-        // remove repeated trailing extensions like .jpg.jpeg
-        .replace(/\.(?:jpe?g|png|webp|gif)+$/i, '')
+        .replace(/\.(?:jpe?g|png|webp|gif)+$/i, '') // remove trailing extensions
         .replace(/[-_]+/g, ' ')
         .trim();
     }

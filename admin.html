@@ -1,4 +1,4 @@
-<!-- File: admin.html (GAS HtmlService) -->
+<!-- File: admin.html (GAS HtmlService UI) -->
 <!doctype html>
 <html>
 
@@ -59,6 +59,12 @@
             border-color: var(--accent)
         }
 
+        .btn.danger {
+            background: #a33;
+            color: #fff;
+            border-color: #a33
+        }
+
         .status {
             margin-left: 8px
         }
@@ -91,7 +97,7 @@
         }
 
         .col {
-            flex: 1 1 360px;
+            flex: 1 1 420px;
             background: #fff;
             border: 1px solid var(--frame);
             border-radius: 12px;
@@ -126,11 +132,15 @@
         }
 
         .thumb {
-            width: 60px;
-            height: 45px;
+            width: 64px;
+            height: 48px;
             object-fit: cover;
             border-radius: 6px;
             background: #f2f2f2
+        }
+
+        .grow {
+            flex: 1
         }
 
         .muted {
@@ -141,7 +151,7 @@
             font-size: 12px
         }
 
-        .danger {
+        .dangerTxt {
             color: #a00
         }
     </style>
@@ -167,15 +177,16 @@
     <div id="lists" class="row"></div>
 
     <p class="small muted">
-        “All” tab shows a combined preview (read-only). Reorder within each category; your public site reads
-        <code>assets/works/works.json</code>.
+        ・<b>All</b> は全カテゴリの順序です（サイトの「All」表示順に使用）。<br>
+        ・各カテゴリタブでは、そのカテゴリ内部の順序を変更できます。<br>
+        ・🗑 の削除は GitHub からファイルを消し、manifest からも除外します（元に戻すときは Git のコミット履歴から復元可）。
     </p>
 
     <script>
         let manifest = {};
-        let current = null;
+        let current = 'all'; // 起動時は All から
 
-        // GAS web app /exec URL for uploads (same origin: no CORS)
+        // アップロード用 /exec URL（同一オリジン）
         const EXEC_URL = '<?= ScriptApp.getService().getUrl(); ?>';
 
         function el(tag, props = {}, ...kids) {
@@ -188,52 +199,103 @@
         function setStatus(t, isErr = false) {
             const el = document.getElementById('status');
             el.textContent = t;
-            el.className = 'status ' + (isErr ? 'danger' : 'muted');
+            el.className = 'status ' + (isErr ? 'dangerTxt' : 'muted');
         }
 
         function loadManifest() {
             return new Promise((resolve, reject) => {
                 google.script.run.withSuccessHandler(m => {
                     manifest = m || {};
+                    if (!manifest._allOrder) manifest._allOrder = [];
                     resolve();
-                }).withFailureHandler(err => {
-                    console.error(err);
-                    reject(err);
-                }).getManifestObj();
+                }).withFailureHandler(reject).getManifestObj();
             });
         }
 
         function saveOrder() {
             return new Promise((resolve, reject) => {
                 google.script.run.withSuccessHandler(res => {
-                    if (res && res.ok) { resolve(); }
-                    else { reject(new Error('save failed')); }
-                }).withFailureHandler(err => reject(err))
-                    .saveManifest(manifest);
+                    if (res && res.ok) resolve(); else reject(new Error('save failed'));
+                }).withFailureHandler(reject).saveManifest(manifest);
+            });
+        }
+
+        function delOne(category, name) {
+            return new Promise((resolve, reject) => {
+                google.script.run.withSuccessHandler(res => {
+                    if (res && res.ok) resolve(); else reject(new Error('delete failed'));
+                }).withFailureHandler(reject).deleteOne(category, name);
             });
         }
 
         function renderTabs() {
             const tabs = document.getElementById('tabs');
             tabs.innerHTML = '';
-
-            // Build tab list: ["all", ...actual categories]
-            const cats = Object.keys(manifest);
+            const cats = Object.keys(manifest).filter(k => k !== '_allOrder');
             const tabList = ['all', ...cats];
-
-            if (!current) current = tabList[0];
-
             tabList.forEach(cat => {
-                const label = cat === 'all' ? 'All (read-only)' : cat;
+                const label = cat === 'all' ? 'All' : cat;
                 const b = el('button', { textContent: label, onclick() { current = cat; renderLists(); } });
                 b.setAttribute('aria-pressed', cat === current);
                 tabs.append(b);
             });
 
-            // fill upload category selector
+            // upload category selector
             const sel = document.getElementById('catSel');
             sel.innerHTML = cats.map(c => `<option>${c}</option>`).join('');
-            if (cats.length) sel.value = cats[0];
+            if (cats.length && !sel.value) sel.value = cats[0];
+        }
+
+        function makeLi(cat, name, allowDrag = true) {
+            const li = el('li', { draggable: allowDrag });
+            if (allowDrag) {
+                li.addEventListener('dragstart', () => li.classList.add('dragging'));
+                li.addEventListener('dragend', () => li.classList.remove('dragging'));
+            }
+            const img = el('img', { className: 'thumb', src: `assets/works/${cat}/${encodeURIComponent(name)}` });
+            const title = (current === 'all') ? `[${cat}] ${name}` : name;
+            const del = el('button', {
+                className: 'btn danger small', textContent: '🗑', onclick: async () => {
+                    if (!confirm(`Delete this image?\n${cat}/${name}`)) return;
+                    setStatus('Deleting...');
+                    try {
+                        await delOne(cat, name);
+                        // 画面上からも消す
+                        if (manifest[cat]) manifest[cat] = manifest[cat].filter(n => n !== name);
+                        manifest._allOrder = (manifest._allOrder || []).filter(p => p !== `${cat}/${name}`);
+                        renderLists();
+                        setStatus('Deleted ✅');
+                    } catch (e) {
+                        console.error(e); setStatus('Delete failed', true);
+                    }
+                }
+            });
+            li.append(img, el('span', { className: 'grow', textContent: title }), del);
+            return li;
+        }
+
+        function enableDnd(ul, onChange) {
+            ul.addEventListener('dragover', e => {
+                e.preventDefault();
+                const after = getDragAfterElement(ul, e.clientY);
+                const dragging = ul.querySelector('.dragging');
+                if (!dragging) return;
+                if (after == null) ul.appendChild(dragging);
+                else ul.insertBefore(dragging, after);
+            });
+            ul.addEventListener('drop', () => {
+                onChange(Array.from(ul.querySelectorAll('li .grow')).map(s => s.textContent));
+            });
+        }
+
+        function getDragAfterElement(container, y) {
+            const els = [...container.querySelectorAll('li:not(.dragging)')];
+            return els.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) return { offset, element: child };
+                else return closest;
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
         }
 
         function renderLists() {
@@ -241,43 +303,125 @@
             lists.innerHTML = '';
 
             if (current === 'all') {
-                // read-only combined preview
-                const ul = el('ul');
-                const combined = [];
+                const ul = el('ul', { id: 'ul-all' });
+                // _allOrder に従って表示。足りないものは後方に追加（冪等のため）
+                const seen = new Set(manifest._allOrder || []);
+                const rest = [];
                 Object.entries(manifest).forEach(([cat, arr]) => {
-                    arr.forEach(name => combined.push({ cat, name }));
+                    if (cat === '_allOrder') return;
+                    for (const name of arr) {
+                        const key = `${cat}/${name}`;
+                        if (!seen.has(key)) rest.push(key);
+                    }
                 });
-                combined.forEach(({ cat, name }) => {
-                    const li = el('li', { draggable: false });
-                    const img = el('img', { className: 'thumb', src: `assets/works/${cat}/${encodeURIComponent(name)}` });
-                    li.append(img, el('span', { textContent: `[${cat}] ${name}` }));
-                    ul.append(li);
+                const ordered = [...(manifest._allOrder || []), ...rest];
+                ul.innerHTML = '';
+                for (const key of ordered) {
+                    const [cat, ...nameParts] = key.split('/');
+                    const name = nameParts.join('/');
+                    if (!manifest[cat] || !manifest[cat].includes(name)) continue; // manifest と食い違うものはスキップ
+                    ul.append(makeLi(cat, name, true));
+                }
+                enableDnd(ul, (titles) => {
+                    // titles は "[cat] name" の形なので key を再構築
+                    const keys = Array.from(ul.querySelectorAll('li img')).map(img => {
+                        const src = img.getAttribute('src'); // assets/works/<cat>/<name>
+                        const m = src.match(/assets\/works\/([^/]+)\/(.+)$/);
+                        return m ? `${decodeURIComponent(m[1])}/${decodeURIComponent(m[2])}` : null;
+                    }).filter(Boolean);
+                    manifest._allOrder = keys;
+                    setStatus('All order changed (not saved yet)');
                 });
-                lists.append(el('div', { className: 'col' }, el('h3', { textContent: 'All (preview)' }), ul));
+
+                lists.append(el('div', { className: 'col' }, el('h3', { textContent: 'All (drag to reorder)' }), ul));
                 return;
             }
 
+            // 個別カテゴリ
             if (!manifest[current]) {
                 lists.append(el('div', { className: 'col' }, el('p', { className: 'muted', textContent: 'No items in this category.' })));
                 return;
             }
-
             const ul = el('ul', { id: 'ul-' + current });
             (manifest[current] || []).forEach(name => {
-                const li = el('li', { draggable: true });
-                li.addEventListener('dragstart', () => li.classList.add('dragging'));
-                li.addEventListener('dragend', () => li.classList.remove('dragging'));
-                const img = el('img', { className: 'thumb', src: `assets/works/${current}/${encodeURIComponent(name)}` });
-                li.append(img, el('span', { textContent: name }));
-                ul.append(li);
+                ul.append(makeLi(current, name, true));
             });
-            enableDnd(ul, names => { manifest[current] = names; setStatus('Order changed (not saved yet)'); });
+            enableDnd(ul, (names) => {
+                // names は同じ見た目文字列（ファイル名）
+                manifest[current] = names;
+                // _allOrder に同じファイルが含まれる場合、相対位置は維持（Allは別タブで編集する想定）
+                setStatus('Order changed (not saved yet)');
+            });
 
-            // Right: manifest preview (all categories)
+            // 簡易プレビュー
             const preview = el('div', { className: 'small' });
             Object.entries(manifest).forEach(([cat, arr]) => {
+                if (cat === '_allOrder') return;
                 preview.append(
                     el('div', {},
                         el('strong', { textContent: cat + ` (${arr.length})` }),
                         el('div', { className: 'muted' }, document.createTextNode(arr.join(', ')))
                     )
+                );
+            });
+
+            lists.append(
+                el('div', { className: 'col' }, el('h3', { textContent: 'Reorder: ' + current }), ul),
+                el('div', { className: 'col' }, el('h3', { textContent: 'Manifest preview' }), preview)
+            );
+        }
+
+        async function onSaveClick() {
+            try {
+                setStatus('Saving...');
+                await saveOrder();
+                setStatus('Saved ✅');
+            } catch (e) {
+                console.error(e); setStatus('Save failed', true);
+            }
+        }
+
+        async function onUploadClick() {
+            const sel = document.getElementById('catSel');
+            const cat = sel.value;
+            const inp = document.getElementById('files');
+            if (!cat) return setStatus('Choose category', true);
+            if (!inp.files.length) return setStatus('Select files first', true);
+
+            const fd = new FormData();
+            fd.append('category', cat);
+            for (const f of inp.files) fd.append('files', f, f.name);
+
+            try {
+                setStatus('Uploading...');
+                const r = await fetch(EXEC_URL + '?endpoint=upload', { method: 'POST', body: fd, credentials: 'omit' });
+                if (!r.ok) throw new Error('upload failed');
+                await loadManifest();
+                renderTabs();
+                renderLists();
+                inp.value = '';
+                setStatus('Uploaded ✅');
+            } catch (e) {
+                console.error(e); setStatus('Upload failed', true);
+            }
+        }
+
+        // 起動時
+        (async function () {
+            try {
+                await loadManifest();
+                renderTabs();
+                renderLists();
+                setStatus('Ready');
+            } catch (e) {
+                console.error(e);
+                setStatus('Failed to load manifest', true);
+            }
+
+            document.getElementById('saveBtn').addEventListener('click', onSaveClick);
+            document.getElementById('uploadBtn').addEventListener('click', onUploadClick);
+        })();
+    </script>
+</body>
+
+</html>
