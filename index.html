@@ -1072,7 +1072,7 @@
           list.push({
             filename: filename,
             name: meta.name,
-            src: `${base}/${encodeURIComponent(filename)}`,
+            src: `${base}/${encodeURIComponent(filename).replace(/%2C/g, ',').replace(/%28/g, '(').replace(/%29/g, ')')}`,
             cat: cat,
             price: meta.price,
             size: meta.size,
