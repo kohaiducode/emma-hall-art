@@ -8,6 +8,15 @@
   <meta name="description" content="Works, biography, and contact details for painter Emma Hall." />
   <!-- Use a relative path so GitHub Pages project sites don't break -->
   <link rel="icon" href="favicon.ico" />
+  
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z0WGPR0MW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8Z0WGPR0MW');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -22,7 +31,7 @@
       --muted: #6f635d;
       --accent: #b86b5e;
       --frame: #e6dccf;
-      --maxw: 1100px;
+      --maxw: 1400px;
     }
 
     * { box-sizing: border-box; }
@@ -137,18 +146,318 @@
     .chip:active { transform: scale(0.99); }
     .chip[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-    /* MASONRY GALLERY */
-    .grid { column-count: 3; column-gap: 4px; }
-    @media (max-width:980px) { .grid { column-count: 2; } }
-    @media (max-width:600px) { .grid { column-count: 2; } }
+    /* GRID GALLERY */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      width: 100%;
+    }
+    @media (max-width:1150px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+    @media (max-width:860px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+    @media (max-width:480px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+    }
 
-    .grid img {
+    .gallery-card {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .gallery-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .gallery-card img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 0px;
-      margin-bottom: 4px;
-      break-inside: avoid;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .gallery-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(47, 42, 40, 0.88); /* Slate/ink theme matching */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .gallery-card:hover .card-overlay {
+      opacity: 1;
+    }
+    
+    .card-info {
+      color: #faf7f2;
+      transform: translateY(10px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .gallery-card:hover .card-info {
+      transform: translateY(0);
+    }
+    
+    .card-info h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      margin: 0 0 8px 0;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    
+    .card-meta {
+      font-family: Inter, sans-serif;
+      font-size: 13px;
+      margin: 0;
+      color: #e6dccf;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 600px) {
+      .card-info h3 {
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+      .card-meta {
+        font-size: 10px;
+      }
+      .card-overlay {
+        padding: 12px;
+      }
+    }
+
+    /* LANGUAGE SELECTOR */
+    .lang-selector {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 16px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .lang-btn {
+      background: none;
+      border: 0;
+      padding: 2px 4px;
+      cursor: pointer;
+      color: var(--muted);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 13px;
+      transition: color 0.2s ease;
+    }
+    .lang-btn:hover {
+      color: var(--accent);
+    }
+    .lang-btn.active {
+      color: var(--ink);
+      border-bottom: 2px solid var(--accent);
+    }
+    .lang-separator {
+      color: var(--frame);
+      font-size: 12px;
+      user-select: none;
+    }
+
+    /* LIGHTBOX MODAL */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(250, 247, 242, 0.98); /* soft warm background matching site theme */
+      z-index: 1000;
+      display: none; /* hidden by default */
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: 0;
+      font-size: 36px;
+      color: var(--ink);
+      cursor: pointer;
+      z-index: 1010;
+      padding: 8px;
+      line-height: 1;
+      transition: color 0.2s ease;
+    }
+    .lightbox-close:hover {
+      color: var(--accent);
+    }
+    
+    .lightbox-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      max-width: 1100px;
+      width: 100%;
+      max-height: 80vh;
+      align-items: center;
+    }
+    
+    .lightbox-img-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid var(--frame);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+      max-height: 75vh;
+      overflow: hidden;
+    }
+    
+    .lightbox-img-container img {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 2px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    
+    .lightbox-details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+    
+    .lightbox-cat {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .lightbox-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0 0 24px 0;
+      color: var(--ink);
+    }
+    
+    .lightbox-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      border-top: 1px solid var(--frame);
+      border-bottom: 1px solid var(--frame);
+      padding: 20px 0;
+      margin-bottom: 28px;
+    }
+    
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 15px;
+    }
+    
+    .spec-label {
+      color: var(--muted);
+      font-weight: 500;
+    }
+    
+    .spec-val {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    
+    .lightbox-btn {
+      appearance: none;
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+    
+    .lightbox-btn:hover {
+      background: #a45a4d;
+    }
+    .lightbox-btn:active {
+      transform: scale(0.99);
+    }
+    
+    @media (max-width: 820px) {
+      .lightbox {
+        padding: 20px;
+        overflow-y: auto;
+      }
+      .lightbox-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-height: none;
+        margin-top: 40px;
+      }
+      .lightbox-img-container {
+        max-height: 50vh;
+      }
+      .lightbox-img-container img {
+        max-height: 45vh;
+      }
+      .lightbox-details {
+        padding: 10px 0;
+      }
     }
 
     .works-actions { display: flex; justify-content: center; margin-top: 20px; }
@@ -164,7 +473,79 @@
     .btn:hover { filter: brightness(0.97); }
 
     /* CONTACT */
-    .contact { display: block; margin: 0 auto; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: start;
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    .acquire-info {
+      padding-right: 20px;
+    }
+    @media (max-width: 820px) {
+      .acquire-info {
+        padding-right: 0;
+      }
+    }
+    .acquire-info h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      color: var(--ink);
+    }
+    .acquire-intro {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .acquire-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .acquire-steps li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-icon {
+      font-size: 24px;
+      background: #f7f3eb;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--frame);
+      flex-shrink: 0;
+    }
+    .step-text strong {
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .step-text p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+      margin: 0;
+    }
     .panel {
       background: var(--paper);
       border: 2px solid var(--frame);
@@ -240,10 +621,15 @@
 <body>
   <header>
     <nav class="nav" aria-label="Primary">
-      <div class="brand">Emma Hall — Painter</div>
+      <div class="brand" data-t="nav.brand">Emma Hall — Painter</div>
       <div class="menu">
-        <a href="#works">Works</a>
-        <a href="#contact">Contact</a>
+        <a href="#works" data-t="nav.works">Works</a>
+        <a href="#contact" data-t="nav.contact">Contact</a>
+        <div class="lang-selector">
+          <button class="lang-btn" data-lang="fr" aria-label="Version française">FR</button>
+          <span class="lang-separator">|</span>
+          <button class="lang-btn" data-lang="en" aria-label="English version">EN</button>
+        </div>
       </div>
     </nav>
   </header>
@@ -251,8 +637,8 @@
   <main>
     <section class="hero">
       <div>
-        <h1>Emma Hall – A Journey Through Color and Texture</h1>
-        <p>Emma, born in South India, paints mainly in oils and also works with watercolours, charcoal, and
+        <h1 data-t="hero.title">Emma Hall – A Journey Through Color and Texture</h1>
+        <p data-t="hero.desc">Emma, born in South India, paints mainly in oils and also works with watercolours, charcoal, and
           pastels. Inspired by her travels to Japan and Italy and her Indian childhood, she uses vibrant colors and a
           unique knife technique for depth, often painting with her fingers. Her works have been exhibited and sold in
           Paris, London, Los Angeles, and Milan.</p>
@@ -265,16 +651,16 @@
     </section>
 
     <section id="works" aria-labelledby="works-heading">
-      <h2 id="works-heading">Works</h2>
+      <h2 id="works-heading" data-t="works.title">Works</h2>
 
       <!-- Filter chips -->
       <div class="chipbar" role="tablist" aria-label="Filter works">
-        <button class="chip" role="tab" aria-selected="true" aria-pressed="true" data-filter="all">All</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="flowers">Flowers</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="aquarelles">Aquarelles</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="landscapes">Landscapes</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="portraits">Portraits</button>
-        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="pets">Pets</button>
+        <button class="chip" role="tab" aria-selected="true" aria-pressed="true" data-filter="all" data-t="filter.all">All</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="flowers" data-t="filter.flowers">Flowers</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="landscapes" data-t="filter.landscapes">Landscapes</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="watercolours" data-t="filter.watercolours">Watercolours</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="portraits" data-t="filter.portraits">Portraits</button>
+        <button class="chip" role="tab" aria-selected="false" aria-pressed="false" data-filter="pets" data-t="filter.pets">Pets</button>
       </div>
 
       <div id="gallery" class="grid" aria-live="polite"></div>
@@ -286,45 +672,101 @@
       </div>
 
       <div class="works-actions">
-        <button style="color:white; background-color:#b86b5e;" id="loadMore" class="btn" type="button">See more</button>
+        <button style="color:white; background-color:#b86b5e;" id="loadMore" class="btn" type="button" data-t="works.loadMore">See more</button>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact">
-        <div class="panel">
-          <p class="sub">For availability, exhibitions, or commissions, get in touch.</p>
+      <h2 data-t="contact.title">Contact</h2>
+      <div class="contact-grid">
+        <div class="acquire-info">
+          <h3 data-t="acquire.title">How to Acquire a Piece</h3>
+          <p class="acquire-intro" data-t="acquire.desc">If you wish to purchase a painting, please contact me directly using the form or via Instagram. Here is how the process works:</p>
+          
+          <ul class="acquire-steps">
+            <li>
+              <div class="step-icon">🚚</div>
+              <div class="step-text">
+                <strong data-t="acquire.step1.title">Free Shipping</strong>
+                <p data-t="acquire.step1.desc">Free delivery anywhere in France. The piece is professionally packed and shipped with a tracking number.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-icon">💳</div>
+              <div class="step-text">
+                <strong data-t="acquire.step2.title">Secure Payments</strong>
+                <p data-t="acquire.step2.desc">Direct bank transfers and PayPal payments are accepted.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-icon">✉️</div>
+              <div class="step-text">
+                <strong data-t="acquire.step3.title">Direct Contact</strong>
+                <p data-t="acquire.step3.desc">Once you submit an inquiry, we will arrange the shipping details and payment options together.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-          <!-- Secure, no-CORS form via hidden iframe -->
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-          <form id="contact-form"
-            action="https://script.google.com/macros/s/AKfycbyCsNgmX2W0tM3dFPgaY3xd-1j4E8ri-PK3bCnwIglf4H5DAbGOF1t1OwUmiUY5HpI/exec"
-            method="POST" target="hidden_iframe" onsubmit="onFormSubmit(event)">
-            <label class="vh" for="website">Website</label>
-            <input id="website" name="website" type="text" autocomplete="off" tabindex="-1" aria-hidden="true"
-              style="position:absolute;left:-9999px;">
-            <label for="name">Name</label>
-            <input id="name" name="name" placeholder="Your name" autocomplete="name" required />
-            <div style="height:10px"></div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
-            <div style="height:10px"></div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about the piece or commission you have in mind"
-              required></textarea>
-            <div style="height:12px"></div>
-            <button id="sendBtn" type="submit"><span>Send</span></button>
-            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-          </form>
+        <div class="contact-form-container">
+          <div class="panel">
+            <p class="sub" data-t="contact.desc">For availability, exhibitions, or commissions, please fill in the form below.</p>
+
+            <!-- Secure, no-CORS form via hidden iframe -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            <form id="contact-form"
+              action="https://script.google.com/macros/s/AKfycbyCsNgmX2W0tM3dFPgaY3xd-1j4E8ri-PK3bCnwIglf4H5DAbGOF1t1OwUmiUY5HpI/exec"
+              method="POST" target="hidden_iframe" onsubmit="onFormSubmit(event)">
+              <label class="vh" for="website">Website</label>
+              <input id="website" name="website" type="text" autocomplete="off" tabindex="-1" aria-hidden="true"
+                style="position:absolute;left:-9999px;">
+              <label for="name" id="label-name" data-t="form.name">Name</label>
+              <input id="name" name="name" placeholder="Your name" autocomplete="name" required />
+              <div style="height:10px"></div>
+              <label for="email" id="label-email" data-t="form.email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+              <div style="height:10px"></div>
+              <label for="message" id="label-message" data-t="form.message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about the piece or commission you have in mind, thank you."
+                required></textarea>
+              <div style="height:12px"></div>
+              <button id="sendBtn" type="submit"><span data-t="form.send">Send</span></button>
+              <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div>© <span id="year"></span> Emma Hall. All rights reserved.</div>
+    <div id="footer-copyright">© <span id="year"></span> Emma Hall. All rights reserved.</div>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Painting Detail">
+    <button class="lightbox-close" aria-label="Close details">&times;</button>
+    <div class="lightbox-content">
+      <div class="lightbox-img-container">
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+      <div class="lightbox-details">
+        <span id="lightbox-cat" class="lightbox-cat">Category</span>
+        <h2 id="lightbox-title" class="lightbox-title">Painting Title</h2>
+        <div class="lightbox-specs">
+          <div class="spec-item">
+            <span class="spec-label">Size</span>
+            <span id="lightbox-size" class="spec-val"></span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Price</span>
+            <span id="lightbox-price" class="spec-val"></span>
+          </div>
+        </div>
+        <button id="lightbox-inquire" class="lightbox-btn">Inquire about this piece</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     // ============================
@@ -336,13 +778,112 @@
 
     const WORKS_ROOT = "assets/works";
     const CATEGORY_PATHS = {
-      aquarelles: `${WORKS_ROOT}/aquarelles`,
-      flowers: `${WORKS_ROOT}/flowers`,
-      landscapes: `${WORKS_ROOT}/landscapes`,
-      pets: `${WORKS_ROOT}/pets`,
-      portraits: `${WORKS_ROOT}/portraits`,
+      watercolours: `${WORKS_ROOT}/watercolours_brushed`,
+      flowers: `${WORKS_ROOT}/Flowers_brushed`,
+      landscapes: `${WORKS_ROOT}/landscapes_brushed`,
+      pets: `${WORKS_ROOT}/pets_brushed`,
+      portraits: `${WORKS_ROOT}/portraits_brushed`,
     };
     const PAGE_SIZE = 12;
+
+    const TRANSLATIONS = {
+      fr: {
+        "nav.brand": "Emma Hall — Artiste Peintre",
+        "nav.works": "Œuvres",
+        "nav.contact": "Contact",
+        "hero.title": "Emma Hall – Un Voyage à travers la Couleur et la Texture",
+        "hero.desc": "Emma, née dans le sud de l'Inde, peint principalement à l'huile et travaille également l'aquarelle, le fusain et le pastel. Inspirée par ses voyages au Japon et en Italie ainsi que par son enfance en Inde, elle utilise des couleurs vibrantes et une technique unique au couteau pour donner de la profondeur, peignant souvent avec ses doigts. Ses œuvres ont été exposées et vendues à Paris, Londres, Los Angeles et Milan.",
+        "works.title": "Œuvres",
+        "filter.all": "Tous",
+        "filter.flowers": "Fleurs",
+        "filter.landscapes": "Paysages",
+        "filter.watercolours": "Aquarelles",
+        "filter.portraits": "Portraits",
+        "filter.pets": "Animaux",
+        "works.loadMore": "Voir plus",
+        "contact.title": "Contact",
+        "contact.desc": "Pour toute information sur la disponibilité des œuvres, les expositions ou les commandes, veuillez remplir le formulaire ci-dessous.",
+        "form.name": "Nom",
+        "form.email": "E-mail",
+        "form.message": "Message",
+        "form.send": "Envoyer",
+        "form.placeholder_name": "Votre nom",
+        "form.placeholder_email": "vous@exemple.com",
+        "form.placeholder_message": "Parlez-moi de l'œuvre ou de la commande que vous avez en tête, merci.",
+        "form.status_sending": "Envoi en cours…",
+        "form.status_sent": "✅ Message envoyé. Merci !",
+        "lightbox.cat_label": "Catégorie",
+        "lightbox.size_label": "Dimensions",
+        "lightbox.price_label": "Prix",
+        "lightbox.size_on_request": "Dimensions sur demande",
+        "lightbox.price_on_request": "Prix sur demande",
+        "lightbox.inquire_btn": "Contacter",
+        "inquiry.message_template": "Bonjour Emma,\n\nJe souhaite acquérir votre tableau \"{title}\" ({cat}, {size}, {price}). Pourriez-vous me confirmer sa disponibilité ainsi que les détails pour le règlement (virement ou PayPal) ? Merci !",
+        "cat.flowers": "Fleurs",
+        "cat.landscapes": "Paysages",
+        "cat.watercolours": "Aquarelles",
+        "cat.portraits": "Portraits",
+        "cat.pets": "Animaux",
+        "acquire.title": "Comment acquérir une œuvre",
+        "acquire.desc": "Si vous souhaitez acheter un tableau, contactez-moi directement via ce formulaire ou sur Instagram. Voici comment se déroule le processus :",
+        "acquire.step1.title": "Livraison gratuite",
+        "acquire.step1.desc": "Livraison gratuite partout en France. L'œuvre est emballée avec un soin professionnel et expédiée avec numéro de suivi.",
+        "acquire.step2.title": "Paiements sécurisés",
+        "acquire.step2.desc": "Les règlements par virement bancaire et PayPal sont acceptés.",
+        "acquire.step3.title": "Échange direct",
+        "acquire.step3.desc": "Dès réception de votre message, nous convenons ensemble des détails d'expédition et de paiement.",
+        "footer.copyright": "© {year} Emma Hall. Tous droits réservés."
+      },
+      en: {
+        "nav.brand": "Emma Hall — Painter",
+        "nav.works": "Works",
+        "nav.contact": "Contact",
+        "hero.title": "Emma Hall – A Journey Through Color and Texture",
+        "hero.desc": "Emma, born in South India, paints mainly in oils and also works with watercolours, charcoal, and pastels. Inspired by her travels to Japan and Italy and her Indian childhood, she uses vibrant colors and a unique knife technique for depth, often painting with her fingers. Her works have been exhibited and sold in Paris, London, Los Angeles, and Milan.",
+        "works.title": "Works",
+        "filter.all": "All",
+        "filter.flowers": "Flowers",
+        "filter.landscapes": "Landscapes",
+        "filter.watercolours": "Watercolours",
+        "filter.portraits": "Portraits",
+        "filter.pets": "Pets",
+        "works.loadMore": "See more",
+        "contact.title": "Contact",
+        "contact.desc": "For availability, exhibitions, or commissions, please fill in the form below.",
+        "form.name": "Name",
+        "form.email": "Email",
+        "form.message": "Message",
+        "form.send": "Send",
+        "form.placeholder_name": "Your name",
+        "form.placeholder_email": "you@example.com",
+        "form.placeholder_message": "Tell me about the piece or commission you have in mind, thank you.",
+        "form.status_sending": "Sending…",
+        "form.status_sent": "✅ Message sent. Thank you!",
+        "lightbox.cat_label": "Category",
+        "lightbox.size_label": "Size",
+        "lightbox.price_label": "Price",
+        "lightbox.size_on_request": "Dimensions on request",
+        "lightbox.price_on_request": "Price on request",
+        "lightbox.inquire_btn": "Inquire about this piece",
+        "inquiry.message_template": "Hello Emma,\n\nI would like to acquire your painting \"{title}\" ({cat}, {size}, {price}). Could you please let me know if it is available and share payment details (bank transfer or PayPal)? Thank you!",
+        "cat.flowers": "Flowers",
+        "cat.landscapes": "Landscapes",
+        "cat.watercolours": "Watercolours",
+        "cat.portraits": "Portraits",
+        "cat.pets": "Pets",
+        "acquire.title": "How to Acquire a Piece",
+        "acquire.desc": "If you wish to purchase a painting, please contact me directly using the form or via Instagram. Here is how the process works:",
+        "acquire.step1.title": "Free Shipping",
+        "acquire.step1.desc": "Free delivery anywhere in France. The piece is professionally packed and shipped with a tracking number.",
+        "acquire.step2.title": "Secure Payments",
+        "acquire.step2.desc": "Direct bank transfers and PayPal payments are accepted.",
+        "acquire.step3.title": "Direct Contact",
+        "acquire.step3.desc": "Once you submit an inquiry, we will arrange the shipping details and payment options together.",
+        "footer.copyright": "© {year} Emma Hall. All rights reserved."
+      }
+    };
+
+    let CURRENT_LANG = 'fr';
 
     const galleryEl = document.getElementById('gallery');
     const loadMoreBtn = document.getElementById('loadMore');
@@ -352,9 +893,53 @@
 
     let CURRENT_FILTER = 'all';
     let MANIFEST = null;      // keep the raw manifest (so we can use _allOrder)
-    let FULL_LIST = [];       // flat: {name, src, cat}
+    let FULL_LIST = [];       // flat: {name, src, cat, price, size, priority}
     let IMAGES = [];
     let page = 0;
+
+    function translatePage(lang) {
+      CURRENT_LANG = lang;
+      
+      const tMap = TRANSLATIONS[lang];
+      document.querySelectorAll('[data-t]').forEach(el => {
+        const key = el.dataset.t;
+        if (tMap[key]) {
+          el.textContent = tMap[key];
+        }
+      });
+      
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const msgTextarea = document.getElementById('message');
+      
+      if (nameInput) nameInput.placeholder = tMap["form.placeholder_name"];
+      if (emailInput) emailInput.placeholder = tMap["form.placeholder_email"];
+      if (msgTextarea) msgTextarea.placeholder = tMap["form.placeholder_message"];
+      
+      const sizeLabel = document.querySelector('.spec-item:nth-child(1) .spec-label');
+      const priceLabel = document.querySelector('.spec-item:nth-child(2) .spec-label');
+      if (sizeLabel) sizeLabel.textContent = tMap["lightbox.size_label"];
+      if (priceLabel) priceLabel.textContent = tMap["lightbox.price_label"];
+      
+      const inquireBtn = document.getElementById('lightbox-inquire');
+      if (inquireBtn) inquireBtn.textContent = tMap["lightbox.inquire_btn"];
+      
+      const year = new Date().getFullYear();
+      const copyrightEl = document.getElementById('footer-copyright');
+      if (copyrightEl) {
+        copyrightEl.innerHTML = tMap["footer.copyright"].replace('{year}', `<span id="year">${year}</span>`);
+      }
+      
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+      
+      localStorage.setItem('emma_hall_lang', lang);
+      
+      if (FULL_LIST.length > 0) {
+        refreshImagesForFilter();
+      }
+    }
 
     function setActiveChip(filter) {
       chips.forEach(chip => {
@@ -369,23 +954,20 @@
     }
 
     function maybeSortForAll(images) {
-      // If manifest has an _allOrder array, sort "all" by that order. Others unchanged.
       if (CURRENT_FILTER !== 'all') return images;
       const order = MANIFEST && Array.isArray(MANIFEST._allOrder) ? MANIFEST._allOrder : null;
       if (order && order.length) {
         const idx = new Map();
         order.forEach((key, i) => idx.set(key, i));
         images.sort((a, b) => {
-          const ka = `${a.cat}/${a.name}`;
-          const kb = `${b.cat}/${b.name}`;
+          const ka = `${a.cat}/${a.filename}`;
+          const kb = `${b.cat}/${b.filename}`;
           const ia = idx.has(ka) ? idx.get(ka) : Number.MAX_SAFE_INTEGER;
           const ib = idx.has(kb) ? idx.get(kb) : Number.MAX_SAFE_INTEGER;
           if (ia !== ib) return ia - ib;
-          // fallback: keep stable-ish by filename
           return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
         });
       } else {
-        // fallback when _allOrder is missing: sort by filename for "all"
         images.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
       }
       return images;
@@ -401,11 +983,47 @@
 
       const frag = document.createDocumentFragment();
       for (const img of slice) {
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+        
         const el = document.createElement('img');
         el.loading = "lazy";
         el.src = img.src;
-        el.alt = humanizeName(img.name);
-        frag.appendChild(el);
+        el.alt = img.name;
+        
+        const overlay = document.createElement('div');
+        overlay.className = 'card-overlay';
+        
+        const info = document.createElement('div');
+        info.className = 'card-info';
+        
+        const title = document.createElement('h3');
+        title.textContent = img.name;
+        
+        const meta = document.createElement('p');
+        meta.className = 'card-meta';
+        const parts = [];
+        
+        const tMap = TRANSLATIONS[CURRENT_LANG];
+        const localizedPrice = (img.price === "Price on demand" || img.price === "price on demand") 
+          ? tMap["lightbox.price_on_request"] 
+          : img.price;
+        const localizedSize = img.size ? img.size : "";
+        
+        if (localizedSize) parts.push(localizedSize);
+        if (localizedPrice) parts.push(localizedPrice);
+        meta.textContent = parts.join(' • ');
+        
+        info.appendChild(title);
+        if (parts.length > 0) info.appendChild(meta);
+        overlay.appendChild(info);
+        
+        card.appendChild(el);
+        card.appendChild(overlay);
+        
+        card.addEventListener('click', () => openLightbox(img));
+        
+        frag.appendChild(card);
       }
       galleryEl.appendChild(frag);
 
@@ -414,7 +1032,6 @@
     }
 
     async function loadManifest() {
-      // Cache-busting query avoids stale versions after a deploy
       const url = `${WORKS_ROOT}/works.json?v=${Date.now()}`;
       const r = await fetch(url);
       if (!r.ok) throw new Error('No works.json');
@@ -423,19 +1040,30 @@
 
     function buildList(data) {
       const list = [];
+      const metadata = data._metadata || {};
       for (const [cat, files] of Object.entries(data)) {
-        if (cat === '_allOrder') continue;        // skip special key
+        if (cat === '_allOrder' || cat === '_metadata') continue;
         const base = CATEGORY_PATHS[cat];
-        if (!base) continue;                      // ignore unknown categories to avoid 404s
-        for (const name of files) {
+        if (!base) continue;
+        for (const filename of files) {
+          const key = `${cat}/${filename}`;
+          const meta = metadata[key] || {
+            name: humanizeName(filename),
+            price: "Price on demand",
+            size: "",
+            priority: false
+          };
           list.push({
-            name,
-            src: `${base}/${encodeURIComponent(name)}`,
-            cat
+            filename: filename,
+            name: meta.name,
+            src: `${base}/${encodeURIComponent(filename)}`,
+            cat: cat,
+            price: meta.price,
+            size: meta.size,
+            priority: meta.priority
           });
         }
       }
-      // Important: DO NOT sort here. Keep per-category order as-is.
       return list;
     }
 
@@ -462,9 +1090,6 @@
 
     loadMoreBtn.addEventListener('click', renderNextPage);
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     // Contact form handling
     const form = document.getElementById('contact-form');
     const iframe = document.getElementById('hidden_iframe');
@@ -478,24 +1103,131 @@
 
     function onFormSubmit(e) {
       const hp = (document.getElementById('website').value || '').trim();
-      if (hp) { setStatus("Thank you!", true); e.target.reset(); return; }
+      const tMap = TRANSLATIONS[CURRENT_LANG];
+      if (hp) { setStatus(tMap["form.status_sent"], true); e.target.reset(); return; }
 
       sendBtn.disabled = true;
       sendBtn.style.opacity = .7;
-      setStatus("Sending…", true);
+      setStatus(tMap["form.status_sending"], true);
 
       iframe.onload = function () {
-        setStatus("✅ Message sent. Thank you!");
+        setStatus(tMap["form.status_sent"]);
         form.reset();
         sendBtn.disabled = false;
         sendBtn.style.opacity = 1;
         iframe.onload = null;
       };
     }
-    window.onFormSubmit = onFormSubmit; // expose for inline handler
+    window.onFormSubmit = onFormSubmit;
+
+    // Lightbox Modal Logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCat = document.getElementById('lightbox-cat');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxSize = document.getElementById('lightbox-size');
+    const lightboxPrice = document.getElementById('lightbox-price');
+    const lightboxInquire = document.getElementById('lightbox-inquire');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    let currentInquiredPainting = null;
+
+    function openLightbox(img) {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.name;
+      
+      const tMap = TRANSLATIONS[CURRENT_LANG];
+      
+      const catKey = `cat.${img.cat}`;
+      const localizedCat = tMap[catKey] || (img.cat.charAt(0).toUpperCase() + img.cat.slice(1));
+      lightboxCat.textContent = localizedCat;
+      
+      lightboxTitle.textContent = img.name;
+      
+      const localizedSize = img.size ? img.size : tMap["lightbox.size_on_request"];
+      const localizedPrice = (img.price === "Price on demand" || img.price === "price on demand") 
+        ? tMap["lightbox.price_on_request"] 
+        : img.price;
+        
+      lightboxSize.textContent = localizedSize;
+      lightboxPrice.textContent = localizedPrice;
+      
+      currentInquiredPainting = img;
+      
+      lightbox.style.display = 'flex';
+      lightbox.offsetHeight;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (!lightbox.classList.contains('active')) {
+          lightbox.style.display = 'none';
+        }
+      }, 300);
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+
+    lightboxInquire.addEventListener('click', () => {
+      if (!currentInquiredPainting) return;
+      
+      const tMap = TRANSLATIONS[CURRENT_LANG];
+      
+      const title = currentInquiredPainting.name;
+      const catKey = `cat.${currentInquiredPainting.cat}`;
+      const cat = tMap[catKey] || (currentInquiredPainting.cat.charAt(0).toUpperCase() + currentInquiredPainting.cat.slice(1));
+      const price = (currentInquiredPainting.price === "Price on demand" || currentInquiredPainting.price === "price on demand") 
+        ? tMap["lightbox.price_on_request"] 
+        : currentInquiredPainting.price;
+      const size = currentInquiredPainting.size ? currentInquiredPainting.size : tMap["lightbox.size_on_request"];
+      
+      const message = tMap["inquiry.message_template"]
+        .replace('{title}', title)
+        .replace('{cat}', cat)
+        .replace('{size}', size)
+        .replace('{price}', price);
+      
+      const msgTextarea = document.getElementById('message');
+      msgTextarea.value = message;
+      
+      closeLightbox();
+      
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          document.getElementById('name').focus();
+        }, 800);
+      }
+    });
+
+    // Language Toggle Click Handlers
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        translatePage(btn.dataset.lang);
+      });
+    });
 
     // Initial load
     (async function init() {
+      const savedLang = localStorage.getItem('emma_hall_lang') || 'fr';
+      translatePage(savedLang);
+      
       setActiveChip(CURRENT_FILTER);
       try {
         MANIFEST = await loadManifest();
@@ -503,7 +1235,6 @@
         refreshImagesForFilter();
         notice.style.display = 'none';
       } catch (e) {
-        // Friendly hint if works.json is missing (first-time setup)
         notice.style.display = '';
         toggleLoadMore(false);
       }
@@ -512,7 +1243,7 @@
     // helpers
     function humanizeName(name) {
       return name
-        .replace(/\.(?:jpe?g|png|webp|gif)+$/i, '') // remove trailing extensions
+        .replace(/\.(?:jpe?g|png|webp|gif)+$/i, '')
         .replace(/[-_]+/g, ' ')
         .trim();
     }

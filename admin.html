@@ -258,7 +258,7 @@
         function delOne(category, name) { return HAS_GSR ? gsDeleteOne(category, name) : restDeleteOne(category, name); }
 
         // -------------- Manifest shaping --------------
-        const DEFAULT_CATEGORIES = ['aquarelles', 'flowers', 'landscapes', 'pets', 'portraits'];
+        const DEFAULT_CATEGORIES = ['watercolours', 'flowers', 'landscapes', 'pets', 'portraits'];
         function withDefaults(m) {
             m = m || {};
             DEFAULT_CATEGORIES.forEach(c => { if (!Array.isArray(m[c])) m[c] = []; });
@@ -291,7 +291,15 @@
                 li.addEventListener('dragstart', () => li.classList.add('dragging'));
                 li.addEventListener('dragend', () => li.classList.remove('dragging'));
             }
-            const img = el('img', { className: 'thumb', src: `assets/works/${cat}/${encodeURIComponent(name)}` });
+            const folders = {
+                flowers: 'Flowers_brushed',
+                landscapes: 'landscapes_brushed',
+                watercolours: 'watercolours_brushed',
+                portraits: 'portraits_brushed',
+                pets: 'pets_brushed'
+            };
+            const folder = folders[cat] || cat;
+            const img = el('img', { className: 'thumb', src: `assets/works/${folder}/${encodeURIComponent(name)}` });
             const title = (current === 'all') ? `[${cat}] ${name}` : name;
             const del = el('button', {
                 className: 'btn danger small', textContent: '🗑', onclick: async () => {

@@ -3,6 +3,6 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build:works": "node scripts/build-works-manifest.mjs"
+        "build:works": "python scripts/build-works-manifest.py"
     }
 }
