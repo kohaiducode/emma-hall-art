@@ -90,10 +90,11 @@ def main():
             if any(cell is not None for cell in r):
                 excel_rows.append({
                     'category': (r[0] or "").strip().lower(),
-                    'priority': (r[1] or "No").strip().lower() == "yes",
+                    'filename': (r[1] or "").strip(),
                     'name': (r[2] or "").strip() if r[2] else None,
                     'price': (r[3] or "").strip() if r[3] else None,
-                    'size': (r[4] or "").strip() if r[4] else None
+                    'size': (r[4] or "").strip() if r[4] else None,
+                    'priority': (r[5] or "No").strip().lower() == "yes"
                 })
         print(f"Loaded {len(excel_rows)} rows from Excel.")
     else:
@@ -103,7 +104,6 @@ def main():
     excel_by_cat = {}
     for row in excel_rows:
         cat = row['category']
-        # normalize watercolors -> watercolours
         if cat == 'watercolors':
             cat = 'watercolours'
         excel_by_cat.setdefault(cat, []).append(row)
@@ -130,32 +130,48 @@ def main():
         # Excel rows for this category
         cat_excel_rows = excel_by_cat.get(cat, [])
         
-        # Build map of clean name -> row for matching
-        excel_map = {}
-        category_default = None
+        # Build index maps for matching:
+        # 1. Exact/clean filename matching
+        file_map = {}
+        # 2. Clean name matching
+        name_map = {}
+        
         for row in cat_excel_rows:
-            if row['name'] is None:
-                # This is a category default row (e.g. Portraits or Pets row)
-                category_default = row
-            else:
-                excel_map[normalize(row['name'])] = row
+            if row['filename']:
+                file_map[normalize(row['filename'])] = row
+            if row['name']:
+                name_map[normalize(row['name'])] = row
 
         for filename in files:
-            # Check manual mapping override first (extension-agnostic)
-            filename_no_ext = os.path.splitext(filename)[0]
-            matched_name = MANUAL_MAPPING.get(filename_no_ext)
             matched_row = None
-            if matched_name:
-                matched_row = excel_map.get(normalize(matched_name))
+            filename_no_ext = os.path.splitext(filename)[0]
 
-            # If no manual override, try exact clean matching
+            # Hierarchical matching:
+            # 1. Try exact/clean matching on File Name column
+            matched_row = file_map.get(normalize(filename))
+
+            # 2. Try clean matching on filename without extension
             if not matched_row:
-                matched_row = excel_map.get(normalize(filename))
+                matched_row = file_map.get(normalize(filename_no_ext))
 
-            # If still no match, look for fuzzy matches (substring or prefix)
+            # 3. Try clean matching on Display Name (Name) column using full filename
+            if not matched_row:
+                matched_row = name_map.get(normalize(filename))
+
+            # 4. Try clean matching on Display Name (Name) column using filename without extension
+            if not matched_row:
+                matched_row = name_map.get(normalize(filename_no_ext))
+
+            # 5. Try manual mapping override as a fallback
+            if not matched_row:
+                matched_name = MANUAL_MAPPING.get(filename_no_ext)
+                if matched_name:
+                    matched_row = name_map.get(normalize(matched_name))
+
+            # 6. Try fuzzy matching (substring search on clean Name)
             if not matched_row:
                 norm_file = normalize(filename)
-                for clean_name, row in excel_map.items():
+                for clean_name, row in name_map.items():
                     if clean_name in norm_file or norm_file in clean_name:
                         matched_row = row
                         break
@@ -164,18 +180,10 @@ def main():
             meta_key = f"{cat}/{filename}"
             if matched_row:
                 metadata[meta_key] = {
-                    'name': matched_row['name'],
+                    'name': matched_row['name'] if matched_row['name'] else humanize_name(filename),
                     'price': format_price(matched_row['price']),
                     'size': matched_row['size'] or "",
                     'priority': matched_row['priority']
-                }
-            elif category_default:
-                # Use category default (e.g. for Portraits or Pets)
-                metadata[meta_key] = {
-                    'name': humanize_name(filename),
-                    'price': format_price(category_default['price']),
-                    'size': category_default['size'] or "",
-                    'priority': category_default['priority']
                 }
             else:
                 # Complete fallback
