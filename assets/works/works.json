@@ -351,392 +351,392 @@
     },
     "flowers/English roses.webp": {
       "name": "English Roses",
-      "price": "500",
+      "price": "500 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Free spring bouquet.webp": {
       "name": "Free Spring",
-      "price": "400",
+      "price": "400 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Hanging Costa Rica flowers.webp": {
       "name": "Hanging costa rica flowers",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": true,
       "status": "FOR SALE"
     },
     "flowers/Into the blue.webp": {
       "name": "Into the blue",
-      "price": "450",
+      "price": "450 €",
       "size": "60 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/into the green.webp": {
       "name": "Into the green",
-      "price": "400",
+      "price": "400 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/into the light.webp": {
       "name": "Into the light",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Japanese sand flowers.webp": {
       "name": "Japanese sand flowers",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Japanese water lilies.webp": {
       "name": "Japanese water lilies",
-      "price": "400",
+      "price": "400 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Leaves in the waters of Lake Annecy.webp": {
       "name": "Leaves in Lake Annecy",
-      "price": "400",
+      "price": "400 €",
       "size": "50 x 40",
       "priority": true,
       "status": "FOR SALE"
     },
     "flowers/Light sakura.webp": {
       "name": "Light sakura",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Lilac.webp": {
       "name": "Lilac",
-      "price": "400",
+      "price": "400 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Peach.webp": {
       "name": "Peach",
-      "price": "400",
+      "price": "400 €",
       "size": "60 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Pink into the sky.webp": {
       "name": "Pink into the sky",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/pink sakura.webp": {
       "name": "Pink sakura",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/PIVOINES of ile de france.webp": {
       "name": "Pivoines",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Purple japanese water lilies.webp": {
       "name": "Purple Japanese water lily",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Sakura blowing in the blue skies of Tokyo.webp": {
       "name": "Sakura flowers",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/SAKURA GLORY.webp": {
       "name": "sakura glory",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Savoie flowers.webp": {
       "name": "Savoie mountain flowers",
-      "price": "200",
+      "price": "200 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Sunflowers of Tuscany.webp": {
       "name": "Sunflowers from Tuscany",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/The Blue Vase.webp": {
       "name": "The Blue Vase",
-      "price": "500",
+      "price": "500 €",
       "size": "60 x 50",
       "priority": true,
       "status": "FOR SALE"
     },
     "flowers/The pink vase.webp": {
       "name": "The Pink Vase",
-      "price": "500",
+      "price": "500 €",
       "size": "60 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/The spring forest in velizy.webp": {
       "name": "Spring V.",
-      "price": "550",
+      "price": "550 €",
       "size": "60 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "flowers/yellow.webp": {
       "name": "Yellow",
-      "price": "550",
+      "price": "550 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/autumn in japan.webp": {
       "name": "Autumn in Japan",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Autumn in Velizy, France.webp": {
       "name": "Autumn in Velizy",
-      "price": "550",
+      "price": "550 €",
       "size": "60 x 50",
       "priority": true,
       "status": "FOR SALE"
     },
     "landscapes/Flowing river in India.webp": {
       "name": "River flowing in India",
-      "price": "550",
+      "price": "550 €",
       "size": "70 x50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Hills in the Lebanon.webp": {
       "name": "Hills in Lebanon",
-      "price": "450",
+      "price": "450 €",
       "size": "60 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Indian river.webp": {
       "name": "Indian River",
-      "price": "550",
+      "price": "550 €",
       "size": "70 x 50",
       "priority": true,
       "status": "FOR SALE"
     },
     "landscapes/Ischia, Italy.webp": {
       "name": "Ischia",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Japan gate.webp": {
       "name": "Japan gate",
-      "price": "300",
+      "price": "300 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Japan view of pink sky.webp": {
       "name": "Japan view of pink",
-      "price": "300",
+      "price": "300 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Kinkakuji, Kyoto, Japan.webp": {
       "name": "Kinkakuji",
-      "price": "300",
+      "price": "300 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Lake Annecy, France.webp": {
       "name": "Lake Annecy",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Lake in Kansai, Japan.webp": {
       "name": "Lake in Kansai, Japan",
-      "price": "500",
+      "price": "500 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Landscape in Lebanon.webp": {
       "name": "Landscape in Lebanon",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
       "priority": true,
       "status": "FOR SALE"
     },
     "landscapes/Le sud ouest, France.webp": {
       "name": "The south west of France",
-      "price": "200",
+      "price": "200 €",
       "size": "30 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Lebanese Hills.webp": {
       "name": "Lebanese hills",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Normandy, France.webp": {
       "name": "Normandy",
-      "price": "300",
+      "price": "300 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Osaka Jo, Osaka, Japan.webp": {
       "name": "Osaka Jo",
-      "price": "400",
+      "price": "400 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Positano, Italy.webp": {
       "name": "Positano",
-      "price": "150",
+      "price": "150 €",
       "size": "40 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Sakura in Kyoto, Japan.webp": {
       "name": "Sakura in Kyoto",
-      "price": "300",
+      "price": "300 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Sakura view, Kansai, Japan.webp": {
       "name": "Sakura view",
-      "price": "300",
+      "price": "300 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Shibuya view, Tokyo, Japan.webp": {
       "name": "Shibuya view, Tokyo",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Solitude.webp": {
       "name": "Solitude",
-      "price": "400",
+      "price": "400 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Spring in the forest of Velizy, France.webp": {
       "name": "Spring in Velizy, France",
-      "price": "500",
+      "price": "500 €",
       "size": "60 x 60",
       "priority": true,
       "status": "FOR SALE"
     },
     "landscapes/Sunset in Japan.webp": {
       "name": "Sunset in Japan",
-      "price": "300",
+      "price": "300 €",
       "size": "40 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Sunset in Okinawa, Japan.webp": {
       "name": "Sunset",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Sunset.webp": {
       "name": "Sunset",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Tempest in the Maldives.webp": {
       "name": "Tempest in the Maldives",
-      "price": "400",
+      "price": "400 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/The African Tree.webp": {
       "name": "The African tree",
-      "price": "300",
+      "price": "300 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/The Blue Pot.webp": {
       "name": "The blue pot",
-      "price": "300",
+      "price": "300 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/The Bluebell girl.webp": {
       "name": "The bluebell girl, London",
-      "price": "450",
+      "price": "450 €",
       "size": "60 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/The Emperors Gardens, Kyoto, Japan.webp": {
       "name": "Kyoto Emperors garden,",
-      "price": "450",
+      "price": "450 €",
       "size": "60 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/The gondola, Venezia.webp": {
       "name": "The Gondola, Venezia",
-      "price": "550",
+      "price": "550 €",
       "size": "70 x 50",
       "priority": true,
       "status": "FOR SALE"
     },
     "landscapes/The lonely tree.webp": {
       "name": "The lonely tree",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 30",
       "priority": false,
       "status": "FOR SALE"
@@ -750,210 +750,210 @@
     },
     "landscapes/The River.webp": {
       "name": "The River",
-      "price": "550",
+      "price": "550 €",
       "size": "70 x 50",
       "priority": true,
       "status": "FOR SALE"
     },
     "landscapes/The Secret Passage.webp": {
       "name": "The Secret",
-      "price": "250",
+      "price": "250 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/The tree of life.webp": {
       "name": "The tree of life",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Tokyo sky view.webp": {
       "name": "Tokyo sky view",
-      "price": "350",
+      "price": "350 €",
       "size": "40 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Tokyoview from Shibuja.webp": {
       "name": "Tokyo view from Shinjuku",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Venezia.webp": {
       "name": "Venezia",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/View of Venice.webp": {
       "name": "View of Venice",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/View on an Indian river.webp": {
       "name": "View on India",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Waterfall in Japan.webp": {
       "name": "Waterfall in Japan",
-      "price": "300",
+      "price": "300 €",
       "size": "40 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Where Sakura trees meet Tuscany.webp": {
       "name": "Where Sakura meets Tuscany",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Autumn gardens in Kyoto.webp": {
       "name": "Autumn garden",
-      "price": "250",
+      "price": "250 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Autumn in Japan.webp": {
       "name": "Autumn in Japan",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Blue.webp": {
       "name": "Blue",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Gion, Kyoto, Japan(1).webp": {
       "name": "Gion",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Gion, Kyoto, Japan.webp": {
       "name": "Gion",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Hut in hills in Japan.webp": {
       "name": "Hut in the hills",
-      "price": "250",
+      "price": "250 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/japanese countryside.webp": {
       "name": "Japanese countryside",
-      "price": "250",
+      "price": "250 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Kinkakuji, Kyoto, Japan.webp": {
       "name": "Kinkakuji",
-      "price": "300",
+      "price": "300 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Morocco.webp": {
       "name": "Morocco",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Mountains in Japan.webp": {
       "name": "Mountains in Japan",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Pink and Grey.webp": {
       "name": "Pink and grey",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Pivoines, France.webp": {
       "name": "Pivoines from France",
-      "price": "250",
+      "price": "250 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Purple sky.webp": {
       "name": "Purple sky",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Sakura 2.webp": {
       "name": "Sakura",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Sakura flower.webp": {
       "name": "Sakura",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Sakura.webp": {
       "name": "Sakura",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Sea in Japan.webp": {
       "name": "sea in Japan",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Small shrine in Japan.webp": {
       "name": "Small shrine in Japan",
-      "price": "300",
+      "price": "300 €",
       "size": "26 x 32",
       "priority": true,
       "status": "FOR SALE"
     },
     "watercolours/Temple in India.webp": {
       "name": "Temple in India",
-      "price": "150",
+      "price": "150 €",
       "size": "27 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Temple in Kyoto, Japan.webp": {
       "name": "Temple in Kyoto",
-      "price": "150",
+      "price": "150 €",
       "size": "28 x 32",
       "priority": false,
       "status": "FOR SALE"
@@ -967,21 +967,21 @@
     },
     "watercolours/The small pink rose.webp": {
       "name": "Small Rose",
-      "price": "150",
+      "price": "150 €",
       "size": "29 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/Tree in Kyoto, Japan.webp": {
       "name": "Tree in Kyoto",
-      "price": "150",
+      "price": "150 €",
       "size": "30 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
     "watercolours/View over Gion, Kyoto, Japan.webp": {
       "name": "Gion",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"

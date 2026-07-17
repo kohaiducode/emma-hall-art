@@ -70,13 +70,26 @@ def format_price(p):
     if not p:
         return "Price on demand"
     p_str = str(p).strip()
+    if p_str.lower() == 'x' or p_str.lower() == 'price on demand':
+        return p_str
+    
+    # Normalize float string if it has .0
+    if re.match(r'^\d+\.0+$', p_str):
+        p_str = p_str.split('.')[0]
+        
     # Replace case-insensitive ' E' or 'E' at the end of the string with ' €'
     # E.g. '450 E' -> '450 €', '450E' -> '450 €', 'around 250 E' -> 'around 250 €'
-    formatted = re.sub(r'(?<=\d)\s*[eE]$|\b[eE]$', ' €', p_str)
+    p_str = re.sub(r'(?<=\d)\s*[eE]$|\b[eE]$', ' €', p_str)
+    
+    # If the price is purely numeric (like '300'), append ' €'
+    if re.match(r'^\d+$', p_str):
+        p_str = p_str + ' €'
+        
     # Clean up multiple spaces
-    formatted = re.sub(r'\s+', ' ', formatted).strip()
+    formatted = re.sub(r'\s+', ' ', p_str).strip()
+    
     # Normalize price on demand phrasing
-    if formatted.lower() == 'price on demand' or formatted.lower() == 'price on demand €':
+    if formatted.lower() in ('price on demand', 'price on demand €'):
         return "Price on demand"
     return formatted
 
