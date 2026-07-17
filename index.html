@@ -378,6 +378,29 @@
       display: block;
     }
 
+    .bio-extra-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .bio-extra-img-container {
+      background: var(--paper);
+      border: 2px solid var(--frame);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
+      width: 100%;
+    }
+    .bio-extra-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* CONTACT SECTION LAYOUT */
     .contact-grid {
       display: grid;
@@ -848,6 +871,15 @@
         max-width: 400px;
         margin: 0 auto;
       }
+      .bio-extra-images {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 32px;
+      }
+      .bio-extra-img-container {
+        max-width: 500px;
+        margin: 0 auto;
+      }
 
       .contact-grid {
         grid-template-columns: 1fr;
@@ -1045,6 +1077,19 @@
           </div>
           <div class="bio-img-container">
             <img class="bio-img" src="assets/profile/ems.jpg" alt="Emma Hall" />
+          </div>
+        </div>
+        
+        <!-- Additional Bio Media Images -->
+        <div class="bio-extra-images">
+          <div class="bio-extra-img-container">
+            <img class="bio-extra-img" src="assets/profile/1.webp" alt="Emma Hall Article / Painting" loading="lazy" />
+          </div>
+          <div class="bio-extra-img-container">
+            <img class="bio-extra-img" src="assets/profile/2.webp" alt="Emma Hall Portrait" loading="lazy" />
+          </div>
+          <div class="bio-extra-img-container">
+            <img class="bio-extra-img" src="assets/profile/3.webp" alt="Emma Hall Work / Studio" loading="lazy" />
           </div>
         </div>
       </section>
