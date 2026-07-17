@@ -35,6 +35,7 @@
     "The River.webp",
     "autumn in japan.webp",
     "Hills in the Lebanon.webp",
+    "IMG20240331164357.webp",
     "Ischia, Italy.webp",
     "Japan gate.webp",
     "Japan view of pink sky.webp",
@@ -76,9 +77,9 @@
     "Autumn gardens in Kyoto.webp",
     "Autumn in Japan.webp",
     "Blue.webp",
-    "Gion, Kyoto, Japan(1).webp",
-    "Gion, Kyoto, Japan.webp",
     "View over Gion, Kyoto, Japan.webp",
+    "Gion, Kyoto, Japan.webp",
+    "Gion, Kyoto, Japan(1).webp",
     "Hut in hills in Japan.webp",
     "japanese countryside.webp",
     "Kinkakuji, Kyoto, Japan.webp",
@@ -87,8 +88,8 @@
     "Pink and Grey.webp",
     "Pivoines, France.webp",
     "Purple sky.webp",
-    "Sakura 2.webp",
     "Sakura flower.webp",
+    "Sakura 2.webp",
     "Sakura.webp",
     "Sea in Japan.webp",
     "The small pink rose.webp",
@@ -124,6 +125,7 @@
     "Mona Lisa.webp",
     "Moroccan man.webp",
     "Morricone.webp",
+    "nbvcfghjio.jpg.webp",
     "Nicola Artico.webp",
     "Nurse during covid.webp",
     "old man.webp",
@@ -133,7 +135,6 @@
     "Philippe Beylier.webp",
     "Puccini.webp",
     "Saori.webp",
-    "ToDef.webp",
     "Seth.webp",
     "Sissy.webp",
     "Sorolla.webp",
@@ -141,7 +142,7 @@
     "The Eye.webp",
     "The world during covid.webp",
     "The young Alexander.webp",
-    "nbvcfghjio.jpg.webp",
+    "ToDef.webp",
     "Valse.webp",
     "Woman copyfrom Sargeant.webp",
     "Woman with tights.webp",
@@ -169,8 +170,8 @@
     "The Horse.webp",
     "The Wolf.webp",
     "Tigger, Velizy.webp",
-    "Vegas, France(1).webp",
     "Vegas, France.webp",
+    "Vegas, France(1).webp",
     "Venezia, Velizy.webp",
     "Yuki, the King Charles Spaniel, Velizy, France.webp"
   ],
@@ -192,67 +193,68 @@
     "landscapes/Hills in the Lebanon.webp",
     "watercolours/Autumn in Japan.webp",
     "flowers/Free spring bouquet.webp",
-    "landscapes/Ischia, Italy.webp",
+    "landscapes/IMG20240331164357.webp",
     "watercolours/Blue.webp",
     "flowers/Into the blue.webp",
-    "landscapes/Japan gate.webp",
-    "watercolours/Gion, Kyoto, Japan(1).webp",
+    "landscapes/Ischia, Italy.webp",
+    "watercolours/View over Gion, Kyoto, Japan.webp",
     "flowers/into the green.webp",
-    "landscapes/Japan view of pink sky.webp",
+    "landscapes/Japan gate.webp",
     "watercolours/Gion, Kyoto, Japan.webp",
     "flowers/into the light.webp",
-    "landscapes/Kinkakuji, Kyoto, Japan.webp",
-    "watercolours/View over Gion, Kyoto, Japan.webp",
+    "landscapes/Japan view of pink sky.webp",
+    "watercolours/Gion, Kyoto, Japan(1).webp",
     "flowers/Japanese sand flowers.webp",
-    "landscapes/The Emperors Gardens, Kyoto, Japan.webp",
+    "landscapes/Kinkakuji, Kyoto, Japan.webp",
     "watercolours/Hut in hills in Japan.webp",
     "flowers/Japanese water lilies.webp",
-    "landscapes/Lake Annecy, France.webp",
+    "landscapes/The Emperors Gardens, Kyoto, Japan.webp",
     "watercolours/japanese countryside.webp",
     "flowers/Light sakura.webp",
-    "landscapes/Lake in Kansai, Japan.webp",
+    "landscapes/Lake Annecy, France.webp",
     "watercolours/Kinkakuji, Kyoto, Japan.webp",
     "flowers/Lilac.webp",
-    "landscapes/Lebanese Hills.webp",
+    "landscapes/Lake in Kansai, Japan.webp",
     "watercolours/Morocco.webp",
     "flowers/Peach.webp",
-    "landscapes/Normandy, France.webp",
+    "landscapes/Lebanese Hills.webp",
     "watercolours/Mountains in Japan.webp",
     "flowers/Pink into the sky.webp",
-    "landscapes/Osaka Jo, Osaka, Japan.webp",
+    "landscapes/Normandy, France.webp",
     "watercolours/Pink and Grey.webp",
     "flowers/pink sakura.webp",
-    "landscapes/Positano, Italy.webp",
+    "landscapes/Osaka Jo, Osaka, Japan.webp",
     "watercolours/Pivoines, France.webp",
     "flowers/PIVOINES of ile de france.webp",
-    "landscapes/Flowing river in India.webp",
+    "landscapes/Positano, Italy.webp",
     "watercolours/Purple sky.webp",
     "flowers/Purple japanese water lilies.webp",
+    "landscapes/Flowing river in India.webp",
+    "watercolours/Sakura flower.webp",
+    "flowers/Sakura blowing in the blue skies of Tokyo.webp",
     "landscapes/Sakura in Kyoto, Japan.webp",
     "watercolours/Sakura 2.webp",
-    "flowers/Sakura blowing in the blue skies of Tokyo.webp",
-    "landscapes/Sakura view, Kansai, Japan.webp",
-    "watercolours/Sakura flower.webp",
     "flowers/SAKURA GLORY.webp",
-    "landscapes/Shibuya view, Tokyo, Japan.webp",
+    "landscapes/Sakura view, Kansai, Japan.webp",
     "watercolours/Sakura.webp",
     "flowers/Savoie flowers.webp",
-    "landscapes/Solitude.webp",
+    "landscapes/Shibuya view, Tokyo, Japan.webp",
     "watercolours/Sea in Japan.webp",
     "flowers/The spring forest in velizy.webp",
-    "landscapes/Sunset in Okinawa, Japan.webp",
+    "landscapes/Solitude.webp",
     "watercolours/The small pink rose.webp",
     "flowers/Sunflowers of Tuscany.webp",
-    "landscapes/Sunset.webp",
+    "landscapes/Sunset in Okinawa, Japan.webp",
     "watercolours/Temple in India.webp",
     "flowers/The pink vase.webp",
-    "landscapes/Sunset in Japan.webp",
+    "landscapes/Sunset.webp",
     "watercolours/Temple in Kyoto, Japan.webp",
     "flowers/yellow.webp",
-    "landscapes/Tempest in the Maldives.webp",
+    "landscapes/Sunset in Japan.webp",
     "watercolours/The discarded warehouse.webp",
-    "landscapes/The African Tree.webp",
+    "landscapes/Tempest in the Maldives.webp",
     "watercolours/Tree in Kyoto, Japan.webp",
+    "landscapes/The African Tree.webp",
     "landscapes/The Blue Pot.webp",
     "landscapes/The Bluebell girl.webp",
     "landscapes/The lonely tree.webp",
@@ -304,9 +306,9 @@
     "portraits/Guitarist.webp",
     "pets/Tigger, Velizy.webp",
     "portraits/Guy Bedos.webp",
-    "pets/Vegas, France(1).webp",
-    "portraits/Juliet Binoche.webp",
     "pets/Vegas, France.webp",
+    "portraits/Juliet Binoche.webp",
+    "pets/Vegas, France(1).webp",
     "portraits/Kristin Scott Thomas.webp",
     "pets/Venezia, Velizy.webp",
     "portraits/La Madonna.webp",
@@ -315,6 +317,7 @@
     "portraits/Mona Lisa.webp",
     "portraits/Moroccan man.webp",
     "portraits/Morricone.webp",
+    "portraits/nbvcfghjio.jpg.webp",
     "portraits/Nicola Artico.webp",
     "portraits/Nurse during covid.webp",
     "portraits/old man.webp",
@@ -324,7 +327,6 @@
     "portraits/Philippe Beylier.webp",
     "portraits/Puccini.webp",
     "portraits/Saori.webp",
-    "portraits/ToDef.webp",
     "portraits/Seth.webp",
     "portraits/Sissy.webp",
     "portraits/Sorolla.webp",
@@ -332,7 +334,7 @@
     "portraits/The Eye.webp",
     "portraits/The world during covid.webp",
     "portraits/The young Alexander.webp",
-    "portraits/nbvcfghjio.jpg.webp",
+    "portraits/ToDef.webp",
     "portraits/Valse.webp",
     "portraits/Woman copyfrom Sargeant.webp",
     "portraits/Woman with tights.webp",
@@ -342,1160 +344,1001 @@
     "portraits/young boy 2.webp"
   ],
   "_metadata": {
-    "flowers/Costa Rican flowers.webp": {
-      "name": "Costa Rican flowers",
-      "price": "350 €",
-      "size": "59 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/English roses.webp": {
-      "name": "English Roses",
-      "price": "500",
-      "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Free spring bouquet.webp": {
-      "name": "Free Spring",
-      "price": "400",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Hanging Costa Rica flowers.webp": {
-      "name": "Hanging costa rica flowers",
-      "price": "350",
-      "size": "50 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "flowers/Into the blue.webp": {
-      "name": "Into the blue",
-      "price": "450",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/into the green.webp": {
-      "name": "Into the green",
-      "price": "400",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+    "flowers/Japanese sand flowers.webp": {
+      "name": "Japanese sand flowers",
+      "price": "200 €",
+      "size": "40 x 30",
+      "priority": false
     },
     "flowers/into the light.webp": {
       "name": "Into the light",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "flowers/Japanese sand flowers.webp": {
-      "name": "Japanese sand flowers",
-      "price": "200",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Japanese water lilies.webp": {
-      "name": "Japanese water lilies",
-      "price": "400",
+    "flowers/Hanging Costa Rica flowers.webp": {
+      "name": "Hanging costa rica flowers",
+      "price": "350 €",
       "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Leaves in the waters of Lake Annecy.webp": {
-      "name": "Leaves in Lake Annecy",
-      "price": "400",
-      "size": "50 x 40",
-      "priority": true,
-      "status": "FOR SALE"
+      "priority": true
     },
     "flowers/Light sakura.webp": {
       "name": "Light sakura",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Lilac.webp": {
-      "name": "Lilac",
-      "price": "400",
-      "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Peach.webp": {
-      "name": "Peach",
-      "price": "400",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
     "flowers/Pink into the sky.webp": {
       "name": "Pink into the sky",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
     "flowers/pink sakura.webp": {
       "name": "Pink sakura",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/PIVOINES of ile de france.webp": {
-      "name": "Pivoines",
-      "price": "200",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Purple japanese water lilies.webp": {
-      "name": "Purple Japanese water lily",
-      "price": "350",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Sakura blowing in the blue skies of Tokyo.webp": {
-      "name": "Sakura flowers",
-      "price": "200",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
     "flowers/SAKURA GLORY.webp": {
       "name": "sakura glory",
-      "price": "200",
+      "price": "200 €",
       "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
+    },
+    "flowers/Sakura blowing in the blue skies of Tokyo.webp": {
+      "name": "Sakura flowers",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false
+    },
+    "flowers/PIVOINES of ile de france.webp": {
+      "name": "Pivoines",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false
+    },
+    "flowers/into the green.webp": {
+      "name": "Into the green",
+      "price": "400 €",
+      "size": "50 x 40",
+      "priority": false
+    },
+    "flowers/English roses.webp": {
+      "name": "English Roses",
+      "price": "500 €",
+      "size": "70 x 50",
+      "priority": false
     },
     "flowers/Savoie flowers.webp": {
       "name": "Savoie mountain flowers",
-      "price": "200",
+      "price": "200 €",
       "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Sunflowers of Tuscany.webp": {
-      "name": "Sunflowers from Tuscany",
-      "price": "200",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/The Blue Vase.webp": {
-      "name": "The Blue Vase",
-      "price": "500",
-      "size": "60 x 50",
-      "priority": true,
-      "status": "FOR SALE"
+      "priority": false
     },
     "flowers/The pink vase.webp": {
       "name": "The Pink Vase",
-      "price": "500",
+      "price": "500 €",
       "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
+    },
+    "flowers/Sunflowers of Tuscany.webp": {
+      "name": "Sunflowers from Tuscany",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false
+    },
+    "flowers/Purple japanese water lilies.webp": {
+      "name": "Purple Japanese water lily",
+      "price": "350 €",
+      "size": "50 x 50",
+      "priority": false
+    },
+    "flowers/Free spring bouquet.webp": {
+      "name": "Free Spring",
+      "price": "400 €",
+      "size": "50 x 50",
+      "priority": false
+    },
+    "flowers/Peach.webp": {
+      "name": "Peach",
+      "price": "400 €",
+      "size": "60 x 50",
+      "priority": false
+    },
+    "flowers/Into the blue.webp": {
+      "name": "Into the blue",
+      "price": "450 €",
+      "size": "60 x 50",
+      "priority": false
+    },
+    "flowers/Costa Rican flowers.webp": {
+      "name": "Costa Rican flowers",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "flowers/Leaves in the waters of Lake Annecy.webp": {
+      "name": "Leaves in Lake Annecy",
+      "price": "400 €",
+      "size": "50 x 40",
+      "priority": true
     },
     "flowers/The spring forest in velizy.webp": {
       "name": "Spring V.",
-      "price": "550",
+      "price": "550 €",
       "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
+    },
+    "flowers/The Blue Vase.webp": {
+      "name": "The Blue Vase",
+      "price": "500 €",
+      "size": "60 x 50",
+      "priority": true
     },
     "flowers/yellow.webp": {
       "name": "Yellow",
-      "price": "550",
+      "price": "550 €",
       "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "landscapes/autumn in japan.webp": {
-      "name": "Autumn in Japan",
-      "price": "200",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Autumn in Velizy, France.webp": {
-      "name": "Autumn in Velizy",
-      "price": "550",
-      "size": "60 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/Flowing river in India.webp": {
-      "name": "River flowing in India",
-      "price": "550",
-      "size": "70 x50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Hills in the Lebanon.webp": {
-      "name": "Hills in Lebanon",
-      "price": "450",
-      "size": "60 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Indian river.webp": {
-      "name": "Indian River",
-      "price": "550",
-      "size": "70 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/Ischia, Italy.webp": {
-      "name": "Ischia",
-      "price": "350",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Japan gate.webp": {
-      "name": "Japan gate",
-      "price": "300",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Japan view of pink sky.webp": {
-      "name": "Japan view of pink",
-      "price": "300",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Kinkakuji, Kyoto, Japan.webp": {
-      "name": "Kinkakuji",
-      "price": "300",
+    "flowers/Japanese water lilies.webp": {
+      "name": "Japanese water lilies",
+      "price": "400 €",
       "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "landscapes/Lake Annecy, France.webp": {
-      "name": "Lake Annecy",
-      "price": "350",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Lake in Kansai, Japan.webp": {
-      "name": "Lake in Kansai, Japan",
-      "price": "500",
+    "flowers/Lilac.webp": {
+      "name": "Lilac",
+      "price": "400 €",
       "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Landscape in Lebanon.webp": {
-      "name": "Landscape in Lebanon",
-      "price": "450",
-      "size": "70 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/Le sud ouest, France.webp": {
-      "name": "The south west of France",
-      "price": "200",
-      "size": "30 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Lebanese Hills.webp": {
-      "name": "Lebanese hills",
-      "price": "450",
-      "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Normandy, France.webp": {
-      "name": "Normandy",
-      "price": "300",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Osaka Jo, Osaka, Japan.webp": {
-      "name": "Osaka Jo",
-      "price": "400",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Positano, Italy.webp": {
-      "name": "Positano",
-      "price": "150",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Sakura in Kyoto, Japan.webp": {
-      "name": "Sakura in Kyoto",
-      "price": "300",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
     "landscapes/Sakura view, Kansai, Japan.webp": {
       "name": "Sakura view",
-      "price": "300",
+      "price": "300 €",
       "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "landscapes/Shibuya view, Tokyo, Japan.webp": {
-      "name": "Shibuya view, Tokyo",
-      "price": "350",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Solitude.webp": {
-      "name": "Solitude",
-      "price": "400",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Spring in the forest of Velizy, France.webp": {
-      "name": "Spring in Velizy, France",
-      "price": "500",
-      "size": "60 x 60",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/Sunset in Japan.webp": {
-      "name": "Sunset in Japan",
-      "price": "300",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Sunset in Okinawa, Japan.webp": {
-      "name": "Sunset",
-      "price": "200",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Sunset.webp": {
-      "name": "Sunset",
-      "price": "200",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Tempest in the Maldives.webp": {
-      "name": "Tempest in the Maldives",
-      "price": "400",
+    "landscapes/Indian river.webp": {
+      "name": "Indian River",
+      "price": "550 €",
       "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": true
+    },
+    "landscapes/Positano, Italy.webp": {
+      "name": "Positano",
+      "price": "150 €",
+      "size": "40 x 30",
+      "priority": false
     },
     "landscapes/The African Tree.webp": {
       "name": "The African tree",
-      "price": "300",
+      "price": "300 €",
       "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Blue Pot.webp": {
-      "name": "The blue pot",
-      "price": "300",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Bluebell girl.webp": {
-      "name": "The bluebell girl, London",
-      "price": "450",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Emperors Gardens, Kyoto, Japan.webp": {
-      "name": "Kyoto Emperors garden,",
-      "price": "450",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The gondola, Venezia.webp": {
-      "name": "The Gondola, Venezia",
-      "price": "550",
-      "size": "70 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/The lonely tree.webp": {
-      "name": "The lonely tree",
-      "price": "200",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Mill House, Suffolk, England.webp": {
-      "name": "The Mill House, Suffolk, England",
-      "price": "350 €",
-      "size": "50 x 60",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The River.webp": {
-      "name": "The River",
-      "price": "550",
-      "size": "70 x 50",
-      "priority": true,
-      "status": "FOR SALE"
+      "priority": false
     },
     "landscapes/The Secret Passage.webp": {
       "name": "The Secret",
-      "price": "250",
+      "price": "250 €",
       "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "landscapes/The tree of life.webp": {
-      "name": "The tree of life",
-      "price": "350",
+    "landscapes/The Emperors Gardens, Kyoto, Japan.webp": {
+      "name": "Kyoto Emperors garden,",
+      "price": "450 €",
+      "size": "60 x 50",
+      "priority": false
+    },
+    "landscapes/Lake Annecy, France.webp": {
+      "name": "Lake Annecy",
+      "price": "350 €",
       "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "landscapes/Tokyo sky view.webp": {
-      "name": "Tokyo sky view",
-      "price": "350",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Lebanese Hills.webp": {
+      "name": "Lebanese hills",
+      "price": "450 €",
+      "size": "70 x 50",
+      "priority": false
+    },
+    "landscapes/The Mill House, Suffolk, England.webp": {
+      "name": "The Mill House, Suffolk, England",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "landscapes/Le sud ouest, France.webp": {
+      "name": "The south west of France",
+      "price": "200 €",
+      "size": "30 x 40",
+      "priority": false
+    },
+    "landscapes/Sunset in Okinawa, Japan.webp": {
+      "name": "Sunset",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false
+    },
+    "landscapes/Spring in the forest of Velizy, France.webp": {
+      "name": "Spring in Velizy, France",
+      "price": "500 €",
+      "size": "60 x 60",
+      "priority": true
     },
     "landscapes/Tokyoview from Shibuja.webp": {
       "name": "Tokyo view from Shinjuku",
-      "price": "350",
+      "price": "350 €",
       "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "landscapes/Venezia.webp": {
-      "name": "Venezia",
-      "price": "450",
+    "landscapes/Lake in Kansai, Japan.webp": {
+      "name": "Lake in Kansai, Japan",
+      "price": "500 €",
       "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "landscapes/View of Venice.webp": {
-      "name": "View of Venice",
-      "price": "450",
-      "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/View on an Indian river.webp": {
-      "name": "View on India",
-      "price": "350",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Waterfall in Japan.webp": {
-      "name": "Waterfall in Japan",
-      "price": "300",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Japan view of pink sky.webp": {
+      "name": "Japan view of pink",
+      "price": "300 €",
+      "size": "50 x 40",
+      "priority": false
     },
     "landscapes/Where Sakura trees meet Tuscany.webp": {
       "name": "Where Sakura meets Tuscany",
-      "price": "450",
+      "price": "450 €",
       "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "watercolours/Autumn gardens in Kyoto.webp": {
-      "name": "Autumn garden",
-      "price": "250",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/The gondola, Venezia.webp": {
+      "name": "The Gondola, Venezia",
+      "price": "550 €",
+      "size": "70 x 50",
+      "priority": true
     },
-    "watercolours/Autumn in Japan.webp": {
+    "landscapes/Landscape in Lebanon.webp": {
+      "name": "Landscape in Lebanon",
+      "price": "450 €",
+      "size": "70 x 50",
+      "priority": true
+    },
+    "landscapes/Sakura in Kyoto, Japan.webp": {
+      "name": "Sakura in Kyoto",
+      "price": "300 €",
+      "size": "40 x 40",
+      "priority": false
+    },
+    "landscapes/The tree of life.webp": {
+      "name": "The tree of life",
+      "price": "350 €",
+      "size": "50 x 40",
+      "priority": false
+    },
+    "landscapes/Tokyo sky view.webp": {
+      "name": "Tokyo sky view",
+      "price": "350 €",
+      "size": "40 x 30",
+      "priority": false
+    },
+    "landscapes/Flowing river in India.webp": {
+      "name": "River flowing in India",
+      "price": "550 €",
+      "size": "70 x50",
+      "priority": false
+    },
+    "landscapes/Sunset.webp": {
+      "name": "Sunset",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false
+    },
+    "landscapes/The Blue Pot.webp": {
+      "name": "The blue pot",
+      "price": "300 €",
+      "size": "50 x 40",
+      "priority": false
+    },
+    "landscapes/The River.webp": {
+      "name": "The River",
+      "price": "550 €",
+      "size": "70 x 50",
+      "priority": true
+    },
+    "landscapes/The Bluebell girl.webp": {
+      "name": "The bluebell girl, London",
+      "price": "450 €",
+      "size": "60 x 50",
+      "priority": false
+    },
+    "landscapes/autumn in japan.webp": {
       "name": "Autumn in Japan",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false
     },
-    "watercolours/Blue.webp": {
-      "name": "Blue",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Sunset in Japan.webp": {
+      "name": "Sunset in Japan",
+      "price": "300 €",
+      "size": "40 x 30",
+      "priority": false
     },
-    "watercolours/Gion, Kyoto, Japan(1).webp": {
-      "name": "Gion",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/View of Venice.webp": {
+      "name": "View of Venice",
+      "price": "450 €",
+      "size": "70 x 50",
+      "priority": false
     },
-    "watercolours/Gion, Kyoto, Japan.webp": {
-      "name": "Gion",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Ischia, Italy.webp": {
+      "name": "Ischia",
+      "price": "350 €",
+      "size": "50 x 40",
+      "priority": false
     },
-    "watercolours/Hut in hills in Japan.webp": {
-      "name": "Hut in the hills",
-      "price": "250",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/IMG20240331164357.webp": {
+      "name": "IMG20240331164357",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
     },
-    "watercolours/japanese countryside.webp": {
-      "name": "Japanese countryside",
-      "price": "250",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Shibuya view, Tokyo, Japan.webp": {
+      "name": "Shibuya view, Tokyo",
+      "price": "350 €",
+      "size": "50 x 50",
+      "priority": false
     },
-    "watercolours/Kinkakuji, Kyoto, Japan.webp": {
+    "landscapes/Venezia.webp": {
+      "name": "Venezia",
+      "price": "450 €",
+      "size": "70 x 50",
+      "priority": false
+    },
+    "landscapes/The lonely tree.webp": {
+      "name": "The lonely tree",
+      "price": "200 €",
+      "size": "40 x 30",
+      "priority": false
+    },
+    "landscapes/Hills in the Lebanon.webp": {
+      "name": "Hills in Lebanon",
+      "price": "450 €",
+      "size": "60 x 40",
+      "priority": false
+    },
+    "landscapes/Autumn in Velizy, France.webp": {
+      "name": "Autumn in Velizy",
+      "price": "550 €",
+      "size": "60 x 50",
+      "priority": true
+    },
+    "landscapes/Osaka Jo, Osaka, Japan.webp": {
+      "name": "Osaka Jo",
+      "price": "400 €",
+      "size": "50 x 50",
+      "priority": false
+    },
+    "landscapes/Solitude.webp": {
+      "name": "Solitude",
+      "price": "400 €",
+      "size": "50 x 50",
+      "priority": false
+    },
+    "landscapes/Kinkakuji, Kyoto, Japan.webp": {
       "name": "Kinkakuji",
-      "price": "300",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+      "price": "300 €",
+      "size": "50 x 50",
+      "priority": false
     },
-    "watercolours/Morocco.webp": {
-      "name": "Morocco",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/View on an Indian river.webp": {
+      "name": "View on India",
+      "price": "350 €",
+      "size": "50 x 50",
+      "priority": false
     },
-    "watercolours/Mountains in Japan.webp": {
-      "name": "Mountains in Japan",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Normandy, France.webp": {
+      "name": "Normandy",
+      "price": "300 €",
+      "size": "50 x 40",
+      "priority": false
     },
-    "watercolours/Pink and Grey.webp": {
-      "name": "Pink and grey",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Japan gate.webp": {
+      "name": "Japan gate",
+      "price": "300 €",
+      "size": "50 x 40",
+      "priority": false
     },
-    "watercolours/Pivoines, France.webp": {
-      "name": "Pivoines from France",
-      "price": "250",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Tempest in the Maldives.webp": {
+      "name": "Tempest in the Maldives",
+      "price": "400 €",
+      "size": "70 x 50",
+      "priority": false
     },
-    "watercolours/Purple sky.webp": {
-      "name": "Purple sky",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Sakura 2.webp": {
-      "name": "Sakura",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Sakura flower.webp": {
-      "name": "Sakura",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Sakura.webp": {
-      "name": "Sakura",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Sea in Japan.webp": {
-      "name": "sea in Japan",
-      "price": "150",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Small shrine in Japan.webp": {
-      "name": "Small shrine in Japan",
-      "price": "300",
-      "size": "26 x 32",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "watercolours/Temple in India.webp": {
-      "name": "Temple in India",
-      "price": "150",
-      "size": "27 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Temple in Kyoto, Japan.webp": {
-      "name": "Temple in Kyoto",
-      "price": "150",
-      "size": "28 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/The discarded warehouse.webp": {
-      "name": "The discarded warehouse",
-      "price": "150 €",
-      "size": "24 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/The small pink rose.webp": {
-      "name": "Small Rose",
-      "price": "150",
-      "size": "29 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Tree in Kyoto, Japan.webp": {
-      "name": "Tree in Kyoto",
-      "price": "150",
-      "size": "30 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+    "landscapes/Waterfall in Japan.webp": {
+      "name": "Waterfall in Japan",
+      "price": "300 €",
+      "size": "40 x 30",
+      "priority": false
     },
     "watercolours/View over Gion, Kyoto, Japan.webp": {
       "name": "Gion",
-      "price": "150",
+      "price": "150 €",
       "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
+      "priority": false
     },
-    "portraits/Aiko 2.webp": {
-      "name": "Aiko 2",
-      "price": "Price on demand",
-      "size": "26 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Gion, Kyoto, Japan.webp": {
+      "name": "Gion",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Aiko.webp": {
-      "name": "Aiko",
-      "price": "Price on demand",
-      "size": "25 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Sakura flower.webp": {
+      "name": "Sakura",
+      "price": "150 all sakura ones",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Alex baby.webp": {
-      "name": "Alex baby",
-      "price": "Price on demand",
-      "size": "27 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Blue.webp": {
+      "name": "Blue",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Austrian boy.webp": {
-      "name": "Austrian boy",
-      "price": "Price on demand",
-      "size": "28 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Hut in hills in Japan.webp": {
+      "name": "Hut in the hills",
+      "price": "250 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Candice.webp": {
-      "name": "Candice",
-      "price": "Price on demand",
-      "size": "29 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/The small pink rose.webp": {
+      "name": "Small Rose",
+      "price": "150 €",
+      "size": "29 x 32",
+      "priority": false
     },
-    "portraits/Celine Dion.webp": {
-      "name": "Celine Dion",
-      "price": "Price on demand",
-      "size": "30 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Temple in Kyoto, Japan.webp": {
+      "name": "Temple in Kyoto",
+      "price": "150 €",
+      "size": "28 x 32",
+      "priority": false
     },
-    "portraits/Christelle.webp": {
-      "name": "Christelle",
-      "price": "Price on demand",
-      "size": "31 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Sakura 2.webp": {
+      "name": "Sakura",
+      "price": "150 all sakura ones",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/David Bowie 2.webp": {
-      "name": "David Bowie 2",
-      "price": "Price on demand",
-      "size": "33 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Small shrine in Japan.webp": {
+      "name": "Small shrine in Japan",
+      "price": "300 €",
+      "size": "26 x 32",
+      "priority": true
     },
-    "portraits/David Bowie.webp": {
-      "name": "David Bowie",
-      "price": "Price on demand",
-      "size": "32 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Pivoines, France.webp": {
+      "name": "Pivoines from France",
+      "price": "250 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Emma_s copy of La Liseuse.webp": {
-      "name": "Emma s copy of La Liseuse",
+    "watercolours/The discarded warehouse.webp": {
+      "name": "The discarded warehouse",
       "price": "Price on demand",
-      "size": "34 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+      "size": "",
+      "priority": false
     },
-    "portraits/Geisha 2.webp": {
-      "name": "Geisha 2",
-      "price": "Price on demand",
-      "size": "36 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Sea in Japan.webp": {
+      "name": "sea in Japan",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Geisha.webp": {
-      "name": "Geisha",
-      "price": "Price on demand",
-      "size": "35 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/japanese countryside.webp": {
+      "name": "Japanese countryside",
+      "price": "250 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Girl 2.webp": {
-      "name": "Girl 2",
-      "price": "Price on demand",
-      "size": "38 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Autumn gardens in Kyoto.webp": {
+      "name": "Autumn garden",
+      "price": "250 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Girl from London.webp": {
-      "name": "Girl from London",
-      "price": "Price on demand",
-      "size": "39 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Sakura.webp": {
+      "name": "Sakura",
+      "price": "150 all sakura ones",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Girl.webp": {
-      "name": "Girl",
-      "price": "Price on demand",
-      "size": "37 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Mountains in Japan.webp": {
+      "name": "Mountains in Japan",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Grace Kelly 2.webp": {
-      "name": "Grace Kelly 2",
-      "price": "Price on demand",
-      "size": "41 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Purple sky.webp": {
+      "name": "Purple sky",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Grace Kelly.webp": {
-      "name": "Grace Kelly",
-      "price": "Price on demand",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Tree in Kyoto, Japan.webp": {
+      "name": "Tree in Kyoto",
+      "price": "150 €",
+      "size": "30 x 32",
+      "priority": false
     },
-    "portraits/Guitarist.webp": {
-      "name": "Guitarist",
-      "price": "Price on demand",
-      "size": "42 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Autumn in Japan.webp": {
+      "name": "Autumn in Japan",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Guy Bedos.webp": {
-      "name": "Guy Bedos",
-      "price": "Price on demand",
-      "size": "43 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Temple in India.webp": {
+      "name": "Temple in India",
+      "price": "150 €",
+      "size": "27 x 32",
+      "priority": false
     },
-    "portraits/Juliet Binoche.webp": {
-      "name": "Juliet Binoche",
-      "price": "Price on demand",
-      "size": "44 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Gion, Kyoto, Japan(1).webp": {
+      "name": "Gion",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Kristin Scott Thomas.webp": {
-      "name": "Kristin Scott Thomas",
-      "price": "Price on demand",
-      "size": "45 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Pink and Grey.webp": {
+      "name": "Pink and grey",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/La Madonna.webp": {
-      "name": "La Madonna",
-      "price": "Price on demand",
-      "size": "46 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Kinkakuji, Kyoto, Japan.webp": {
+      "name": "Kinkakuji",
+      "price": "300 €",
+      "size": "25 x 32",
+      "priority": false
     },
-    "portraits/Man.webp": {
-      "name": "Man",
-      "price": "Price on demand",
-      "size": "47 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Mona Lisa.webp": {
-      "name": "Mona Lisa",
-      "price": "Price on demand",
-      "size": "48 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Moroccan man.webp": {
-      "name": "Moroccan man",
-      "price": "Price on demand",
-      "size": "49 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Morricone.webp": {
-      "name": "Morricone",
-      "price": "Price on demand",
-      "size": "50 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/nbvcfghjio.jpg.webp": {
-      "name": "Valse",
-      "price": "Price on demand",
-      "size": "51 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Nicola Artico.webp": {
-      "name": "Nicola Artico",
-      "price": "Price on demand",
-      "size": "52 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Nurse during covid.webp": {
-      "name": "Nurse during covid",
-      "price": "Price on demand",
-      "size": "53 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/old man.webp": {
-      "name": "old man",
-      "price": "Price on demand",
-      "size": "54 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Pat.webp": {
-      "name": "Pat",
-      "price": "Price on demand",
-      "size": "55 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Patricia, costa rica.webp": {
-      "name": "Patricia, costa rica",
-      "price": "Price on demand",
-      "size": "57 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Patricia.webp": {
-      "name": "Patricia",
-      "price": "Price on demand",
-      "size": "56 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Philippe Beylier.webp": {
-      "name": "Philippe Beylier",
-      "price": "Price on demand",
-      "size": "58 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Puccini.webp": {
-      "name": "Puccini",
-      "price": "Price on demand",
-      "size": "59 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Saori.webp": {
-      "name": "Saori",
-      "price": "Price on demand",
-      "size": "60 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Seth.webp": {
-      "name": "Seth",
-      "price": "Price on demand",
-      "size": "61 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Sissy.webp": {
-      "name": "Sissy",
-      "price": "Price on demand",
-      "size": "62 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Sorolla.webp": {
-      "name": "Sorolla",
-      "price": "Price on demand",
-      "size": "63 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "watercolours/Morocco.webp": {
+      "name": "Morocco",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false
     },
     "portraits/The duke of edinburgh.webp": {
       "name": "The duke of edinburgh",
-      "price": "Price on demand",
-      "size": "64 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
-    "portraits/The Eye.webp": {
-      "name": "The Eye",
-      "price": "Price on demand",
-      "size": "65 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+    "portraits/Nicola Artico.webp": {
+      "name": "Nicola Artico",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Kristin Scott Thomas.webp": {
+      "name": "Kristin Scott Thomas",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Sorolla.webp": {
+      "name": "Sorolla",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Austrian boy.webp": {
+      "name": "Austrian boy",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Girl.webp": {
+      "name": "Girl",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
     "portraits/The world during covid.webp": {
       "name": "The world during covid",
-      "price": "Price on demand",
-      "size": "66 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/The young Alexander.webp": {
-      "name": "The young Alexander",
-      "price": "Price on demand",
-      "size": "67 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/ToDef.webp": {
-      "name": "Seated man",
-      "price": "Price on demand",
-      "size": "68 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Valse.webp": {
-      "name": "Valse",
-      "price": "Price on demand",
-      "size": "69 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Woman copyfrom Sargeant.webp": {
-      "name": "Woman copyfrom Sargeant",
-      "price": "Price on demand",
-      "size": "70 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Woman with tights.webp": {
-      "name": "Woman with tights",
-      "price": "Price on demand",
-      "size": "71 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Working in Covid.webp": {
-      "name": "Working in Covid",
-      "price": "Price on demand",
-      "size": "72 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/working through Covid.webp": {
-      "name": "working through Covid",
-      "price": "Price on demand",
-      "size": "73 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
     "portraits/young boy 2.webp": {
       "name": "young boy 2",
-      "price": "Price on demand",
-      "size": "75 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Juliet Binoche.webp": {
+      "name": "Juliet Binoche",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Grace Kelly 2.webp": {
+      "name": "Grace Kelly 2",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Aiko 2.webp": {
+      "name": "Aiko 2",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Valse.webp": {
+      "name": "Valse",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/old man.webp": {
+      "name": "old man",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Guitarist.webp": {
+      "name": "Guitarist",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Moroccan man.webp": {
+      "name": "Moroccan man",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
     "portraits/young boy.webp": {
       "name": "young boy",
-      "price": "Price on demand",
-      "size": "74 x 30",
-      "priority": false,
-      "status": "FOR SALE"
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
-    "pets/Aghi, Velizy.webp": {
-      "name": "Aghi, Velizy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+    "portraits/Puccini.webp": {
+      "name": "Puccini",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
-    "pets/Dorothy, Milan, Italy.webp": {
-      "name": "Dorothy, Milan, Italy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+    "portraits/Saori.webp": {
+      "name": "Saori",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
-    "pets/Layla, Velizy.webp": {
-      "name": "Layla, Velizy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+    "portraits/Emma_s copy of La Liseuse.webp": {
+      "name": "Emma s copy of La Liseuse",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
-    "pets/Leo, Velizy.webp": {
-      "name": "Leo, Velizy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+    "portraits/Nurse during covid.webp": {
+      "name": "Nurse during covid",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
-    "pets/Olaf, France.webp": {
-      "name": "Olaf, France",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+    "portraits/La Madonna.webp": {
+      "name": "La Madonna",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
-    "pets/Pollock, Brittany, France.webp": {
-      "name": "Pollock, Brittany, France",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+    "portraits/Mona Lisa.webp": {
+      "name": "Mona Lisa",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Grace Kelly.webp": {
+      "name": "Grace Kelly",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Morricone.webp": {
+      "name": "Morricone",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/The Eye.webp": {
+      "name": "The Eye",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Woman with tights.webp": {
+      "name": "Woman with tights",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Aiko.webp": {
+      "name": "Aiko",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/David Bowie.webp": {
+      "name": "David Bowie",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Seth.webp": {
+      "name": "Seth",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Alex baby.webp": {
+      "name": "Alex baby",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Geisha 2.webp": {
+      "name": "Geisha 2",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Candice.webp": {
+      "name": "Candice",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Geisha.webp": {
+      "name": "Geisha",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/ToDef.webp": {
+      "name": "ToDef",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Pat.webp": {
+      "name": "Pat",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/working through Covid.webp": {
+      "name": "working through Covid",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/nbvcfghjio.jpg.webp": {
+      "name": "nbvcfghjio.jpg",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Girl 2.webp": {
+      "name": "Girl 2",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Guy Bedos.webp": {
+      "name": "Guy Bedos",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Girl from London.webp": {
+      "name": "Girl from London",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/The young Alexander.webp": {
+      "name": "The young Alexander",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Christelle.webp": {
+      "name": "Christelle",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/David Bowie 2.webp": {
+      "name": "David Bowie 2",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Patricia.webp": {
+      "name": "Patricia",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Celine Dion.webp": {
+      "name": "Celine Dion",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Sissy.webp": {
+      "name": "Sissy",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Man.webp": {
+      "name": "Man",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Working in Covid.webp": {
+      "name": "Working in Covid",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Philippe Beylier.webp": {
+      "name": "Philippe Beylier",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Patricia, costa rica.webp": {
+      "name": "Patricia, costa rica",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
+    },
+    "portraits/Woman copyfrom Sargeant.webp": {
+      "name": "Woman copyfrom Sargeant",
+      "price": "Price on demand around 250 €",
+      "size": "All size 25 x 30 cm",
+      "priority": false
     },
     "pets/Raika, Velizy.webp": {
       "name": "Raika, Velizy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Running in the wild.webp": {
-      "name": "Running in the wild",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sally, England.webp": {
-      "name": "Sally, England",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sam, the Samoyed.webp": {
-      "name": "Sam, the Samoyed",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sam.webp": {
-      "name": "Sam",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sandy, the cocker spaniel, France.webp": {
-      "name": "Sandy, the cocker spaniel, France",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sketch of Sam the Samoyed, Velizy.webp": {
-      "name": "Sketch of Sam the Samoyed, Velizy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Tangerine, France.webp": {
-      "name": "Tangerine, France",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/The baby dalmation.webp": {
-      "name": "The baby dalmation",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/The Horse.webp": {
-      "name": "The Horse",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/The Wolf.webp": {
-      "name": "The Wolf",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Tigger, Velizy.webp": {
-      "name": "Tigger, Velizy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Vegas, France(1).webp": {
-      "name": "Vegas, France",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Vegas, France.webp": {
-      "name": "Vegas, France",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
     },
     "pets/Venezia, Velizy.webp": {
       "name": "Venezia, Velizy",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/The Wolf.webp": {
+      "name": "The Wolf",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Tigger, Velizy.webp": {
+      "name": "Tigger, Velizy",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/The baby dalmation.webp": {
+      "name": "The baby dalmation",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Leo, Velizy.webp": {
+      "name": "Leo, Velizy",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Sam.webp": {
+      "name": "Sam",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Sam, the Samoyed.webp": {
+      "name": "Sam, the Samoyed",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/The Horse.webp": {
+      "name": "The Horse",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Pollock, Brittany, France.webp": {
+      "name": "Pollock, Brittany, France",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Olaf, France.webp": {
+      "name": "Olaf, France",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Dorothy, Milan, Italy.webp": {
+      "name": "Dorothy, Milan, Italy",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Sally, England.webp": {
+      "name": "Sally, England",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
     },
     "pets/Yuki, the King Charles Spaniel, Velizy, France.webp": {
       "name": "Yuki, the King Charles Spaniel, Velizy, France",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Sketch of Sam the Samoyed, Velizy.webp": {
+      "name": "Sketch of Sam the Samoyed, Velizy",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Vegas, France.webp": {
+      "name": "Vegas, France",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Aghi, Velizy.webp": {
+      "name": "Aghi, Velizy",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Tangerine, France.webp": {
+      "name": "Tangerine, France",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Running in the wild.webp": {
+      "name": "Running in the wild",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Layla, Velizy.webp": {
+      "name": "Layla, Velizy",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Sandy, the cocker spaniel, France.webp": {
+      "name": "Sandy, the cocker spaniel, France",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
+    },
+    "pets/Vegas, France(1).webp": {
+      "name": "Vegas, France",
+      "price": "Price on demand",
+      "size": "",
+      "priority": false
     }
   }
 }
