@@ -89,12 +89,13 @@ def main():
         for r in list(ws.iter_rows(values_only=True))[1:]:
             if any(cell is not None for cell in r):
                 excel_rows.append({
-                    'category': (r[0] or "").strip().lower(),
-                    'filename': (r[1] or "").strip(),
-                    'name': (r[2] or "").strip() if r[2] else None,
-                    'price': (r[3] or "").strip() if r[3] else None,
-                    'size': (r[4] or "").strip() if r[4] else None,
-                    'priority': (r[5] or "No").strip().lower() == "yes"
+                    'category': str(r[0] or "").strip().lower(),
+                    'filename': str(r[1] or "").strip(),
+                    'name': str(r[2]).strip() if r[2] is not None else None,
+                    'price': str(r[3]).strip() if r[3] is not None else None,
+                    'size': str(r[4]).strip() if r[4] is not None else None,
+                    'priority': str(r[5] or "No").strip().lower() == "yes",
+                    'status': str(r[6]).strip() if len(r) > 6 and r[6] is not None else ""
                 })
         print(f"Loaded {len(excel_rows)} rows from Excel.")
     else:
@@ -183,7 +184,8 @@ def main():
                     'name': matched_row['name'] if matched_row['name'] else humanize_name(filename),
                     'price': format_price(matched_row['price']),
                     'size': matched_row['size'] or "",
-                    'priority': matched_row['priority']
+                    'priority': matched_row['priority'],
+                    'status': matched_row.get('status', '')
                 }
             else:
                 # Complete fallback
@@ -191,7 +193,8 @@ def main():
                     'name': humanize_name(filename),
                     'price': "Price on demand",
                     'size': "",
-                    'priority': False
+                    'priority': False,
+                    'status': ""
                 }
 
             manifest[cat].append(filename)

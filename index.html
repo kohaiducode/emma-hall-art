@@ -476,6 +476,38 @@
       }
     }
 
+    .sold-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--accent);
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      text-transform: uppercase;
+      z-index: 10;
+      pointer-events: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      font-family: Inter, sans-serif;
+    }
+
+    .lightbox-note {
+      display: none;
+      margin-top: -12px;
+      margin-bottom: 24px;
+      padding: 12px 16px;
+      background: #fdfaf5;
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+      width: 100%;
+    }
+
     .works-actions { display: flex; justify-content: center; margin-top: 20px; }
     .btn {
       appearance: none;
@@ -721,6 +753,13 @@
                 <p data-t="acquire.step3.desc">Once you submit an inquiry, we will arrange the shipping details and payment options together.</p>
               </div>
             </li>
+            <li>
+              <div class="step-icon">🎨</div>
+              <div class="step-text">
+                <strong data-t="acquire.step4.title">Commissions & Sold Pieces</strong>
+                <p data-t="acquire.step4.desc">If a painting you love is already sold, it can be painted again upon request. Contact me to discuss a custom commission.</p>
+              </div>
+            </li>
           </ul>
         </div>
 
@@ -779,6 +818,7 @@
             <span id="lightbox-price" class="spec-val"></span>
           </div>
         </div>
+        <div id="lightbox-note" class="lightbox-note"></div>
         <button id="lightbox-inquire" class="lightbox-btn">Inquire about this piece</button>
       </div>
     </div>
@@ -834,7 +874,11 @@
         "lightbox.size_on_request": "Dimensions sur demande",
         "lightbox.price_on_request": "Prix sur demande",
         "lightbox.inquire_btn": "Contacter",
+        "status.sold": "Vendu",
+        "lightbox.inquire_commission": "Demander une œuvre similaire",
+        "lightbox.note_sold": "Ce tableau est vendu, mais il peut être peint à nouveau sur commande (format personnalisé possible).",
         "inquiry.message_template": "Bonjour Emma,\n\nJe souhaite acquérir votre tableau \"{title}\" ({cat}, {size}, {price}). Pourriez-vous me confirmer sa disponibilité ainsi que les détails pour le règlement (virement ou PayPal) ? Merci !",
+        "inquiry.message_template_sold": "Bonjour Emma,\n\nJe vois que votre tableau \"{title}\" ({cat}) est vendu, mais j'aimerais beaucoup commander une œuvre similaire. Pourriez-vous me donner plus de détails sur la réalisation d'une commande personnalisée ? Merci !",
         "cat.flowers": "Fleurs",
         "cat.landscapes": "Paysages",
         "cat.watercolours": "Aquarelles",
@@ -848,6 +892,8 @@
         "acquire.step2.desc": "Les règlements par virement bancaire et PayPal sont acceptés.",
         "acquire.step3.title": "Échange direct",
         "acquire.step3.desc": "Dès réception de votre message, nous convenons ensemble des détails d'expédition et de paiement.",
+        "acquire.step4.title": "Commandes & Tableaux vendus",
+        "acquire.step4.desc": "Si un tableau que vous aimez est déjà vendu, il peut être peint à nouveau sur demande. Contactez-moi pour en discuter.",
         "footer.copyright": "© {year} Emma Hall. Tous droits réservés."
       },
       en: {
@@ -881,7 +927,11 @@
         "lightbox.size_on_request": "Dimensions on request",
         "lightbox.price_on_request": "Price on request",
         "lightbox.inquire_btn": "Inquire about this piece",
+        "status.sold": "Sold",
+        "lightbox.inquire_commission": "Inquire about a commission",
+        "lightbox.note_sold": "This painting is sold, but a similar piece can be painted again upon request (custom sizes available).",
         "inquiry.message_template": "Hello Emma,\n\nI would like to acquire your painting \"{title}\" ({cat}, {size}, {price}). Could you please let me know if it is available and share payment details (bank transfer or PayPal)? Thank you!",
+        "inquiry.message_template_sold": "Hello Emma,\n\nI see that your painting \"{title}\" ({cat}) is sold, but I would love to commission a similar piece. Could you please let me know details about availability and how we can proceed? Thank you!",
         "cat.flowers": "Flowers",
         "cat.landscapes": "Landscapes",
         "cat.watercolours": "Watercolours",
@@ -895,6 +945,8 @@
         "acquire.step2.desc": "Direct bank transfers and PayPal payments are accepted.",
         "acquire.step3.title": "Direct Contact",
         "acquire.step3.desc": "Once you submit an inquiry, we will arrange the shipping details and payment options together.",
+        "acquire.step4.title": "Commissions & Sold Pieces",
+        "acquire.step4.desc": "If a painting you love is already sold, it can be painted again upon request. Contact me to discuss a custom commission.",
         "footer.copyright": "© {year} Emma Hall. All rights reserved."
       }
     };
@@ -938,7 +990,36 @@
       if (priceLabel) priceLabel.textContent = tMap["lightbox.price_label"];
       
       const inquireBtn = document.getElementById('lightbox-inquire');
-      if (inquireBtn) inquireBtn.textContent = tMap["lightbox.inquire_btn"];
+      if (inquireBtn) {
+        if (currentInquiredPainting && currentInquiredPainting.status === "SOLD") {
+          inquireBtn.textContent = tMap["lightbox.inquire_commission"];
+        } else {
+          inquireBtn.textContent = tMap["lightbox.inquire_btn"];
+        }
+      }
+      
+      const noteEl = document.getElementById('lightbox-note');
+      if (noteEl && currentInquiredPainting && currentInquiredPainting.status === "SOLD") {
+        noteEl.textContent = tMap["lightbox.note_sold"];
+      }
+
+      if (currentInquiredPainting) {
+        const isSold = currentInquiredPainting.status === "SOLD";
+        const sizeVal = document.getElementById('lightbox-size');
+        const priceVal = document.getElementById('lightbox-price');
+        if (sizeVal) {
+          sizeVal.textContent = isSold 
+            ? ((currentInquiredPainting.size && currentInquiredPainting.size !== 'x') ? currentInquiredPainting.size : tMap["lightbox.size_on_request"])
+            : (currentInquiredPainting.size ? currentInquiredPainting.size : tMap["lightbox.size_on_request"]);
+        }
+        if (priceVal) {
+          priceVal.textContent = isSold 
+            ? (tMap["status.sold"] || "SOLD")
+            : ((currentInquiredPainting.price === "Price on demand" || currentInquiredPainting.price === "price on demand") 
+                ? tMap["lightbox.price_on_request"] 
+                : currentInquiredPainting.price);
+        }
+      }
       
       const year = new Date().getFullYear();
       const copyrightEl = document.getElementById('footer-copyright');
@@ -1021,10 +1102,19 @@
         const parts = [];
         
         const tMap = TRANSLATIONS[CURRENT_LANG];
-        const localizedPrice = (img.price === "Price on demand" || img.price === "price on demand") 
-          ? tMap["lightbox.price_on_request"] 
-          : img.price;
-        const localizedSize = img.size ? img.size : "";
+        const isSold = img.status === "SOLD";
+        let localizedPrice = "";
+        let localizedSize = "";
+        
+        if (isSold) {
+          localizedPrice = tMap["status.sold"] || "SOLD";
+          localizedSize = (img.size && img.size !== 'x') ? img.size : "";
+        } else {
+          localizedPrice = (img.price === "Price on demand" || img.price === "price on demand") 
+            ? tMap["lightbox.price_on_request"] 
+            : img.price;
+          localizedSize = img.size ? img.size : "";
+        }
         
         if (localizedSize) parts.push(localizedSize);
         if (localizedPrice) parts.push(localizedPrice);
@@ -1036,6 +1126,13 @@
         
         card.appendChild(el);
         card.appendChild(overlay);
+        
+        if (isSold) {
+          const badge = document.createElement('span');
+          badge.className = 'sold-badge';
+          badge.textContent = tMap["status.sold"] || "SOLD";
+          card.appendChild(badge);
+        }
         
         card.addEventListener('click', () => openLightbox(img));
         
@@ -1067,7 +1164,8 @@
             name: humanizeName(filename),
             price: "Price on demand",
             size: "",
-            priority: false
+            priority: false,
+            status: ""
           };
           list.push({
             filename: filename,
@@ -1076,7 +1174,8 @@
             cat: cat,
             price: meta.price,
             size: meta.size,
-            priority: meta.priority
+            priority: meta.priority,
+            status: meta.status || ""
           });
         }
       }
@@ -1160,13 +1259,44 @@
       
       lightboxTitle.textContent = img.name;
       
-      const localizedSize = img.size ? img.size : tMap["lightbox.size_on_request"];
-      const localizedPrice = (img.price === "Price on demand" || img.price === "price on demand") 
-        ? tMap["lightbox.price_on_request"] 
-        : img.price;
+      const isSold = img.status === "SOLD";
+      
+      let localizedSize = "";
+      if (isSold) {
+        localizedSize = (img.size && img.size !== 'x') ? img.size : tMap["lightbox.size_on_request"];
+      } else {
+        localizedSize = img.size ? img.size : tMap["lightbox.size_on_request"];
+      }
+      
+      let localizedPrice = "";
+      if (isSold) {
+        localizedPrice = tMap["status.sold"] || "SOLD";
+      } else {
+        localizedPrice = (img.price === "Price on demand" || img.price === "price on demand") 
+          ? tMap["lightbox.price_on_request"] 
+          : img.price;
+      }
         
       lightboxSize.textContent = localizedSize;
       lightboxPrice.textContent = localizedPrice;
+      
+      const noteEl = document.getElementById('lightbox-note');
+      if (noteEl) {
+        if (isSold) {
+          noteEl.textContent = tMap["lightbox.note_sold"] || "This painting is sold, but it can be painted again upon request.";
+          noteEl.style.display = 'block';
+        } else {
+          noteEl.style.display = 'none';
+        }
+      }
+      
+      if (lightboxInquire) {
+        if (isSold) {
+          lightboxInquire.textContent = tMap["lightbox.inquire_commission"] || "Inquire about a commission";
+        } else {
+          lightboxInquire.textContent = tMap["lightbox.inquire_btn"] || "Inquire about this piece";
+        }
+      }
       
       currentInquiredPainting = img;
       
@@ -1212,11 +1342,19 @@
         : currentInquiredPainting.price;
       const size = currentInquiredPainting.size ? currentInquiredPainting.size : tMap["lightbox.size_on_request"];
       
-      const message = tMap["inquiry.message_template"]
-        .replace('{title}', title)
-        .replace('{cat}', cat)
-        .replace('{size}', size)
-        .replace('{price}', price);
+      const isSold = currentInquiredPainting.status === "SOLD";
+      let message = "";
+      if (isSold) {
+        message = tMap["inquiry.message_template_sold"]
+          .replace('{title}', title)
+          .replace('{cat}', cat);
+      } else {
+        message = tMap["inquiry.message_template"]
+          .replace('{title}', title)
+          .replace('{cat}', cat)
+          .replace('{size}', size)
+          .replace('{price}', price);
+      }
       
       const msgTextarea = document.getElementById('message');
       msgTextarea.value = message;
