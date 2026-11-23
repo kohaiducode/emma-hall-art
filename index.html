@@ -118,17 +118,28 @@
       justify-content: space-between;
       border-top: 1px solid var(--frame);
       padding-top: 24px;
+      gap: 12px;
     }
 
-    .instagram-link {
-      color: var(--muted);
-      transition: color 0.2s ease;
+    .social-links {
       display: inline-flex;
       align-items: center;
+      gap: 10px;
+    }
+
+    .social-link,
+    .instagram-link {
+      color: var(--muted);
+      transition: color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       width: max-content;
     }
+    .social-link:hover,
     .instagram-link:hover {
       color: var(--accent);
+      transform: translateY(-1px);
     }
 
     .sidebar .lang-selector {
@@ -137,6 +148,7 @@
       gap: 4px;
       font-size: 13px;
       font-weight: 600;
+      flex-shrink: 0;
     }
 
     /* MOBILE NAVIGATION Elements */
@@ -364,6 +376,44 @@
       opacity: 0.8;
       text-decoration: underline;
     }
+    .bio-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 8px 0 24px;
+    }
+    .bio-social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      background: var(--paper);
+      border: 1px solid var(--frame);
+      color: var(--ink);
+      font-family: Inter, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .bio-social-pill:hover {
+      background: #fff;
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .bio-social-pill svg {
+      width: 15px;
+      height: 15px;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+    .bio-social-pill:hover svg {
+      color: var(--accent);
+    }
     .bio-img-container {
       background: var(--paper);
       border: 2px solid var(--frame);
@@ -526,6 +576,17 @@
       display: flex;
       justify-content: center;
       font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-socials {
+      gap: 16px;
     }
 
     /* LIGHTBOX MODAL */
@@ -984,13 +1045,33 @@
           <span class="lang-separator">|</span>
           <button class="lang-btn" data-lang="en" aria-label="English version">EN</button>
         </div>
-        <a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener" class="instagram-link" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </a>
+        <div class="social-links">
+          <a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@emmahallpainting" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@emmahallpaintings" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/emma-hall-770559230/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
       </div>
     </aside>
 
@@ -1023,13 +1104,33 @@
         <a href="#contact" class="nav-link" data-route="contact" data-t="nav.contact">Contact</a>
       </nav>
       <div class="mobile-menu-bottom">
-        <a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener" class="instagram-link" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </a>
+        <div class="social-links">
+          <a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@emmahallpainting" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@emmahallpaintings" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/emma-hall-770559230/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
         <div class="lang-selector">
           <button class="lang-btn active" data-lang="fr" aria-label="Version française">FR</button>
           <span class="lang-separator">|</span>
@@ -1073,7 +1174,37 @@
           <div class="bio-content">
             <h2 data-t="hero.title">Emma Hall – A Journey Through Color and Texture</h2>
             <p data-t="hero.desc">Emma, born in South India, paints mainly in oils and also works with watercolours, charcoal, and pastels. Inspired by her travels to Japan and Italy and her Indian childhood, she uses vibrant colors and a unique knife technique for depth, often painting with her fingers. Her works have been exhibited and sold in Paris, London, Los Angeles, and Milan.</p>
-            <p><a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener" class="instagram-text-link">Instagram → @emmahallpaintings</a></p>
+            <div class="bio-socials">
+              <a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener noreferrer" class="bio-social-pill" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.youtube.com/@emmahallpainting" target="_blank" rel="noopener noreferrer" class="bio-social-pill" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+                <span>YouTube</span>
+              </a>
+              <a href="https://www.tiktok.com/@emmahallpaintings" target="_blank" rel="noopener noreferrer" class="bio-social-pill" aria-label="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+                <span>TikTok</span>
+              </a>
+              <a href="https://www.linkedin.com/in/emma-hall-770559230/" target="_blank" rel="noopener noreferrer" class="bio-social-pill" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
           <div class="bio-img-container">
             <img class="bio-img" src="assets/profile/ems.jpg" alt="Emma Hall" />
@@ -1166,7 +1297,36 @@
 
       <!-- Footer -->
       <footer>
-        <div id="footer-copyright">© <span id="year"></span> Emma Hall. All rights reserved.</div>
+        <div class="footer-content">
+          <div class="social-links footer-socials">
+            <a href="https://www.instagram.com/emmahallpaintings/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@emmahallpainting" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@emmahallpaintings" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/emma-hall-770559230/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+          <div id="footer-copyright">© <span id="year"></span> Emma Hall. All rights reserved.</div>
+        </div>
       </footer>
     </main>
   </div>
