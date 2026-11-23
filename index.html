@@ -17,8 +17,8 @@
     gtag('js', new Date());
     gtag('config', 'G-8Z0WGPR0MW');
   </script>
-  <!-- Google reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Google reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcLPy8uAAAAAKO-SYuKxIRurd8b9Y3kt9fXmBHg"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -565,16 +565,23 @@
     button[type="submit"]:hover { filter: brightness(1.05); }
     button[type="submit"]:active { transform: scale(0.99); }
 
-    .recaptcha-wrapper {
-      margin: 14px 0 8px;
-      min-height: 78px;
+    .grecaptcha-badge {
+      visibility: hidden !important;
     }
-    @media (max-width: 400px) {
-      .recaptcha-wrapper {
-        transform: scale(0.85);
-        transform-origin: 0 0;
-        margin-bottom: -10px;
-      }
+
+    .recaptcha-terms {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.4;
+      text-align: center;
+    }
+    .recaptcha-terms a {
+      color: var(--muted);
+      text-decoration: underline;
+    }
+    .recaptcha-terms a:hover {
+      color: var(--accent);
     }
 
     .form-status { margin-top: 10px; font-size: 14px; }
@@ -1300,11 +1307,13 @@
                 <label for="message" id="label-message" data-t="form.message">Message</label>
                 <textarea id="message" name="message" placeholder="Tell me about the piece or commission you have in mind, thank you."
                   required></textarea>
-                <div class="recaptcha-wrapper">
-                  <div class="g-recaptcha" data-sitekey="6LcLPy8uAAAAAKO-SYuKxIRurd8b9Y3kt9fXmBHg"></div>
-                </div>
+                <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                <div style="height:12px"></div>
                 <button id="sendBtn" type="submit"><span data-t="form.send">Send</span></button>
                 <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+                <p class="recaptcha-terms">
+                  Protected by reCAPTCHA (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> • <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>)
+                </p>
               </form>
             </div>
           </div>
@@ -1785,34 +1794,40 @@
     }
 
     function onFormSubmit(e) {
+      if (e) e.preventDefault();
       const hp = (document.getElementById('website').value || '').trim();
       const tMap = TRANSLATIONS[CURRENT_LANG];
-      if (hp) { setStatus(tMap["form.status_sent"], true); e.target.reset(); return; }
-
-      // Verify reCAPTCHA
-      if (typeof grecaptcha !== 'undefined') {
-        const token = grecaptcha.getResponse();
-        if (!token) {
-          e.preventDefault();
-          setStatus(tMap["form.captcha_required"] || "Please complete the captcha verification.", false);
-          return;
-        }
-      }
+      if (hp) { setStatus(tMap["form.status_sent"], true); form.reset(); return; }
 
       sendBtn.disabled = true;
       sendBtn.style.opacity = .7;
       setStatus(tMap["form.status_sending"], true);
 
-      iframe.onload = function () {
-        setStatus(tMap["form.status_sent"]);
-        form.reset();
-        if (typeof grecaptcha !== 'undefined') {
-          grecaptcha.reset();
-        }
-        sendBtn.disabled = false;
-        sendBtn.style.opacity = 1;
-        iframe.onload = null;
-      };
+      function submitFormToIframe() {
+        iframe.onload = function () {
+          setStatus(tMap["form.status_sent"]);
+          form.reset();
+          sendBtn.disabled = false;
+          sendBtn.style.opacity = 1;
+          iframe.onload = null;
+        };
+        form.submit();
+      }
+
+      if (typeof grecaptcha !== 'undefined') {
+        grecaptcha.ready(function () {
+          grecaptcha.execute('6LcLPy8uAAAAAKO-SYuKxIRurd8b9Y3kt9fXmBHg', { action: 'contact' }).then(function (token) {
+            const tokenInput = document.getElementById('g-recaptcha-response');
+            if (tokenInput) tokenInput.value = token;
+            submitFormToIframe();
+          }).catch(function (err) {
+            console.warn('reCAPTCHA error:', err);
+            submitFormToIframe();
+          });
+        });
+      } else {
+        submitFormToIframe();
+      }
     }
     window.onFormSubmit = onFormSubmit;
 
