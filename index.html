@@ -18,7 +18,7 @@
     gtag('config', 'G-8Z0WGPR0MW');
   </script>
   <!-- Google reCAPTCHA Enterprise (score-based) -->
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcLPy8uAAAAAKO-SYuKxIRurd8b9Y3kt9fXmBHg"></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcTUC8uAAAAAAouoVGooSdZU21FjIs9_oIZTV2U"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -1836,7 +1836,7 @@
       if (typeof grecaptcha !== 'undefined' && grecaptcha.enterprise) {
         grecaptcha.enterprise.ready(async function () {
           try {
-            const token = await grecaptcha.enterprise.execute('6LcLPy8uAAAAAKO-SYuKxIRurd8b9Y3kt9fXmBHg', { action: 'contact' });
+            const token = await grecaptcha.enterprise.execute('6LcTUC8uAAAAAAouoVGooSdZU21FjIs9_oIZTV2U', { action: 'contact' });
             const tokenInput = document.getElementById('g-recaptcha-response');
             if (tokenInput) tokenInput.value = token;
             submitFormToIframe();
