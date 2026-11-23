@@ -17,6 +17,8 @@
     gtag('js', new Date());
     gtag('config', 'G-8Z0WGPR0MW');
   </script>
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -562,6 +564,18 @@
     }
     button[type="submit"]:hover { filter: brightness(1.05); }
     button[type="submit"]:active { transform: scale(0.99); }
+
+    .recaptcha-wrapper {
+      margin: 14px 0 8px;
+      min-height: 78px;
+    }
+    @media (max-width: 400px) {
+      .recaptcha-wrapper {
+        transform: scale(0.85);
+        transform-origin: 0 0;
+        margin-bottom: -10px;
+      }
+    }
 
     .form-status { margin-top: 10px; font-size: 14px; }
     .ok { color: #196127; }
@@ -1286,7 +1300,9 @@
                 <label for="message" id="label-message" data-t="form.message">Message</label>
                 <textarea id="message" name="message" placeholder="Tell me about the piece or commission you have in mind, thank you."
                   required></textarea>
-                <div style="height:12px"></div>
+                <div class="recaptcha-wrapper">
+                  <div class="g-recaptcha" data-sitekey="6LcLPy8uAAAAAKO-SYuKxIRurd8b9Y3kt9fXmBHg"></div>
+                </div>
                 <button id="sendBtn" type="submit"><span data-t="form.send">Send</span></button>
                 <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
               </form>
@@ -1408,6 +1424,7 @@
         "form.placeholder_message": "Parlez-moi de l'œuvre ou de la commande que vous avez en tête, merci.",
         "form.status_sending": "Envoi en cours…",
         "form.status_sent": "✅ Message envoyé. Merci !",
+        "form.captcha_required": "Veuillez cocher la case \"Je ne suis pas un robot\".",
         "lightbox.cat_label": "Catégorie",
         "lightbox.size_label": "Dimensions",
         "lightbox.price_label": "Prix",
@@ -1468,6 +1485,7 @@
         "form.placeholder_message": "Tell me about the piece or commission you have in mind, thank you.",
         "form.status_sending": "Sending…",
         "form.status_sent": "✅ Message sent. Thank you!",
+        "form.captcha_required": "Please complete the \"I'm not a robot\" verification.",
         "lightbox.cat_label": "Category",
         "lightbox.size_label": "Size",
         "lightbox.price_label": "Price",
@@ -1771,6 +1789,16 @@
       const tMap = TRANSLATIONS[CURRENT_LANG];
       if (hp) { setStatus(tMap["form.status_sent"], true); e.target.reset(); return; }
 
+      // Verify reCAPTCHA
+      if (typeof grecaptcha !== 'undefined') {
+        const token = grecaptcha.getResponse();
+        if (!token) {
+          e.preventDefault();
+          setStatus(tMap["form.captcha_required"] || "Please complete the captcha verification.", false);
+          return;
+        }
+      }
+
       sendBtn.disabled = true;
       sendBtn.style.opacity = .7;
       setStatus(tMap["form.status_sending"], true);
@@ -1778,6 +1806,9 @@
       iframe.onload = function () {
         setStatus(tMap["form.status_sent"]);
         form.reset();
+        if (typeof grecaptcha !== 'undefined') {
+          grecaptcha.reset();
+        }
         sendBtn.disabled = false;
         sendBtn.style.opacity = 1;
         iframe.onload = null;
