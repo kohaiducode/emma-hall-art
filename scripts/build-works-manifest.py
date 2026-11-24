@@ -93,6 +93,10 @@ def format_price(p):
         return "Price on demand"
     return formatted
 
+def generate_alt_text(name, cat):
+    medium = "watercolour" if cat == "watercolours" else "oil"
+    return f"{name} - Original {medium} painting by Emma Hall"
+
 def main():
     # 1. Read Excel rows
     excel_rows = []
@@ -192,9 +196,12 @@ def main():
 
             # Construct metadata
             meta_key = f"{cat}/{filename}"
+            final_name = matched_row['name'] if (matched_row and matched_row.get('name')) else humanize_name(filename)
+            alt_text = generate_alt_text(final_name, cat)
             if matched_row:
                 metadata[meta_key] = {
-                    'name': matched_row['name'] if matched_row['name'] else humanize_name(filename),
+                    'name': final_name,
+                    'alt': alt_text,
                     'price': format_price(matched_row['price']),
                     'size': matched_row['size'] or "",
                     'priority': matched_row['priority'],
@@ -203,7 +210,8 @@ def main():
             else:
                 # Complete fallback
                 metadata[meta_key] = {
-                    'name': humanize_name(filename),
+                    'name': final_name,
+                    'alt': alt_text,
                     'price': "Price on demand",
                     'size': "",
                     'priority': False,
@@ -282,6 +290,17 @@ def main():
     # Print priority count details
     priority_count = sum(1 for k, v in metadata.items() if v['priority'])
     print(f"Total paintings: {len(all_paintings)}, Priority paintings: {priority_count}")
+
+    # 6. Automatically regenerate sitemap.xml
+    try:
+        from generate_sitemap import generate_sitemap
+        generate_sitemap()
+    except ImportError:
+        try:
+            from scripts.generate_sitemap import generate_sitemap
+            generate_sitemap()
+        except Exception as e:
+            print(f"Note: Could not run generate_sitemap: {e}")
 
 if __name__ == "__main__":
     main()

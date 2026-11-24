@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage with Google Image Indexation -->
+  <url>
+    <loc>https://www.emmahallpaintings.com/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/profile/ems.jpg</image:loc>
+      <image:title>Emma Hall in Studio</image:title>
+      <image:caption>Emma Hall — Visual Artist and Painter in her Studio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/profile/1.webp</image:loc>
+      <image:title>Emma Hall Article and Feature Exhibition Paintings</image:title>
+      <image:caption>Emma Hall press feature and exhibition oil paintings</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/profile/2.webp</image:loc>
+      <image:title>Emma Hall Portrait</image:title>
+      <image:caption>Emma Hall Portrait — Contemporary Artist</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/profile/3.webp</image:loc>
+      <image:title>Emma Hall Studio Workspace</image:title>
+      <image:caption>Emma Hall Studio Workspace and Palette Knife Artwork</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Hanging%20Costa%20Rica%20flowers.webp</image:loc>
+      <image:title>Hanging costa rica flowers</image:title>
+      <image:caption>Hanging costa rica flowers - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Leaves%20in%20the%20waters%20of%20Lake%20Annecy.webp</image:loc>
+      <image:title>Leaves in Lake Annecy</image:title>
+      <image:caption>Leaves in Lake Annecy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/The%20Blue%20Vase.webp</image:loc>
+      <image:title>The Blue Vase</image:title>
+      <image:caption>The Blue Vase - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Costa%20Rican%20flowers.webp</image:loc>
+      <image:title>Costa Rican flowers</image:title>
+      <image:caption>Costa Rican flowers - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/English%20roses.webp</image:loc>
+      <image:title>English Roses</image:title>
+      <image:caption>English Roses - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Free%20spring%20bouquet.webp</image:loc>
+      <image:title>Free Spring</image:title>
+      <image:caption>Free Spring - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Into%20the%20blue.webp</image:loc>
+      <image:title>Into the blue</image:title>
+      <image:caption>Into the blue - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/into%20the%20green.webp</image:loc>
+      <image:title>Into the green</image:title>
+      <image:caption>Into the green - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/into%20the%20light.webp</image:loc>
+      <image:title>Into the light</image:title>
+      <image:caption>Into the light - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Japanese%20sand%20flowers.webp</image:loc>
+      <image:title>Japanese sand flowers</image:title>
+      <image:caption>Japanese sand flowers - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Japanese%20water%20lilies.webp</image:loc>
+      <image:title>Japanese water lilies</image:title>
+      <image:caption>Japanese water lilies - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Light%20sakura.webp</image:loc>
+      <image:title>Light sakura</image:title>
+      <image:caption>Light sakura - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Lilac.webp</image:loc>
+      <image:title>Lilac</image:title>
+      <image:caption>Lilac - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Peach.webp</image:loc>
+      <image:title>Peach</image:title>
+      <image:caption>Peach - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Pink%20into%20the%20sky.webp</image:loc>
+      <image:title>Pink into the sky</image:title>
+      <image:caption>Pink into the sky - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/pink%20sakura.webp</image:loc>
+      <image:title>Pink sakura</image:title>
+      <image:caption>Pink sakura - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/PIVOINES%20of%20ile%20de%20france.webp</image:loc>
+      <image:title>Pivoines</image:title>
+      <image:caption>Pivoines - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Purple%20japanese%20water%20lilies.webp</image:loc>
+      <image:title>Purple Japanese water lily</image:title>
+      <image:caption>Purple Japanese water lily - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Sakura%20blowing%20in%20the%20blue%20skies%20of%20Tokyo.webp</image:loc>
+      <image:title>Sakura flowers</image:title>
+      <image:caption>Sakura flowers - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/SAKURA%20GLORY.webp</image:loc>
+      <image:title>sakura glory</image:title>
+      <image:caption>sakura glory - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Savoie%20flowers.webp</image:loc>
+      <image:title>Savoie mountain flowers</image:title>
+      <image:caption>Savoie mountain flowers - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/The%20spring%20forest%20in%20velizy.webp</image:loc>
+      <image:title>Spring V.</image:title>
+      <image:caption>Spring V. - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/Sunflowers%20of%20Tuscany.webp</image:loc>
+      <image:title>Sunflowers from Tuscany</image:title>
+      <image:caption>Sunflowers from Tuscany - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/The%20pink%20vase.webp</image:loc>
+      <image:title>The Pink Vase</image:title>
+      <image:caption>The Pink Vase - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/Flowers_brushed/yellow.webp</image:loc>
+      <image:title>Yellow</image:title>
+      <image:caption>Yellow - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Autumn%20in%20Velizy,%20France.webp</image:loc>
+      <image:title>Autumn in Velizy</image:title>
+      <image:caption>Autumn in Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Indian%20river.webp</image:loc>
+      <image:title>Indian River</image:title>
+      <image:caption>Indian River - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Landscape%20in%20Lebanon.webp</image:loc>
+      <image:title>Landscape in Lebanon</image:title>
+      <image:caption>Landscape in Lebanon - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Spring%20in%20the%20forest%20of%20Velizy,%20France.webp</image:loc>
+      <image:title>Spring in Velizy, France</image:title>
+      <image:caption>Spring in Velizy, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20gondola,%20Venezia.webp</image:loc>
+      <image:title>The Gondola, Venezia</image:title>
+      <image:caption>The Gondola, Venezia - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20River.webp</image:loc>
+      <image:title>The River</image:title>
+      <image:caption>The River - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/autumn%20in%20japan.webp</image:loc>
+      <image:title>Autumn in Japan</image:title>
+      <image:caption>Autumn in Japan - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Hills%20in%20the%20Lebanon.webp</image:loc>
+      <image:title>Hills in Lebanon</image:title>
+      <image:caption>Hills in Lebanon - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Ischia,%20Italy.webp</image:loc>
+      <image:title>Ischia</image:title>
+      <image:caption>Ischia - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Japan%20gate.webp</image:loc>
+      <image:title>Japan gate</image:title>
+      <image:caption>Japan gate - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Japan%20view%20of%20pink%20sky.webp</image:loc>
+      <image:title>Japan view of pink</image:title>
+      <image:caption>Japan view of pink - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Kinkakuji,%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Kinkakuji</image:title>
+      <image:caption>Kinkakuji - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20Emperors%20Gardens,%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Kyoto Emperors garden,</image:title>
+      <image:caption>Kyoto Emperors garden, - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Lake%20Annecy,%20France.webp</image:loc>
+      <image:title>Lake Annecy</image:title>
+      <image:caption>Lake Annecy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Lake%20in%20Kansai,%20Japan.webp</image:loc>
+      <image:title>Lake in Kansai, Japan</image:title>
+      <image:caption>Lake in Kansai, Japan - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Lebanese%20Hills.webp</image:loc>
+      <image:title>Lebanese hills</image:title>
+      <image:caption>Lebanese hills - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Normandy,%20France.webp</image:loc>
+      <image:title>Normandy</image:title>
+      <image:caption>Normandy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Osaka%20Jo,%20Osaka,%20Japan.webp</image:loc>
+      <image:title>Osaka Jo</image:title>
+      <image:caption>Osaka Jo - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Positano,%20Italy.webp</image:loc>
+      <image:title>Positano</image:title>
+      <image:caption>Positano - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Flowing%20river%20in%20India.webp</image:loc>
+      <image:title>River flowing in India</image:title>
+      <image:caption>River flowing in India - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sakura%20in%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Sakura in Kyoto</image:title>
+      <image:caption>Sakura in Kyoto - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sakura%20view,%20Kansai,%20Japan.webp</image:loc>
+      <image:title>Sakura view</image:title>
+      <image:caption>Sakura view - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Shibuya%20view,%20Tokyo,%20Japan.webp</image:loc>
+      <image:title>Shibuya view, Tokyo</image:title>
+      <image:caption>Shibuya view, Tokyo - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Solitude.webp</image:loc>
+      <image:title>Solitude</image:title>
+      <image:caption>Solitude - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sunset%20in%20Okinawa,%20Japan.webp</image:loc>
+      <image:title>Sunset</image:title>
+      <image:caption>Sunset - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sunset.webp</image:loc>
+      <image:title>Sunset</image:title>
+      <image:caption>Sunset - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sunset%20in%20Japan.webp</image:loc>
+      <image:title>Sunset in Japan</image:title>
+      <image:caption>Sunset in Japan - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Tempest%20in%20the%20Maldives.webp</image:loc>
+      <image:title>Tempest in the Maldives</image:title>
+      <image:caption>Tempest in the Maldives - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20African%20Tree.webp</image:loc>
+      <image:title>The African tree</image:title>
+      <image:caption>The African tree - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20Blue%20Pot.webp</image:loc>
+      <image:title>The blue pot</image:title>
+      <image:caption>The blue pot - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20Bluebell%20girl.webp</image:loc>
+      <image:title>The bluebell girl, London</image:title>
+      <image:caption>The bluebell girl, London - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20lonely%20tree.webp</image:loc>
+      <image:title>The lonely tree</image:title>
+      <image:caption>The lonely tree - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20Mill%20House,%20Suffolk,%20England.webp</image:loc>
+      <image:title>The Mill House, Suffolk, England</image:title>
+      <image:caption>The Mill House, Suffolk, England - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20Secret%20Passage.webp</image:loc>
+      <image:title>The Secret</image:title>
+      <image:caption>The Secret - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Le%20sud%20ouest,%20France.webp</image:loc>
+      <image:title>The south west of France</image:title>
+      <image:caption>The south west of France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/The%20tree%20of%20life.webp</image:loc>
+      <image:title>The tree of life</image:title>
+      <image:caption>The tree of life - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Tokyo%20sky%20view.webp</image:loc>
+      <image:title>Tokyo sky view</image:title>
+      <image:caption>Tokyo sky view - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Tokyoview%20from%20Shibuja.webp</image:loc>
+      <image:title>Tokyo view from Shinjuku</image:title>
+      <image:caption>Tokyo view from Shinjuku - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Venezia.webp</image:loc>
+      <image:title>Venezia</image:title>
+      <image:caption>Venezia - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/View%20of%20Venice.webp</image:loc>
+      <image:title>View of Venice</image:title>
+      <image:caption>View of Venice - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/View%20on%20an%20Indian%20river.webp</image:loc>
+      <image:title>View on India</image:title>
+      <image:caption>View on India - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Waterfall%20in%20Japan.webp</image:loc>
+      <image:title>Waterfall in Japan</image:title>
+      <image:caption>Waterfall in Japan - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Where%20Sakura%20trees%20meet%20Tuscany.webp</image:loc>
+      <image:title>Where Sakura meets Tuscany</image:title>
+      <image:caption>Where Sakura meets Tuscany - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Small%20shrine%20in%20Japan.webp</image:loc>
+      <image:title>Small shrine in Japan</image:title>
+      <image:caption>Small shrine in Japan - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Autumn%20gardens%20in%20Kyoto.webp</image:loc>
+      <image:title>Autumn garden</image:title>
+      <image:caption>Autumn garden - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Autumn%20in%20Japan.webp</image:loc>
+      <image:title>Autumn in Japan</image:title>
+      <image:caption>Autumn in Japan - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Blue.webp</image:loc>
+      <image:title>Blue</image:title>
+      <image:caption>Blue - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Gion,%20Kyoto,%20Japan(1).webp</image:loc>
+      <image:title>Gion</image:title>
+      <image:caption>Gion - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Gion,%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Gion</image:title>
+      <image:caption>Gion - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/View%20over%20Gion,%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Gion</image:title>
+      <image:caption>Gion - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Hut%20in%20hills%20in%20Japan.webp</image:loc>
+      <image:title>Hut in the hills</image:title>
+      <image:caption>Hut in the hills - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/japanese%20countryside.webp</image:loc>
+      <image:title>Japanese countryside</image:title>
+      <image:caption>Japanese countryside - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Kinkakuji,%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Kinkakuji</image:title>
+      <image:caption>Kinkakuji - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Morocco.webp</image:loc>
+      <image:title>Morocco</image:title>
+      <image:caption>Morocco - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Mountains%20in%20Japan.webp</image:loc>
+      <image:title>Mountains in Japan</image:title>
+      <image:caption>Mountains in Japan - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Pink%20and%20Grey.webp</image:loc>
+      <image:title>Pink and grey</image:title>
+      <image:caption>Pink and grey - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Pivoines,%20France.webp</image:loc>
+      <image:title>Pivoines from France</image:title>
+      <image:caption>Pivoines from France - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Purple%20sky.webp</image:loc>
+      <image:title>Purple sky</image:title>
+      <image:caption>Purple sky - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sakura%202.webp</image:loc>
+      <image:title>Sakura</image:title>
+      <image:caption>Sakura - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sakura%20flower.webp</image:loc>
+      <image:title>Sakura</image:title>
+      <image:caption>Sakura - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sakura.webp</image:loc>
+      <image:title>Sakura</image:title>
+      <image:caption>Sakura - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sea%20in%20Japan.webp</image:loc>
+      <image:title>sea in Japan</image:title>
+      <image:caption>sea in Japan - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/The%20small%20pink%20rose.webp</image:loc>
+      <image:title>Small Rose</image:title>
+      <image:caption>Small Rose - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Temple%20in%20India.webp</image:loc>
+      <image:title>Temple in India</image:title>
+      <image:caption>Temple in India - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Temple%20in%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Temple in Kyoto</image:title>
+      <image:caption>Temple in Kyoto - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/The%20discarded%20warehouse.webp</image:loc>
+      <image:title>The discarded warehouse</image:title>
+      <image:caption>The discarded warehouse - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Tree%20in%20Kyoto,%20Japan.webp</image:loc>
+      <image:title>Tree in Kyoto</image:title>
+      <image:caption>Tree in Kyoto - Original watercolour painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Aiko.webp</image:loc>
+      <image:title>Aiko</image:title>
+      <image:caption>Aiko - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Aiko%202.webp</image:loc>
+      <image:title>Aiko 2</image:title>
+      <image:caption>Aiko 2 - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Alex%20baby.webp</image:loc>
+      <image:title>Alex baby</image:title>
+      <image:caption>Alex baby - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Austrian%20boy.webp</image:loc>
+      <image:title>Austrian boy</image:title>
+      <image:caption>Austrian boy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Candice.webp</image:loc>
+      <image:title>Candice</image:title>
+      <image:caption>Candice - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Celine%20Dion.webp</image:loc>
+      <image:title>Celine Dion</image:title>
+      <image:caption>Celine Dion - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Christelle.webp</image:loc>
+      <image:title>Christelle</image:title>
+      <image:caption>Christelle - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/David%20Bowie.webp</image:loc>
+      <image:title>David Bowie</image:title>
+      <image:caption>David Bowie - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/David%20Bowie%202.webp</image:loc>
+      <image:title>David Bowie 2</image:title>
+      <image:caption>David Bowie 2 - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Emma_s%20copy%20of%20La%20Liseuse.webp</image:loc>
+      <image:title>Emma s copy of La Liseuse</image:title>
+      <image:caption>Emma s copy of La Liseuse - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Geisha.webp</image:loc>
+      <image:title>Geisha</image:title>
+      <image:caption>Geisha - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Geisha%202.webp</image:loc>
+      <image:title>Geisha 2</image:title>
+      <image:caption>Geisha 2 - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Girl.webp</image:loc>
+      <image:title>Girl</image:title>
+      <image:caption>Girl - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Girl%202.webp</image:loc>
+      <image:title>Girl 2</image:title>
+      <image:caption>Girl 2 - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Girl%20from%20London.webp</image:loc>
+      <image:title>Girl from London</image:title>
+      <image:caption>Girl from London - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Grace%20Kelly.webp</image:loc>
+      <image:title>Grace Kelly</image:title>
+      <image:caption>Grace Kelly - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Grace%20Kelly%202.webp</image:loc>
+      <image:title>Grace Kelly 2</image:title>
+      <image:caption>Grace Kelly 2 - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Guitarist.webp</image:loc>
+      <image:title>Guitarist</image:title>
+      <image:caption>Guitarist - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Guy%20Bedos.webp</image:loc>
+      <image:title>Guy Bedos</image:title>
+      <image:caption>Guy Bedos - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Juliet%20Binoche.webp</image:loc>
+      <image:title>Juliet Binoche</image:title>
+      <image:caption>Juliet Binoche - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Kristin%20Scott%20Thomas.webp</image:loc>
+      <image:title>Kristin Scott Thomas</image:title>
+      <image:caption>Kristin Scott Thomas - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/La%20Madonna.webp</image:loc>
+      <image:title>La Madonna</image:title>
+      <image:caption>La Madonna - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Man.webp</image:loc>
+      <image:title>Man</image:title>
+      <image:caption>Man - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Mona%20Lisa.webp</image:loc>
+      <image:title>Mona Lisa</image:title>
+      <image:caption>Mona Lisa - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Moroccan%20man.webp</image:loc>
+      <image:title>Moroccan man</image:title>
+      <image:caption>Moroccan man - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Morricone.webp</image:loc>
+      <image:title>Morricone</image:title>
+      <image:caption>Morricone - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Nicola%20Artico.webp</image:loc>
+      <image:title>Nicola Artico</image:title>
+      <image:caption>Nicola Artico - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Nurse%20during%20covid.webp</image:loc>
+      <image:title>Nurse during covid</image:title>
+      <image:caption>Nurse during covid - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/old%20man.webp</image:loc>
+      <image:title>old man</image:title>
+      <image:caption>old man - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Pat.webp</image:loc>
+      <image:title>Pat</image:title>
+      <image:caption>Pat - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Patricia.webp</image:loc>
+      <image:title>Patricia</image:title>
+      <image:caption>Patricia - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Patricia,%20costa%20rica.webp</image:loc>
+      <image:title>Patricia, costa rica</image:title>
+      <image:caption>Patricia, costa rica - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Philippe%20Beylier.webp</image:loc>
+      <image:title>Philippe Beylier</image:title>
+      <image:caption>Philippe Beylier - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Puccini.webp</image:loc>
+      <image:title>Puccini</image:title>
+      <image:caption>Puccini - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Saori.webp</image:loc>
+      <image:title>Saori</image:title>
+      <image:caption>Saori - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/ToDef.webp</image:loc>
+      <image:title>Seated man</image:title>
+      <image:caption>Seated man - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Seth.webp</image:loc>
+      <image:title>Seth</image:title>
+      <image:caption>Seth - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Sissy.webp</image:loc>
+      <image:title>Sissy</image:title>
+      <image:caption>Sissy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Sorolla.webp</image:loc>
+      <image:title>Sorolla</image:title>
+      <image:caption>Sorolla - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/The%20duke%20of%20edinburgh.webp</image:loc>
+      <image:title>The duke of edinburgh</image:title>
+      <image:caption>The duke of edinburgh - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/The%20Eye.webp</image:loc>
+      <image:title>The Eye</image:title>
+      <image:caption>The Eye - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/The%20world%20during%20covid.webp</image:loc>
+      <image:title>The world during covid</image:title>
+      <image:caption>The world during covid - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/The%20young%20Alexander.webp</image:loc>
+      <image:title>The young Alexander</image:title>
+      <image:caption>The young Alexander - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/nbvcfghjio.jpg.webp</image:loc>
+      <image:title>Valse</image:title>
+      <image:caption>Valse - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Valse.webp</image:loc>
+      <image:title>Valse</image:title>
+      <image:caption>Valse - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Woman%20copyfrom%20Sargeant.webp</image:loc>
+      <image:title>Woman copyfrom Sargeant</image:title>
+      <image:caption>Woman copyfrom Sargeant - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Woman%20with%20tights.webp</image:loc>
+      <image:title>Woman with tights</image:title>
+      <image:caption>Woman with tights - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/Working%20in%20Covid.webp</image:loc>
+      <image:title>Working in Covid</image:title>
+      <image:caption>Working in Covid - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/working%20through%20Covid.webp</image:loc>
+      <image:title>working through Covid</image:title>
+      <image:caption>working through Covid - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/young%20boy.webp</image:loc>
+      <image:title>young boy</image:title>
+      <image:caption>young boy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/portraits_brushed/young%20boy%202.webp</image:loc>
+      <image:title>young boy 2</image:title>
+      <image:caption>young boy 2 - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Aghi,%20Velizy.webp</image:loc>
+      <image:title>Aghi, Velizy</image:title>
+      <image:caption>Aghi, Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Dorothy,%20Milan,%20Italy.webp</image:loc>
+      <image:title>Dorothy, Milan, Italy</image:title>
+      <image:caption>Dorothy, Milan, Italy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Layla,%20Velizy.webp</image:loc>
+      <image:title>Layla, Velizy</image:title>
+      <image:caption>Layla, Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Leo,%20Velizy.webp</image:loc>
+      <image:title>Leo, Velizy</image:title>
+      <image:caption>Leo, Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Olaf,%20France.webp</image:loc>
+      <image:title>Olaf, France</image:title>
+      <image:caption>Olaf, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Pollock,%20Brittany,%20France.webp</image:loc>
+      <image:title>Pollock, Brittany, France</image:title>
+      <image:caption>Pollock, Brittany, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Raika,%20Velizy.webp</image:loc>
+      <image:title>Raika, Velizy</image:title>
+      <image:caption>Raika, Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Running%20in%20the%20wild.webp</image:loc>
+      <image:title>Running in the wild</image:title>
+      <image:caption>Running in the wild - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Sally,%20England.webp</image:loc>
+      <image:title>Sally, England</image:title>
+      <image:caption>Sally, England - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Sam.webp</image:loc>
+      <image:title>Sam</image:title>
+      <image:caption>Sam - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Sam,%20the%20Samoyed.webp</image:loc>
+      <image:title>Sam, the Samoyed</image:title>
+      <image:caption>Sam, the Samoyed - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Sandy,%20the%20cocker%20spaniel,%20France.webp</image:loc>
+      <image:title>Sandy, the cocker spaniel, France</image:title>
+      <image:caption>Sandy, the cocker spaniel, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Sketch%20of%20Sam%20the%20Samoyed,%20Velizy.webp</image:loc>
+      <image:title>Sketch of Sam the Samoyed, Velizy</image:title>
+      <image:caption>Sketch of Sam the Samoyed, Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Tangerine,%20France.webp</image:loc>
+      <image:title>Tangerine, France</image:title>
+      <image:caption>Tangerine, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/The%20baby%20dalmation.webp</image:loc>
+      <image:title>The baby dalmation</image:title>
+      <image:caption>The baby dalmation - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/The%20Horse.webp</image:loc>
+      <image:title>The Horse</image:title>
+      <image:caption>The Horse - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/The%20Wolf.webp</image:loc>
+      <image:title>The Wolf</image:title>
+      <image:caption>The Wolf - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Tigger,%20Velizy.webp</image:loc>
+      <image:title>Tigger, Velizy</image:title>
+      <image:caption>Tigger, Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Vegas,%20France(1).webp</image:loc>
+      <image:title>Vegas, France</image:title>
+      <image:caption>Vegas, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Vegas,%20France.webp</image:loc>
+      <image:title>Vegas, France</image:title>
+      <image:caption>Vegas, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Venezia,%20Velizy.webp</image:loc>
+      <image:title>Venezia, Velizy</image:title>
+      <image:caption>Venezia, Velizy - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Yuki,%20the%20King%20Charles%20Spaniel,%20Velizy,%20France.webp</image:loc>
+      <image:title>Yuki, the King Charles Spaniel, Velizy, France</image:title>
+      <image:caption>Yuki, the King Charles Spaniel, Velizy, France - Original oil painting by Emma Hall</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#works</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#flowers</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#landscapes</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#watercolors</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#portraits</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#pets</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#bio</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmahallpaintings.com/#contact</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

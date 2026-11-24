@@ -36,11 +36,11 @@ jobs:
 
       - name: Commit & push manifest if changed
         run: |
-          if [[ -n "$(git status --porcelain assets/works/works.json)" ]]; then
+          if [[ -n "$(git status --porcelain assets/works/works.json sitemap.xml)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add assets/works/works.json
-            git commit -m "chore: update works.json"
+            git add assets/works/works.json sitemap.xml
+            git commit -m "chore: update works.json and sitemap.xml"
             git push
           else
             echo "No changes to commit."

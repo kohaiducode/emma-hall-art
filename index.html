@@ -4,10 +4,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Emma Hall — Painter</title>
-  <meta name="description" content="Works, biography, and contact details for painter Emma Hall." />
+  <title>Emma Hall — Original Oil Paintings, Landscapes &amp; Botanicals</title>
+  <meta name="description" content="Explore original oil paintings and watercolours by Emma Hall. Featuring landscapes, Lake Annecy, Kyoto sakura art, vibrant botanicals, and custom pet portrait commissions painted with palette knife and impasto techniques." />
+  <meta name="keywords" content="Emma Hall, Emma Hall paintings, original oil paintings, landscape paintings, Lake Annecy art, Kyoto sakura paintings, palette knife oil painting, botanical floral art, custom pet portraits, fine art commissions" />
+  <meta name="author" content="Emma Hall" />
+  <link rel="canonical" href="https://www.emmahallpaintings.com/" />
   <!-- Use a relative path so GitHub Pages project sites don't break -->
   <link rel="icon" href="favicon.ico" />
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Pinterest -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.emmahallpaintings.com/" />
+  <meta property="og:site_name" content="Emma Hall Paintings" />
+  <meta property="og:title" content="Emma Hall — Original Oil Paintings, Landscapes &amp; Botanicals" />
+  <meta property="og:description" content="Explore original oil paintings and watercolours by Emma Hall. Featuring landscapes, Lake Annecy, Kyoto sakura art, vibrant botanicals, and custom pet portrait commissions." />
+  <meta property="og:image" content="https://www.emmahallpaintings.com/assets/profile/ems.jpg" />
+  <meta property="og:image:alt" content="Emma Hall in her studio with original oil paintings" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.emmahallpaintings.com/" />
+  <meta name="twitter:title" content="Emma Hall — Original Oil Paintings, Landscapes &amp; Botanicals" />
+  <meta name="twitter:description" content="Explore original oil paintings and watercolours by Emma Hall. Featuring landscapes, Lake Annecy, Kyoto sakura art, vibrant botanicals, and custom pet portraits." />
+  <meta name="twitter:image" content="https://www.emmahallpaintings.com/assets/profile/ems.jpg" />
+  <meta name="twitter:image:alt" content="Emma Hall in her studio with original oil paintings" />
+
+  <!-- Schema.org JSON-LD (VisualArtist & WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.emmahallpaintings.com/#artist",
+        "name": "Emma Hall",
+        "url": "https://www.emmahallpaintings.com/",
+        "image": "https://www.emmahallpaintings.com/assets/profile/ems.jpg",
+        "jobTitle": "Painter & Visual Artist",
+        "description": "Emma Hall is a visual artist specializing in original oil paintings, vibrant botanicals, landscapes, travel-inspired scenes of Japan and Italy, and custom pet portraits using unique palette knife and impasto techniques.",
+        "sameAs": [
+          "https://www.instagram.com/emmahallpaintings/",
+          "https://www.youtube.com/@emmahallpainting",
+          "https://www.tiktok.com/@emmahallpaintings",
+          "https://www.linkedin.com/in/emma-hall-770559230/"
+        ],
+        "knowsAbout": [
+          "Oil painting",
+          "Palette knife oil paintings",
+          "Impasto knife technique",
+          "Landscape paintings",
+          "Lake Annecy oil paintings",
+          "Kyoto sakura art",
+          "Botanical and floral oil paintings",
+          "Custom pet portrait commissions",
+          "Watercolour paintings"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.emmahallpaintings.com/#website",
+        "url": "https://www.emmahallpaintings.com/",
+        "name": "Emma Hall Paintings",
+        "description": "Original oil paintings, landscapes, Kyoto sakura art, vibrant botanicals, and custom commissions by painter Emma Hall.",
+        "publisher": {
+          "@id": "https://www.emmahallpaintings.com/#artist"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
   
   <!-- Google Analytics 4 (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z0WGPR0MW"></script>
@@ -1247,20 +1314,20 @@
             </div>
           </div>
           <div class="bio-img-container">
-            <img class="bio-img" src="assets/profile/ems.jpg" alt="Emma Hall" />
+            <img class="bio-img" src="assets/profile/ems.jpg" alt="Emma Hall — Visual Artist and Painter in her Studio" />
           </div>
         </div>
         
         <!-- Additional Bio Media Images -->
         <div class="bio-extra-images">
           <div class="bio-extra-img-container">
-            <img class="bio-extra-img" src="assets/profile/1.webp" alt="Emma Hall Article / Painting" loading="lazy" />
+            <img class="bio-extra-img" src="assets/profile/1.webp" alt="Emma Hall Article and Feature Exhibition Paintings" loading="lazy" />
           </div>
           <div class="bio-extra-img-container">
-            <img class="bio-extra-img" src="assets/profile/2.webp" alt="Emma Hall Portrait" loading="lazy" />
+            <img class="bio-extra-img" src="assets/profile/2.webp" alt="Emma Hall Portrait — Contemporary Artist" loading="lazy" />
           </div>
           <div class="bio-extra-img-container">
-            <img class="bio-extra-img" src="assets/profile/3.webp" alt="Emma Hall Work / Studio" loading="lazy" />
+            <img class="bio-extra-img" src="assets/profile/3.webp" alt="Emma Hall Studio Workspace and Palette Knife Artwork" loading="lazy" />
           </div>
         </div>
       </section>
@@ -1681,7 +1748,7 @@
         const el = document.createElement('img');
         el.loading = "lazy";
         el.src = img.src;
-        el.alt = img.name;
+        el.alt = img.alt || `${img.name} - Original ${img.cat === 'watercolours' ? 'watercolour' : 'oil'} painting by Emma Hall`;
         
         const overlay = document.createElement('div');
         overlay.className = 'card-overlay';
@@ -1762,9 +1829,12 @@
             priority: false,
             status: ""
           };
+          const metaName = meta.name || humanizeName(filename);
+          const defaultAlt = `${metaName} - Original ${cat === 'watercolours' ? 'watercolour' : 'oil'} painting by Emma Hall`;
           list.push({
             filename: filename,
-            name: meta.name,
+            name: metaName,
+            alt: meta.alt || defaultAlt,
             src: `${base}/${encodeURIComponent(filename).replace(/%2C/g, ',').replace(/%28/g, '(').replace(/%29/g, ')')}`,
             cat: cat,
             price: meta.price,
@@ -1865,7 +1935,7 @@
 
     function openLightbox(img) {
       lightboxImg.src = img.src;
-      lightboxImg.alt = img.name;
+      lightboxImg.alt = img.alt || `${img.name} - Original ${img.cat === 'watercolours' ? 'watercolour' : 'oil'} painting by Emma Hall`;
       
       const tMap = TRANSLATIONS[CURRENT_LANG];
       
