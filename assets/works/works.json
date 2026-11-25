@@ -51,8 +51,8 @@
     "Sakura view, Kansai, Japan.webp",
     "Shibuya view, Tokyo, Japan.webp",
     "Solitude.webp",
-    "Sunset in Okinawa, Japan.webp",
     "Sunset.webp",
+    "Sunset in Okinawa, Japan.webp",
     "Sunset in Japan.webp",
     "Tempest in the Maldives.webp",
     "The African Tree.webp",
@@ -76,9 +76,9 @@
     "Autumn gardens in Kyoto.webp",
     "Autumn in Japan.webp",
     "Blue.webp",
-    "Gion, Kyoto, Japan(1).webp",
     "Gion, Kyoto, Japan.webp",
     "View over Gion, Kyoto, Japan.webp",
+    "Gion, Kyoto, Japan(1).webp",
     "Hut in hills in Japan.webp",
     "japanese countryside.webp",
     "Kinkakuji, Kyoto, Japan.webp",
@@ -87,9 +87,9 @@
     "Pink and Grey.webp",
     "Pivoines, France.webp",
     "Purple sky.webp",
-    "Sakura 2.webp",
-    "Sakura flower.webp",
     "Sakura.webp",
+    "Sakura flower.webp",
+    "Sakura 2.webp",
     "Sea in Japan.webp",
     "The small pink rose.webp",
     "Temple in India.webp",
@@ -169,8 +169,8 @@
     "The Horse.webp",
     "The Wolf.webp",
     "Tigger, Velizy.webp",
-    "Vegas, France(1).webp",
     "Vegas, France.webp",
+    "Vegas, France(1).webp",
     "Venezia, Velizy.webp",
     "Yuki, the King Charles Spaniel, Velizy, France.webp"
   ],
@@ -196,13 +196,13 @@
     "watercolours/Blue.webp",
     "flowers/Into the blue.webp",
     "landscapes/Japan gate.webp",
-    "watercolours/Gion, Kyoto, Japan(1).webp",
+    "watercolours/Gion, Kyoto, Japan.webp",
     "flowers/into the green.webp",
     "landscapes/Japan view of pink sky.webp",
-    "watercolours/Gion, Kyoto, Japan.webp",
+    "watercolours/View over Gion, Kyoto, Japan.webp",
     "flowers/into the light.webp",
     "landscapes/Kinkakuji, Kyoto, Japan.webp",
-    "watercolours/View over Gion, Kyoto, Japan.webp",
+    "watercolours/Gion, Kyoto, Japan(1).webp",
     "flowers/Japanese sand flowers.webp",
     "landscapes/The Emperors Gardens, Kyoto, Japan.webp",
     "watercolours/Hut in hills in Japan.webp",
@@ -229,21 +229,21 @@
     "watercolours/Purple sky.webp",
     "flowers/Purple japanese water lilies.webp",
     "landscapes/Sakura in Kyoto, Japan.webp",
-    "watercolours/Sakura 2.webp",
+    "watercolours/Sakura.webp",
     "flowers/Sakura blowing in the blue skies of Tokyo.webp",
     "landscapes/Sakura view, Kansai, Japan.webp",
     "watercolours/Sakura flower.webp",
     "flowers/SAKURA GLORY.webp",
     "landscapes/Shibuya view, Tokyo, Japan.webp",
-    "watercolours/Sakura.webp",
+    "watercolours/Sakura 2.webp",
     "flowers/Savoie flowers.webp",
     "landscapes/Solitude.webp",
     "watercolours/Sea in Japan.webp",
     "flowers/The spring forest in velizy.webp",
-    "landscapes/Sunset in Okinawa, Japan.webp",
+    "landscapes/Sunset.webp",
     "watercolours/The small pink rose.webp",
     "flowers/Sunflowers of Tuscany.webp",
-    "landscapes/Sunset.webp",
+    "landscapes/Sunset in Okinawa, Japan.webp",
     "watercolours/Temple in India.webp",
     "flowers/The pink vase.webp",
     "landscapes/Sunset in Japan.webp",
@@ -304,9 +304,9 @@
     "portraits/Guitarist.webp",
     "pets/Tigger, Velizy.webp",
     "portraits/Guy Bedos.webp",
-    "pets/Vegas, France(1).webp",
-    "portraits/Juliet Binoche.webp",
     "pets/Vegas, France.webp",
+    "portraits/Juliet Binoche.webp",
+    "pets/Vegas, France(1).webp",
     "portraits/Kristin Scott Thomas.webp",
     "pets/Venezia, Velizy.webp",
     "portraits/La Madonna.webp",
@@ -342,11 +342,75 @@
     "portraits/young boy 2.webp"
   ],
   "_metadata": {
+    "flowers/into the green.webp": {
+      "name": "Into the green",
+      "alt": "Into the green - Original botanical floral oil painting by Emma Hall (50 x 40 cm)",
+      "price": "400 €",
+      "size": "50 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/Purple japanese water lilies.webp": {
+      "name": "Purple Japanese water lily",
+      "alt": "Purple Japanese water lily - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
+      "price": "350 €",
+      "size": "50 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
     "flowers/Costa Rican flowers.webp": {
       "name": "Costa Rican flowers",
       "alt": "Costa Rican flowers - Original botanical floral oil painting by Emma Hall (59 x 50 cm)",
       "price": "350 €",
       "size": "59 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/Japanese water lilies.webp": {
+      "name": "Japanese water lilies",
+      "alt": "Japanese water lilies - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
+      "price": "400 €",
+      "size": "50 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/The spring forest in velizy.webp": {
+      "name": "Spring V.",
+      "alt": "Spring V. - Original botanical floral oil painting by Emma Hall (60 x 50 cm)",
+      "price": "550 €",
+      "size": "60 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/Japanese sand flowers.webp": {
+      "name": "Japanese sand flowers",
+      "alt": "Japanese sand flowers - Original botanical floral oil painting by Emma Hall (40 x 30 cm)",
+      "price": "200 €",
+      "size": "40 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/Leaves in the waters of Lake Annecy.webp": {
+      "name": "Leaves in Lake Annecy",
+      "alt": "Leaves in Lake Annecy - Original botanical floral oil painting by Emma Hall (50 x 40 cm)",
+      "price": "400 €",
+      "size": "50 x 40",
+      "priority": true,
+      "status": "FOR SALE"
+    },
+    "flowers/Sakura blowing in the blue skies of Tokyo.webp": {
+      "name": "Sakura flowers",
+      "alt": "Sakura flowers - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/Light sakura.webp": {
+      "name": "Light sakura",
+      "alt": "Light sakura - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
+      "price": "200 €",
+      "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -362,6 +426,30 @@
       "name": "Free Spring",
       "alt": "Free Spring - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
       "price": "400 €",
+      "size": "50 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/Sunflowers of Tuscany.webp": {
+      "name": "Sunflowers from Tuscany",
+      "alt": "Sunflowers from Tuscany - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/PIVOINES of ile de france.webp": {
+      "name": "Pivoines",
+      "alt": "Pivoines - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
+      "price": "200 €",
+      "size": "40 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/into the light.webp": {
+      "name": "Into the light",
+      "alt": "Into the light - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
@@ -382,60 +470,12 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "flowers/into the green.webp": {
-      "name": "Into the green",
-      "alt": "Into the green - Original botanical floral oil painting by Emma Hall (50 x 40 cm)",
-      "price": "400 €",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/into the light.webp": {
-      "name": "Into the light",
-      "alt": "Into the light - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
-      "price": "350 €",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Japanese sand flowers.webp": {
-      "name": "Japanese sand flowers",
-      "alt": "Japanese sand flowers - Original botanical floral oil painting by Emma Hall (40 x 30 cm)",
-      "price": "200 €",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Japanese water lilies.webp": {
-      "name": "Japanese water lilies",
-      "alt": "Japanese water lilies - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
-      "price": "400 €",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Leaves in the waters of Lake Annecy.webp": {
-      "name": "Leaves in Lake Annecy",
-      "alt": "Leaves in Lake Annecy - Original botanical floral oil painting by Emma Hall (50 x 40 cm)",
-      "price": "400 €",
-      "size": "50 x 40",
+    "flowers/The Blue Vase.webp": {
+      "name": "The Blue Vase",
+      "alt": "The Blue Vase - Original botanical floral oil painting by Emma Hall (60 x 50 cm)",
+      "price": "500 €",
+      "size": "60 x 50",
       "priority": true,
-      "status": "FOR SALE"
-    },
-    "flowers/Light sakura.webp": {
-      "name": "Light sakura",
-      "alt": "Light sakura - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
-      "price": "200 €",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Lilac.webp": {
-      "name": "Lilac",
-      "alt": "Lilac - Original botanical floral oil painting by Emma Hall (70 x 50 cm)",
-      "price": "400 €",
-      "size": "70 x 50",
-      "priority": false,
       "status": "FOR SALE"
     },
     "flowers/Peach.webp": {
@@ -454,33 +494,41 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "flowers/pink sakura.webp": {
-      "name": "Pink sakura",
-      "alt": "Pink sakura - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
-      "price": "200 €",
-      "size": "40 x 40",
+    "flowers/The pink vase.webp": {
+      "name": "The Pink Vase",
+      "alt": "The Pink Vase - Original botanical floral oil painting by Emma Hall (60 x 50 cm)",
+      "price": "500 €",
+      "size": "60 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
-    "flowers/PIVOINES of ile de france.webp": {
-      "name": "Pivoines",
-      "alt": "Pivoines - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
+    "flowers/Savoie flowers.webp": {
+      "name": "Savoie mountain flowers",
+      "alt": "Savoie mountain flowers - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
       "price": "200 €",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Purple japanese water lilies.webp": {
-      "name": "Purple Japanese water lily",
-      "alt": "Purple Japanese water lily - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
-      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
-    "flowers/Sakura blowing in the blue skies of Tokyo.webp": {
-      "name": "Sakura flowers",
-      "alt": "Sakura flowers - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
+    "flowers/Lilac.webp": {
+      "name": "Lilac",
+      "alt": "Lilac - Original botanical floral oil painting by Emma Hall (70 x 50 cm)",
+      "price": "400 €",
+      "size": "70 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/yellow.webp": {
+      "name": "Yellow",
+      "alt": "Yellow - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
+      "price": "550 €",
+      "size": "50 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "flowers/pink sakura.webp": {
+      "name": "Pink sakura",
+      "alt": "Pink sakura - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
       "price": "200 €",
       "size": "40 x 40",
       "priority": false,
@@ -494,100 +542,12 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "flowers/Savoie flowers.webp": {
-      "name": "Savoie mountain flowers",
-      "alt": "Savoie mountain flowers - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
-      "price": "200 €",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/Sunflowers of Tuscany.webp": {
-      "name": "Sunflowers from Tuscany",
-      "alt": "Sunflowers from Tuscany - Original botanical floral oil painting by Emma Hall (40 x 40 cm)",
-      "price": "200 €",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/The Blue Vase.webp": {
-      "name": "The Blue Vase",
-      "alt": "The Blue Vase - Original botanical floral oil painting by Emma Hall (60 x 50 cm)",
-      "price": "500 €",
-      "size": "60 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "flowers/The pink vase.webp": {
-      "name": "The Pink Vase",
-      "alt": "The Pink Vase - Original botanical floral oil painting by Emma Hall (60 x 50 cm)",
-      "price": "500 €",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/The spring forest in velizy.webp": {
-      "name": "Spring V.",
-      "alt": "Spring V. - Original botanical floral oil painting by Emma Hall (60 x 50 cm)",
-      "price": "550 €",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "flowers/yellow.webp": {
-      "name": "Yellow",
-      "alt": "Yellow - Original botanical floral oil painting by Emma Hall (50 x 50 cm)",
-      "price": "550 €",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/autumn in japan.webp": {
-      "name": "Autumn in Japan",
-      "alt": "Autumn in Japan - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 40 cm)",
-      "price": "200 €",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Autumn in Velizy, France.webp": {
-      "name": "Autumn in Velizy",
-      "alt": "Autumn in Velizy - Original palette knife landscape oil painting on canvas by Emma Hall (60 x 50 cm)",
-      "price": "550 €",
-      "size": "60 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/Flowing river in India.webp": {
-      "name": "River flowing in India",
-      "alt": "River flowing in India - Original palette knife landscape oil painting on canvas by Emma Hall (70 x50 cm)",
-      "price": "550 €",
-      "size": "70 x50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Hills in the Lebanon.webp": {
-      "name": "Hills in Lebanon",
-      "alt": "Hills in Lebanon - Original palette knife landscape oil painting on canvas by Emma Hall (60 x 40 cm)",
-      "price": "450 €",
-      "size": "60 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Indian river.webp": {
-      "name": "Indian River",
-      "alt": "Indian River - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
+    "landscapes/The River.webp": {
+      "name": "The River",
+      "alt": "The River - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
       "price": "550 €",
       "size": "70 x 50",
       "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/Ischia, Italy.webp": {
-      "name": "Ischia",
-      "alt": "Ischia - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "350 €",
-      "size": "50 x 40",
-      "priority": false,
       "status": "FOR SALE"
     },
     "landscapes/Japan gate.webp": {
@@ -598,26 +558,74 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/Japan view of pink sky.webp": {
-      "name": "Japan view of pink",
-      "alt": "Japan view of pink - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
+    "landscapes/Lake Annecy, France.webp": {
+      "name": "Lake Annecy",
+      "alt": "Lake Annecy - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
+      "price": "350 €",
+      "size": "50 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/The Bluebell girl.webp": {
+      "name": "The bluebell girl, London",
+      "alt": "The bluebell girl, London - Original palette knife landscape oil painting on canvas by Emma Hall (60 x 50 cm)",
+      "price": "450 €",
+      "size": "60 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Tokyo sky view.webp": {
+      "name": "Tokyo sky view",
+      "alt": "Tokyo sky view - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 30 cm)",
+      "price": "350 €",
+      "size": "40 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/The Blue Pot.webp": {
+      "name": "The blue pot",
+      "alt": "The blue pot - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
       "price": "300 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/Kinkakuji, Kyoto, Japan.webp": {
-      "name": "Kinkakuji",
-      "alt": "Kinkakuji - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
-      "price": "300 €",
+    "landscapes/View on an Indian river.webp": {
+      "name": "View on India",
+      "alt": "View on India - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/Lake Annecy, France.webp": {
-      "name": "Lake Annecy",
-      "alt": "Lake Annecy - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "350 €",
+    "landscapes/The lonely tree.webp": {
+      "name": "The lonely tree",
+      "alt": "The lonely tree - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 30 cm)",
+      "price": "200 €",
+      "size": "40 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Flowing river in India.webp": {
+      "name": "River flowing in India",
+      "alt": "River flowing in India - Original palette knife landscape oil painting on canvas by Emma Hall (70 x50 cm)",
+      "price": "550 €",
+      "size": "70 x50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Normandy, France.webp": {
+      "name": "Normandy",
+      "alt": "Normandy - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
+      "price": "300 €",
+      "size": "50 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Japan view of pink sky.webp": {
+      "name": "Japan view of pink",
+      "alt": "Japan view of pink - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
+      "price": "300 €",
       "size": "50 x 40",
       "priority": false,
       "status": "FOR SALE"
@@ -638,11 +646,51 @@
       "priority": true,
       "status": "FOR SALE"
     },
+    "landscapes/The Mill House, Suffolk, England.webp": {
+      "name": "The Mill House, Suffolk, England",
+      "alt": "The Mill House, Suffolk, England - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 60 cm)",
+      "price": "350 €",
+      "size": "50 x 60",
+      "priority": false,
+      "status": "FOR SALE"
+    },
     "landscapes/Le sud ouest, France.webp": {
       "name": "The south west of France",
       "alt": "The south west of France - Original palette knife landscape oil painting on canvas by Emma Hall (30 x 40 cm)",
       "price": "200 €",
       "size": "30 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/The African Tree.webp": {
+      "name": "The African tree",
+      "alt": "The African tree - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
+      "price": "300 €",
+      "size": "50 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Ischia, Italy.webp": {
+      "name": "Ischia",
+      "alt": "Ischia - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
+      "price": "350 €",
+      "size": "50 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Hills in the Lebanon.webp": {
+      "name": "Hills in Lebanon",
+      "alt": "Hills in Lebanon - Original palette knife landscape oil painting on canvas by Emma Hall (60 x 40 cm)",
+      "price": "450 €",
+      "size": "60 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/View of Venice.webp": {
+      "name": "View of Venice",
+      "alt": "View of Venice - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
+      "price": "450 €",
+      "size": "70 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -654,18 +702,10 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/Normandy, France.webp": {
-      "name": "Normandy",
-      "alt": "Normandy - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "300 €",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Osaka Jo, Osaka, Japan.webp": {
-      "name": "Osaka Jo",
-      "alt": "Osaka Jo - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
-      "price": "400 €",
+    "landscapes/Shibuya view, Tokyo, Japan.webp": {
+      "name": "Shibuya view, Tokyo",
+      "alt": "Shibuya view, Tokyo - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
+      "price": "350 €",
       "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
@@ -678,35 +718,27 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/Sakura in Kyoto, Japan.webp": {
-      "name": "Sakura in Kyoto",
-      "alt": "Sakura in Kyoto - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 40 cm)",
-      "price": "300 €",
+    "landscapes/Venezia.webp": {
+      "name": "Venezia",
+      "alt": "Venezia - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
+      "price": "450 €",
+      "size": "70 x 50",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Sunset.webp": {
+      "name": "Sunset",
+      "alt": "Sunset - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 40 cm)",
+      "price": "200 €",
       "size": "40 x 40",
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/Sakura view, Kansai, Japan.webp": {
-      "name": "Sakura view",
-      "alt": "Sakura view - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 40 cm)",
+    "landscapes/Sunset in Japan.webp": {
+      "name": "Sunset in Japan",
+      "alt": "Sunset in Japan - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 30 cm)",
       "price": "300 €",
-      "size": "40 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Shibuya view, Tokyo, Japan.webp": {
-      "name": "Shibuya view, Tokyo",
-      "alt": "Shibuya view, Tokyo - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
-      "price": "350 €",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Solitude.webp": {
-      "name": "Solitude",
-      "alt": "Solitude - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
-      "price": "400 €",
-      "size": "50 x 50",
+      "size": "40 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -718,11 +750,19 @@
       "priority": true,
       "status": "FOR SALE"
     },
-    "landscapes/Sunset in Japan.webp": {
-      "name": "Sunset in Japan",
-      "alt": "Sunset in Japan - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 30 cm)",
-      "price": "300 €",
-      "size": "40 x 30",
+    "landscapes/The Secret Passage.webp": {
+      "name": "The Secret",
+      "alt": "The Secret - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
+      "price": "250 €",
+      "size": "50 x 40",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "landscapes/Osaka Jo, Osaka, Japan.webp": {
+      "name": "Osaka Jo",
+      "alt": "Osaka Jo - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
+      "price": "400 €",
+      "size": "50 x 50",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -750,126 +790,6 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/The African Tree.webp": {
-      "name": "The African tree",
-      "alt": "The African tree - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "300 €",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Blue Pot.webp": {
-      "name": "The blue pot",
-      "alt": "The blue pot - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "300 €",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Bluebell girl.webp": {
-      "name": "The bluebell girl, London",
-      "alt": "The bluebell girl, London - Original palette knife landscape oil painting on canvas by Emma Hall (60 x 50 cm)",
-      "price": "450 €",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Emperors Gardens, Kyoto, Japan.webp": {
-      "name": "Kyoto Emperors garden,",
-      "alt": "Kyoto Emperors garden, - Original palette knife landscape oil painting on canvas by Emma Hall (60 x 50 cm)",
-      "price": "450 €",
-      "size": "60 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The gondola, Venezia.webp": {
-      "name": "The Gondola, Venezia",
-      "alt": "The Gondola, Venezia - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
-      "price": "550 €",
-      "size": "70 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/The lonely tree.webp": {
-      "name": "The lonely tree",
-      "alt": "The lonely tree - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 30 cm)",
-      "price": "200 €",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Mill House, Suffolk, England.webp": {
-      "name": "The Mill House, Suffolk, England",
-      "alt": "The Mill House, Suffolk, England - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 60 cm)",
-      "price": "350 €",
-      "size": "50 x 60",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The River.webp": {
-      "name": "The River",
-      "alt": "The River - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
-      "price": "550 €",
-      "size": "70 x 50",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "landscapes/The Secret Passage.webp": {
-      "name": "The Secret",
-      "alt": "The Secret - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "250 €",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/The tree of life.webp": {
-      "name": "The tree of life",
-      "alt": "The tree of life - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "350 €",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Tokyo sky view.webp": {
-      "name": "Tokyo sky view",
-      "alt": "Tokyo sky view - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 30 cm)",
-      "price": "350 €",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Tokyoview from Shibuja.webp": {
-      "name": "Tokyo view from Shinjuku",
-      "alt": "Tokyo view from Shinjuku - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 40 cm)",
-      "price": "350 €",
-      "size": "50 x 40",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/Venezia.webp": {
-      "name": "Venezia",
-      "alt": "Venezia - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
-      "price": "450 €",
-      "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/View of Venice.webp": {
-      "name": "View of Venice",
-      "alt": "View of Venice - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
-      "price": "450 €",
-      "size": "70 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "landscapes/View on an Indian river.webp": {
-      "name": "View on India",
-      "alt": "View on India - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)",
-      "price": "350 €",
-      "size": "50 x 50",
-      "priority": false,
-      "status": "FOR SALE"
-    },
     "landscapes/Waterfall in Japan.webp": {
       "name": "Waterfall in Japan",
       "alt": "Waterfall in Japan - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 30 cm)",
@@ -878,41 +798,25 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "landscapes/Where Sakura trees meet Tuscany.webp": {
-      "name": "Where Sakura meets Tuscany",
-      "alt": "Where Sakura meets Tuscany - Original palette knife landscape oil painting on canvas by Emma Hall (70 x 50 cm)",
-      "price": "450 €",
-      "size": "70 x 50",
-      "priority": false,
+    "landscapes/Autumn in Velizy, France.webp": {
+      "name": "Autumn in Velizy",
+      "alt": "Autumn in Velizy - Original palette knife landscape oil painting on canvas by Emma Hall (60 x 50 cm)",
+      "price": "550 €",
+      "size": "60 x 50",
+      "priority": true,
       "status": "FOR SALE"
     },
-    "watercolours/Autumn gardens in Kyoto.webp": {
-      "name": "Autumn garden",
-      "alt": "Autumn garden - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
-      "price": "250 €",
-      "size": "25 x 32",
-      "priority": false,
+    "watercolours/Small shrine in Japan.webp": {
+      "name": "Small shrine in Japan",
+      "alt": "Small shrine in Japan - Original watercolour painting on paper by visual artist Emma Hall (26 x 32 cm)",
+      "price": "300 €",
+      "size": "26 x 32",
+      "priority": true,
       "status": "FOR SALE"
     },
-    "watercolours/Autumn in Japan.webp": {
-      "name": "Autumn in Japan",
-      "alt": "Autumn in Japan - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
-      "price": "150 €",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Blue.webp": {
-      "name": "Blue",
-      "alt": "Blue - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
-      "price": "150 €",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Gion, Kyoto, Japan(1).webp": {
-      "name": "Gion",
-      "alt": "Gion - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+    "watercolours/Mountains in Japan.webp": {
+      "name": "Mountains in Japan",
+      "alt": "Mountains in Japan - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
       "price": "150 €",
       "size": "25 x 32",
       "priority": false,
@@ -926,6 +830,62 @@
       "priority": false,
       "status": "FOR SALE"
     },
+    "watercolours/Sakura.webp": {
+      "name": "Sakura",
+      "alt": "Sakura - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Temple in Kyoto, Japan.webp": {
+      "name": "Temple in Kyoto",
+      "alt": "Temple in Kyoto - Original watercolour painting on paper by visual artist Emma Hall (28 x 32 cm)",
+      "price": "150 €",
+      "size": "28 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/View over Gion, Kyoto, Japan.webp": {
+      "name": "Gion",
+      "alt": "Gion - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Temple in India.webp": {
+      "name": "Temple in India",
+      "alt": "Temple in India - Original watercolour painting on paper by visual artist Emma Hall (27 x 32 cm)",
+      "price": "150 €",
+      "size": "27 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Purple sky.webp": {
+      "name": "Purple sky",
+      "alt": "Purple sky - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/The discarded warehouse.webp": {
+      "name": "The discarded warehouse",
+      "alt": "The discarded warehouse - Original watercolour painting on paper by visual artist Emma Hall (24 x 32 cm)",
+      "price": "150 €",
+      "size": "24 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Blue.webp": {
+      "name": "Blue",
+      "alt": "Blue - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
     "watercolours/Hut in hills in Japan.webp": {
       "name": "Hut in the hills",
       "alt": "Hut in the hills - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
@@ -934,9 +894,57 @@
       "priority": false,
       "status": "FOR SALE"
     },
+    "watercolours/Tree in Kyoto, Japan.webp": {
+      "name": "Tree in Kyoto",
+      "alt": "Tree in Kyoto - Original watercolour painting on paper by visual artist Emma Hall (30 x 32 cm)",
+      "price": "150 €",
+      "size": "30 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Autumn in Japan.webp": {
+      "name": "Autumn in Japan",
+      "alt": "Autumn in Japan - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/The small pink rose.webp": {
+      "name": "Small Rose",
+      "alt": "Small Rose - Original watercolour painting on paper by visual artist Emma Hall (29 x 32 cm)",
+      "price": "150 €",
+      "size": "29 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Pivoines, France.webp": {
+      "name": "Pivoines from France",
+      "alt": "Pivoines from France - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "250 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Morocco.webp": {
+      "name": "Morocco",
+      "alt": "Morocco - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "150 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
     "watercolours/japanese countryside.webp": {
       "name": "Japanese countryside",
       "alt": "Japanese countryside - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+      "price": "250 €",
+      "size": "25 x 32",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "watercolours/Autumn gardens in Kyoto.webp": {
+      "name": "Autumn garden",
+      "alt": "Autumn garden - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
       "price": "250 €",
       "size": "25 x 32",
       "priority": false,
@@ -950,49 +958,17 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/Morocco.webp": {
-      "name": "Morocco",
-      "alt": "Morocco - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+    "watercolours/Sea in Japan.webp": {
+      "name": "sea in Japan",
+      "alt": "sea in Japan - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
       "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/Mountains in Japan.webp": {
-      "name": "Mountains in Japan",
-      "alt": "Mountains in Japan - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
-      "price": "150 €",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Pink and Grey.webp": {
-      "name": "Pink and grey",
-      "alt": "Pink and grey - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
-      "price": "150 €",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Pivoines, France.webp": {
-      "name": "Pivoines from France",
-      "alt": "Pivoines from France - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
-      "price": "250 €",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Purple sky.webp": {
-      "name": "Purple sky",
-      "alt": "Purple sky - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
-      "price": "150 €",
-      "size": "25 x 32",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "watercolours/Sakura 2.webp": {
-      "name": "Sakura",
-      "alt": "Sakura - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+    "watercolours/Gion, Kyoto, Japan(1).webp": {
+      "name": "Gion",
+      "alt": "Gion - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
       "price": "150 €",
       "size": "25 x 32",
       "priority": false,
@@ -1006,7 +982,7 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/Sakura.webp": {
+    "watercolours/Sakura 2.webp": {
       "name": "Sakura",
       "alt": "Sakura - Original watercolour painting on paper by visual artist Emma Hall (Study 3) (25 x 32 cm)",
       "price": "150 €",
@@ -1014,59 +990,51 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/Sea in Japan.webp": {
-      "name": "sea in Japan",
-      "alt": "sea in Japan - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
+    "watercolours/Pink and Grey.webp": {
+      "name": "Pink and grey",
+      "alt": "Pink and grey - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)",
       "price": "150 €",
       "size": "25 x 32",
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/Small shrine in Japan.webp": {
-      "name": "Small shrine in Japan",
-      "alt": "Small shrine in Japan - Original watercolour painting on paper by visual artist Emma Hall (26 x 32 cm)",
-      "price": "300 €",
-      "size": "26 x 32",
-      "priority": true,
-      "status": "FOR SALE"
-    },
-    "watercolours/Temple in India.webp": {
-      "name": "Temple in India",
-      "alt": "Temple in India - Original watercolour painting on paper by visual artist Emma Hall (27 x 32 cm)",
-      "price": "150 €",
-      "size": "27 x 32",
+    "portraits/Christelle.webp": {
+      "name": "Christelle",
+      "alt": "Christelle - Original fine art oil portrait painting by Emma Hall (31 x 30 cm)",
+      "price": "Price on demand",
+      "size": "31 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/Temple in Kyoto, Japan.webp": {
-      "name": "Temple in Kyoto",
-      "alt": "Temple in Kyoto - Original watercolour painting on paper by visual artist Emma Hall (28 x 32 cm)",
-      "price": "150 €",
-      "size": "28 x 32",
+    "portraits/Grace Kelly 2.webp": {
+      "name": "Grace Kelly 2",
+      "alt": "Grace Kelly 2 - Original fine art oil portrait painting by Emma Hall (41 x 30 cm)",
+      "price": "Price on demand",
+      "size": "41 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/The discarded warehouse.webp": {
-      "name": "The discarded warehouse",
-      "alt": "The discarded warehouse - Original watercolour painting on paper by visual artist Emma Hall (24 x 32 cm)",
-      "price": "150 €",
-      "size": "24 x 32",
+    "portraits/David Bowie.webp": {
+      "name": "David Bowie",
+      "alt": "David Bowie - Original fine art oil portrait painting by Emma Hall (32 x 30 cm)",
+      "price": "Price on demand",
+      "size": "32 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/The small pink rose.webp": {
-      "name": "Small Rose",
-      "alt": "Small Rose - Original watercolour painting on paper by visual artist Emma Hall (29 x 32 cm)",
-      "price": "150 €",
-      "size": "29 x 32",
+    "portraits/Candice.webp": {
+      "name": "Candice",
+      "alt": "Candice - Original fine art oil portrait painting by Emma Hall (29 x 30 cm)",
+      "price": "Price on demand",
+      "size": "29 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "watercolours/Tree in Kyoto, Japan.webp": {
-      "name": "Tree in Kyoto",
-      "alt": "Tree in Kyoto - Original watercolour painting on paper by visual artist Emma Hall (30 x 32 cm)",
-      "price": "150 €",
-      "size": "30 x 32",
+    "portraits/young boy 2.webp": {
+      "name": "young boy 2",
+      "alt": "young boy 2 - Original fine art oil portrait painting by Emma Hall (75 x 30 cm)",
+      "price": "Price on demand",
+      "size": "75 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -1086,11 +1054,75 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/Aiko.webp": {
-      "name": "Aiko",
-      "alt": "Aiko - Original fine art oil portrait painting by Emma Hall (25 x 30 cm)",
+    "portraits/Guy Bedos.webp": {
+      "name": "Guy Bedos",
+      "alt": "Guy Bedos - Original fine art oil portrait painting by Emma Hall (43 x 30 cm)",
       "price": "Price on demand",
-      "size": "25 x 30",
+      "size": "43 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/Emma_s copy of La Liseuse.webp": {
+      "name": "Emma s copy of La Liseuse",
+      "alt": "Emma s copy of La Liseuse - Original fine art oil portrait painting by Emma Hall (34 x 30 cm)",
+      "price": "Price on demand",
+      "size": "34 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/Juliet Binoche.webp": {
+      "name": "Juliet Binoche",
+      "alt": "Juliet Binoche - Original fine art oil portrait painting by Emma Hall (44 x 30 cm)",
+      "price": "Price on demand",
+      "size": "44 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/Sissy.webp": {
+      "name": "Sissy",
+      "alt": "Sissy - Original fine art oil portrait painting by Emma Hall (62 x 30 cm)",
+      "price": "Price on demand",
+      "size": "62 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/Man.webp": {
+      "name": "Man",
+      "alt": "Man - Original fine art oil portrait painting by Emma Hall (47 x 30 cm)",
+      "price": "Price on demand",
+      "size": "47 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/The duke of edinburgh.webp": {
+      "name": "The duke of edinburgh",
+      "alt": "The duke of edinburgh - Original fine art oil portrait painting by Emma Hall (64 x 30 cm)",
+      "price": "Price on demand",
+      "size": "64 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/Mona Lisa.webp": {
+      "name": "Mona Lisa",
+      "alt": "Mona Lisa - Original fine art oil portrait painting by Emma Hall (48 x 30 cm)",
+      "price": "Price on demand",
+      "size": "48 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/The young Alexander.webp": {
+      "name": "The young Alexander",
+      "alt": "The young Alexander - Original fine art oil portrait painting by Emma Hall (67 x 30 cm)",
+      "price": "Price on demand",
+      "size": "67 x 30",
+      "priority": false,
+      "status": "FOR SALE"
+    },
+    "portraits/The Eye.webp": {
+      "name": "The Eye",
+      "alt": "The Eye - Original fine art oil portrait painting by Emma Hall (65 x 30 cm)",
+      "price": "Price on demand",
+      "size": "65 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -1110,171 +1142,11 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/Candice.webp": {
-      "name": "Candice",
-      "alt": "Candice - Original fine art oil portrait painting by Emma Hall (29 x 30 cm)",
+    "portraits/Working in Covid.webp": {
+      "name": "Working in Covid",
+      "alt": "Working in Covid - Original fine art oil portrait painting by Emma Hall (72 x 30 cm)",
       "price": "Price on demand",
-      "size": "29 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Celine Dion.webp": {
-      "name": "Celine Dion",
-      "alt": "Celine Dion - Original fine art oil portrait painting by Emma Hall (30 x 30 cm)",
-      "price": "Price on demand",
-      "size": "30 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Christelle.webp": {
-      "name": "Christelle",
-      "alt": "Christelle - Original fine art oil portrait painting by Emma Hall (31 x 30 cm)",
-      "price": "Price on demand",
-      "size": "31 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/David Bowie 2.webp": {
-      "name": "David Bowie 2",
-      "alt": "David Bowie 2 - Original fine art oil portrait painting by Emma Hall (33 x 30 cm)",
-      "price": "Price on demand",
-      "size": "33 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/David Bowie.webp": {
-      "name": "David Bowie",
-      "alt": "David Bowie - Original fine art oil portrait painting by Emma Hall (32 x 30 cm)",
-      "price": "Price on demand",
-      "size": "32 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Emma_s copy of La Liseuse.webp": {
-      "name": "Emma s copy of La Liseuse",
-      "alt": "Emma s copy of La Liseuse - Original fine art oil portrait painting by Emma Hall (34 x 30 cm)",
-      "price": "Price on demand",
-      "size": "34 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Geisha 2.webp": {
-      "name": "Geisha 2",
-      "alt": "Geisha 2 - Original fine art oil portrait painting by Emma Hall (36 x 30 cm)",
-      "price": "Price on demand",
-      "size": "36 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Geisha.webp": {
-      "name": "Geisha",
-      "alt": "Geisha - Original fine art oil portrait painting by Emma Hall (35 x 30 cm)",
-      "price": "Price on demand",
-      "size": "35 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Girl 2.webp": {
-      "name": "Girl 2",
-      "alt": "Girl 2 - Original fine art oil portrait painting by Emma Hall (38 x 30 cm)",
-      "price": "Price on demand",
-      "size": "38 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Girl from London.webp": {
-      "name": "Girl from London",
-      "alt": "Girl from London - Original fine art oil portrait painting by Emma Hall (39 x 30 cm)",
-      "price": "Price on demand",
-      "size": "39 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Girl.webp": {
-      "name": "Girl",
-      "alt": "Girl - Original fine art oil portrait painting by Emma Hall (37 x 30 cm)",
-      "price": "Price on demand",
-      "size": "37 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Grace Kelly 2.webp": {
-      "name": "Grace Kelly 2",
-      "alt": "Grace Kelly 2 - Original fine art oil portrait painting by Emma Hall (41 x 30 cm)",
-      "price": "Price on demand",
-      "size": "41 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Grace Kelly.webp": {
-      "name": "Grace Kelly",
-      "alt": "Grace Kelly - Original fine art oil portrait painting by Emma Hall (40 x 30 cm)",
-      "price": "Price on demand",
-      "size": "40 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Guitarist.webp": {
-      "name": "Guitarist",
-      "alt": "Guitarist - Original fine art oil portrait painting by Emma Hall (42 x 30 cm)",
-      "price": "Price on demand",
-      "size": "42 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Guy Bedos.webp": {
-      "name": "Guy Bedos",
-      "alt": "Guy Bedos - Original fine art oil portrait painting by Emma Hall (43 x 30 cm)",
-      "price": "Price on demand",
-      "size": "43 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Juliet Binoche.webp": {
-      "name": "Juliet Binoche",
-      "alt": "Juliet Binoche - Original fine art oil portrait painting by Emma Hall (44 x 30 cm)",
-      "price": "Price on demand",
-      "size": "44 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Kristin Scott Thomas.webp": {
-      "name": "Kristin Scott Thomas",
-      "alt": "Kristin Scott Thomas - Original fine art oil portrait painting by Emma Hall (45 x 30 cm)",
-      "price": "Price on demand",
-      "size": "45 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/La Madonna.webp": {
-      "name": "La Madonna",
-      "alt": "La Madonna - Original fine art oil portrait painting by Emma Hall (46 x 30 cm)",
-      "price": "Price on demand",
-      "size": "46 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Man.webp": {
-      "name": "Man",
-      "alt": "Man - Original fine art oil portrait painting by Emma Hall (47 x 30 cm)",
-      "price": "Price on demand",
-      "size": "47 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Mona Lisa.webp": {
-      "name": "Mona Lisa",
-      "alt": "Mona Lisa - Original fine art oil portrait painting by Emma Hall (48 x 30 cm)",
-      "price": "Price on demand",
-      "size": "48 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Moroccan man.webp": {
-      "name": "Moroccan man",
-      "alt": "Moroccan man - Original fine art oil portrait painting by Emma Hall (49 x 30 cm)",
-      "price": "Price on demand",
-      "size": "49 x 30",
+      "size": "72 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -1286,43 +1158,11 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/nbvcfghjio.jpg.webp": {
-      "name": "Valse",
-      "alt": "Valse - Original fine art oil portrait painting by Emma Hall (51 x 30 cm)",
-      "price": "Price on demand",
-      "size": "51 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
     "portraits/Nicola Artico.webp": {
       "name": "Nicola Artico",
       "alt": "Nicola Artico - Original fine art oil portrait painting by Emma Hall (52 x 30 cm)",
       "price": "Price on demand",
       "size": "52 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Nurse during covid.webp": {
-      "name": "Nurse during covid",
-      "alt": "Nurse during covid - Original fine art oil portrait painting by Emma Hall (53 x 30 cm)",
-      "price": "Price on demand",
-      "size": "53 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/old man.webp": {
-      "name": "old man",
-      "alt": "old man - Original fine art oil portrait painting by Emma Hall (54 x 30 cm)",
-      "price": "Price on demand",
-      "size": "54 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Pat.webp": {
-      "name": "Pat",
-      "alt": "Pat - Original fine art oil portrait painting by Emma Hall (55 x 30 cm)",
-      "price": "Price on demand",
-      "size": "55 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -1342,19 +1182,19 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/Philippe Beylier.webp": {
-      "name": "Philippe Beylier",
-      "alt": "Philippe Beylier - Original fine art oil portrait painting by Emma Hall (58 x 30 cm)",
+    "portraits/Girl 2.webp": {
+      "name": "Girl 2",
+      "alt": "Girl 2 - Original fine art oil portrait painting by Emma Hall (38 x 30 cm)",
       "price": "Price on demand",
-      "size": "58 x 30",
+      "size": "38 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/Puccini.webp": {
-      "name": "Puccini",
-      "alt": "Puccini - Original fine art oil portrait painting by Emma Hall (59 x 30 cm)",
+    "portraits/Aiko.webp": {
+      "name": "Aiko",
+      "alt": "Aiko - Original fine art oil portrait painting by Emma Hall (25 x 30 cm)",
       "price": "Price on demand",
-      "size": "59 x 30",
+      "size": "25 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -1366,75 +1206,19 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/Seth.webp": {
-      "name": "Seth",
-      "alt": "Seth - Original fine art oil portrait painting by Emma Hall (61 x 30 cm)",
+    "portraits/old man.webp": {
+      "name": "old man",
+      "alt": "old man - Original fine art oil portrait painting by Emma Hall (54 x 30 cm)",
       "price": "Price on demand",
-      "size": "61 x 30",
+      "size": "54 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/Sissy.webp": {
-      "name": "Sissy",
-      "alt": "Sissy - Original fine art oil portrait painting by Emma Hall (62 x 30 cm)",
+    "portraits/Girl.webp": {
+      "name": "Girl",
+      "alt": "Girl - Original fine art oil portrait painting by Emma Hall (37 x 30 cm)",
       "price": "Price on demand",
-      "size": "62 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Sorolla.webp": {
-      "name": "Sorolla",
-      "alt": "Sorolla - Original fine art oil portrait painting by Emma Hall (63 x 30 cm)",
-      "price": "Price on demand",
-      "size": "63 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/The duke of edinburgh.webp": {
-      "name": "The duke of edinburgh",
-      "alt": "The duke of edinburgh - Original fine art oil portrait painting by Emma Hall (64 x 30 cm)",
-      "price": "Price on demand",
-      "size": "64 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/The Eye.webp": {
-      "name": "The Eye",
-      "alt": "The Eye - Original fine art oil portrait painting by Emma Hall (65 x 30 cm)",
-      "price": "Price on demand",
-      "size": "65 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/The world during covid.webp": {
-      "name": "The world during covid",
-      "alt": "The world during covid - Original fine art oil portrait painting by Emma Hall (66 x 30 cm)",
-      "price": "Price on demand",
-      "size": "66 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/The young Alexander.webp": {
-      "name": "The young Alexander",
-      "alt": "The young Alexander - Original fine art oil portrait painting by Emma Hall (67 x 30 cm)",
-      "price": "Price on demand",
-      "size": "67 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/ToDef.webp": {
-      "name": "Seated man",
-      "alt": "Seated man - Original fine art oil portrait painting by Emma Hall (68 x 30 cm)",
-      "price": "Price on demand",
-      "size": "68 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Valse.webp": {
-      "name": "Valse",
-      "alt": "Valse - Original fine art oil portrait painting by Emma Hall (69 x 30 cm)",
-      "price": "Price on demand",
-      "size": "69 x 30",
+      "size": "37 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
@@ -1446,22 +1230,6 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/Woman with tights.webp": {
-      "name": "Woman with tights",
-      "alt": "Woman with tights - Original fine art oil portrait painting by Emma Hall (71 x 30 cm)",
-      "price": "Price on demand",
-      "size": "71 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
-    "portraits/Working in Covid.webp": {
-      "name": "Working in Covid",
-      "alt": "Working in Covid - Original fine art oil portrait painting by Emma Hall (72 x 30 cm)",
-      "price": "Price on demand",
-      "size": "72 x 30",
-      "priority": false,
-      "status": "FOR SALE"
-    },
     "portraits/working through Covid.webp": {
       "name": "working through Covid",
       "alt": "working through Covid - Original fine art oil portrait painting by Emma Hall (73 x 30 cm)",
@@ -1470,73 +1238,73 @@
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/young boy 2.webp": {
-      "name": "young boy 2",
-      "alt": "young boy 2 - Original fine art oil portrait painting by Emma Hall (75 x 30 cm)",
+    "portraits/Moroccan man.webp": {
+      "name": "Moroccan man",
+      "alt": "Moroccan man - Original fine art oil portrait painting by Emma Hall (49 x 30 cm)",
       "price": "Price on demand",
-      "size": "75 x 30",
+      "size": "49 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "portraits/young boy.webp": {
-      "name": "young boy",
-      "alt": "young boy - Original fine art oil portrait painting by Emma Hall (74 x 30 cm)",
+    "portraits/Geisha.webp": {
+      "name": "Geisha",
+      "alt": "Geisha - Original fine art oil portrait painting by Emma Hall (35 x 30 cm)",
       "price": "Price on demand",
-      "size": "74 x 30",
+      "size": "35 x 30",
       "priority": false,
       "status": "FOR SALE"
     },
-    "pets/Aghi, Velizy.webp": {
-      "name": "Aghi, Velizy",
-      "alt": "Aghi, Velizy - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
+    "portraits/Girl from London.webp": {
+      "name": "Girl from London",
+      "alt": "Girl from London - Original fine art oil portrait painting by Emma Hall (39 x 30 cm)",
+      "price": "Price on demand",
+      "size": "39 x 30",
       "priority": false,
-      "status": "SOLD"
+      "status": "FOR SALE"
     },
-    "pets/Dorothy, Milan, Italy.webp": {
-      "name": "Dorothy, Milan, Italy",
-      "alt": "Dorothy, Milan, Italy - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
+    "portraits/La Madonna.webp": {
+      "name": "La Madonna",
+      "alt": "La Madonna - Original fine art oil portrait painting by Emma Hall (46 x 30 cm)",
+      "price": "Price on demand",
+      "size": "46 x 30",
       "priority": false,
-      "status": "SOLD"
+      "status": "FOR SALE"
     },
-    "pets/Layla, Velizy.webp": {
-      "name": "Layla, Velizy",
-      "alt": "Layla, Velizy - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
+    "portraits/Seth.webp": {
+      "name": "Seth",
+      "alt": "Seth - Original fine art oil portrait painting by Emma Hall (61 x 30 cm)",
+      "price": "Price on demand",
+      "size": "61 x 30",
       "priority": false,
-      "status": "SOLD"
+      "status": "FOR SALE"
     },
-    "pets/Leo, Velizy.webp": {
-      "name": "Leo, Velizy",
-      "alt": "Leo, Velizy - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
+    "portraits/ToDef.webp": {
+      "name": "Seated man",
+      "alt": "Seated man - Original fine art oil portrait painting by Emma Hall (68 x 30 cm)",
+      "price": "Price on demand",
+      "size": "68 x 30",
       "priority": false,
-      "status": "SOLD"
+      "status": "FOR SALE"
     },
-    "pets/Olaf, France.webp": {
-      "name": "Olaf, France",
-      "alt": "Olaf, France - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
+    "portraits/Kristin Scott Thomas.webp": {
+      "name": "Kristin Scott Thomas",
+      "alt": "Kristin Scott Thomas - Original fine art oil portrait painting by Emma Hall (45 x 30 cm)",
+      "price": "Price on demand",
+      "size": "45 x 30",
       "priority": false,
-      "status": "SOLD"
+      "status": "FOR SALE"
     },
-    "pets/Pollock, Brittany, France.webp": {
-      "name": "Pollock, Brittany, France",
-      "alt": "Pollock, Brittany, France - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
+    "portraits/Nurse during covid.webp": {
+      "name": "Nurse during covid",
+      "alt": "Nurse during covid - Original fine art oil portrait painting by Emma Hall (53 x 30 cm)",
+      "price": "Price on demand",
+      "size": "53 x 30",
       "priority": false,
-      "status": "SOLD"
+      "status": "FOR SALE"
     },
-    "pets/Raika, Velizy.webp": {
-      "name": "Raika, Velizy",
-      "alt": "Raika, Velizy - Original custom pet portrait oil painting by Emma Hall",
+    "pets/Sally, England.webp": {
+      "name": "Sally, England",
+      "alt": "Sally, England - Original custom pet portrait oil painting by Emma Hall",
       "price": "x",
       "size": "x",
       "priority": false,
@@ -1550,57 +1318,17 @@
       "priority": false,
       "status": "SOLD"
     },
-    "pets/Sally, England.webp": {
-      "name": "Sally, England",
-      "alt": "Sally, England - Original custom pet portrait oil painting by Emma Hall",
+    "pets/Olaf, France.webp": {
+      "name": "Olaf, France",
+      "alt": "Olaf, France - Original custom pet portrait oil painting by Emma Hall",
       "price": "x",
       "size": "x",
       "priority": false,
       "status": "SOLD"
     },
-    "pets/Sam, the Samoyed.webp": {
-      "name": "Sam, the Samoyed",
-      "alt": "Sam, the Samoyed - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sam.webp": {
-      "name": "Sam",
-      "alt": "Sam - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sandy, the cocker spaniel, France.webp": {
-      "name": "Sandy, the cocker spaniel, France",
-      "alt": "Sandy, the cocker spaniel, France - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Sketch of Sam the Samoyed, Velizy.webp": {
-      "name": "Sketch of Sam the Samoyed, Velizy",
-      "alt": "Sketch of Sam the Samoyed, Velizy - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Tangerine, France.webp": {
-      "name": "Tangerine, France",
-      "alt": "Tangerine, France - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/The baby dalmation.webp": {
-      "name": "The baby dalmation",
-      "alt": "The baby dalmation - Original custom pet portrait oil painting by Emma Hall",
+    "pets/Leo, Velizy.webp": {
+      "name": "Leo, Velizy",
+      "alt": "Leo, Velizy - Original custom pet portrait oil painting by Emma Hall",
       "price": "x",
       "size": "x",
       "priority": false,
@@ -1614,25 +1342,9 @@
       "priority": false,
       "status": "SOLD"
     },
-    "pets/The Wolf.webp": {
-      "name": "The Wolf",
-      "alt": "The Wolf - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Tigger, Velizy.webp": {
-      "name": "Tigger, Velizy",
-      "alt": "Tigger, Velizy - Original custom pet portrait oil painting by Emma Hall",
-      "price": "x",
-      "size": "x",
-      "priority": false,
-      "status": "SOLD"
-    },
-    "pets/Vegas, France(1).webp": {
-      "name": "Vegas, France",
-      "alt": "Vegas, France - Original custom pet portrait oil painting by Emma Hall",
+    "pets/Sketch of Sam the Samoyed, Velizy.webp": {
+      "name": "Sketch of Sam the Samoyed, Velizy",
+      "alt": "Sketch of Sam the Samoyed, Velizy - Original custom pet portrait oil painting by Emma Hall",
       "price": "x",
       "size": "x",
       "priority": false,
@@ -1654,9 +1366,113 @@
       "priority": false,
       "status": "SOLD"
     },
+    "pets/Tigger, Velizy.webp": {
+      "name": "Tigger, Velizy",
+      "alt": "Tigger, Velizy - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/The Wolf.webp": {
+      "name": "The Wolf",
+      "alt": "The Wolf - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/The baby dalmation.webp": {
+      "name": "The baby dalmation",
+      "alt": "The baby dalmation - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Layla, Velizy.webp": {
+      "name": "Layla, Velizy",
+      "alt": "Layla, Velizy - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Tangerine, France.webp": {
+      "name": "Tangerine, France",
+      "alt": "Tangerine, France - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Dorothy, Milan, Italy.webp": {
+      "name": "Dorothy, Milan, Italy",
+      "alt": "Dorothy, Milan, Italy - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Aghi, Velizy.webp": {
+      "name": "Aghi, Velizy",
+      "alt": "Aghi, Velizy - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Raika, Velizy.webp": {
+      "name": "Raika, Velizy",
+      "alt": "Raika, Velizy - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
     "pets/Yuki, the King Charles Spaniel, Velizy, France.webp": {
       "name": "Yuki, the King Charles Spaniel, Velizy, France",
       "alt": "Yuki, the King Charles Spaniel, Velizy, France - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Vegas, France(1).webp": {
+      "name": "Vegas, France",
+      "alt": "Vegas, France - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Sandy, the cocker spaniel, France.webp": {
+      "name": "Sandy, the cocker spaniel, France",
+      "alt": "Sandy, the cocker spaniel, France - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Sam.webp": {
+      "name": "Sam",
+      "alt": "Sam - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Sam, the Samoyed.webp": {
+      "name": "Sam, the Samoyed",
+      "alt": "Sam, the Samoyed - Original custom pet portrait oil painting by Emma Hall",
+      "price": "x",
+      "size": "x",
+      "priority": false,
+      "status": "SOLD"
+    },
+    "pets/Pollock, Brittany, France.webp": {
+      "name": "Pollock, Brittany, France",
+      "alt": "Pollock, Brittany, France - Original custom pet portrait oil painting by Emma Hall",
       "price": "x",
       "size": "x",
       "priority": false,
