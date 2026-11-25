@@ -7,7 +7,6 @@ on:
       - "assets/works/**"
       - ".github/workflows/build-manifest.yml"
       - "scripts/build-works-manifest.py"
-      - "index.html"
   workflow_dispatch: {}
 
 permissions:
@@ -40,7 +39,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add assets/works/works.json sitemap.xml index.html
-            git commit -m "chore: update works.json, sitemap.xml and index.html"
+            git commit -m "chore: update works.json, sitemap.xml and index.html [skip ci]"
             git push
           else
             echo "No changes to commit."

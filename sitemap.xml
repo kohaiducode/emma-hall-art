@@ -273,12 +273,12 @@
       <image:caption>Solitude - Original palette knife landscape oil painting on canvas by Emma Hall (50 x 50 cm)</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sunset.webp</image:loc>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sunset%20in%20Okinawa,%20Japan.webp</image:loc>
       <image:title>Sunset</image:title>
       <image:caption>Sunset - Original palette knife landscape oil painting on canvas by Emma Hall (40 x 40 cm)</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sunset%20in%20Okinawa,%20Japan.webp</image:loc>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/landscapes_brushed/Sunset.webp</image:loc>
       <image:title>Sunset</image:title>
       <image:caption>Sunset - Original palette knife landscape oil painting on canvas by Emma Hall (Study 2) (40 x 40 cm)</image:caption>
     </image:image>
@@ -388,6 +388,11 @@
       <image:caption>Blue - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Gion,%20Kyoto,%20Japan(1).webp</image:loc>
+      <image:title>Gion</image:title>
+      <image:caption>Gion - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Gion,%20Kyoto,%20Japan.webp</image:loc>
       <image:title>Gion</image:title>
       <image:caption>Gion - Original watercolour painting on paper by visual artist Emma Hall (Gion, Kyoto, Japan) (25 x 32 cm)</image:caption>
@@ -396,11 +401,6 @@
       <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/View%20over%20Gion,%20Kyoto,%20Japan.webp</image:loc>
       <image:title>Gion</image:title>
       <image:caption>Gion - Original watercolour painting on paper by visual artist Emma Hall (View over Gion, Kyoto, Japan) (25 x 32 cm)</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Gion,%20Kyoto,%20Japan(1).webp</image:loc>
-      <image:title>Gion</image:title>
-      <image:caption>Gion - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Hut%20in%20hills%20in%20Japan.webp</image:loc>
@@ -443,7 +443,7 @@
       <image:caption>Purple sky - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sakura.webp</image:loc>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sakura%202.webp</image:loc>
       <image:title>Sakura</image:title>
       <image:caption>Sakura - Original watercolour painting on paper by visual artist Emma Hall (25 x 32 cm)</image:caption>
     </image:image>
@@ -453,7 +453,7 @@
       <image:caption>Sakura - Original watercolour painting on paper by visual artist Emma Hall (Sakura flower) (25 x 32 cm)</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sakura%202.webp</image:loc>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/watercolours_brushed/Sakura.webp</image:loc>
       <image:title>Sakura</image:title>
       <image:caption>Sakura - Original watercolour painting on paper by visual artist Emma Hall (Study 3) (25 x 32 cm)</image:caption>
     </image:image>
@@ -833,12 +833,12 @@
       <image:caption>Tigger, Velizy - Original custom pet portrait oil painting by Emma Hall</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Vegas,%20France.webp</image:loc>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Vegas,%20France(1).webp</image:loc>
       <image:title>Vegas, France</image:title>
       <image:caption>Vegas, France - Original custom pet portrait oil painting by Emma Hall</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Vegas,%20France(1).webp</image:loc>
+      <image:loc>https://www.emmahallpaintings.com/assets/works/pets_brushed/Vegas,%20France.webp</image:loc>
       <image:title>Vegas, France</image:title>
       <image:caption>Vegas, France - Original custom pet portrait oil painting by Emma Hall (Study 2)</image:caption>
     </image:image>
