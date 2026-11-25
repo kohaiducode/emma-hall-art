@@ -30,36 +30,44 @@
   <meta name="twitter:image" content="https://www.emmahallpaintings.com/assets/profile/ems.jpg" />
   <meta name="twitter:image:alt" content="Emma Hall in her studio with original oil paintings" />
 
-  <!-- Schema.org JSON-LD (VisualArtist & WebSite) -->
+  <!-- Schema.org JSON-LD (ProfilePage, Person, WebSite & FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Person",
-        "@id": "https://www.emmahallpaintings.com/#artist",
-        "name": "Emma Hall",
+        "@type": "ProfilePage",
+        "@id": "https://www.emmahallpaintings.com/#profilepage",
         "url": "https://www.emmahallpaintings.com/",
-        "image": "https://www.emmahallpaintings.com/assets/profile/ems.jpg",
-        "jobTitle": "Painter & Visual Artist",
-        "description": "Emma Hall is a visual artist specializing in original oil paintings, vibrant botanicals, landscapes, travel-inspired scenes of Japan and Italy, and custom pet portraits using unique palette knife and impasto techniques.",
-        "sameAs": [
-          "https://www.instagram.com/emmahallpaintings/",
-          "https://www.youtube.com/@emmahallpainting",
-          "https://www.tiktok.com/@emmahallpaintings",
-          "https://www.linkedin.com/in/emma-hall-770559230/"
-        ],
-        "knowsAbout": [
-          "Oil painting",
-          "Palette knife oil paintings",
-          "Impasto knife technique",
-          "Landscape paintings",
-          "Lake Annecy oil paintings",
-          "Kyoto sakura art",
-          "Botanical and floral oil paintings",
-          "Custom pet portrait commissions",
-          "Watercolour paintings"
-        ]
+        "name": "Emma Hall — Artist Profile & Original Paintings",
+        "description": "Original oil paintings, landscapes, vibrant botanicals, and custom commissions by visual artist Emma Hall.",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://www.emmahallpaintings.com/#artist",
+          "name": "Emma Hall",
+          "alternateName": "Emma Hall Paintings",
+          "url": "https://www.emmahallpaintings.com/",
+          "image": "https://www.emmahallpaintings.com/assets/profile/ems.jpg",
+          "jobTitle": "Painter & Visual Artist",
+          "description": "Emma Hall is a visual artist specializing in original oil paintings, vibrant botanicals, landscapes, travel-inspired scenes of Japan and Italy, and custom pet portraits using unique palette knife and impasto techniques.",
+          "sameAs": [
+            "https://www.instagram.com/emmahallpaintings/",
+            "https://www.youtube.com/@emmahallpainting",
+            "https://www.tiktok.com/@emmahallpaintings",
+            "https://www.linkedin.com/in/emma-hall-770559230/"
+          ],
+          "knowsAbout": [
+            "Oil painting",
+            "Palette knife oil paintings",
+            "Impasto knife technique",
+            "Landscape paintings",
+            "Lake Annecy oil paintings",
+            "Kyoto sakura art",
+            "Botanical and floral oil paintings",
+            "Custom pet portrait commissions",
+            "Watercolour paintings"
+          ]
+        }
       },
       {
         "@type": "WebSite",
@@ -71,6 +79,44 @@
           "@id": "https://www.emmahallpaintings.com/#artist"
         },
         "inLanguage": "en-US"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.emmahallpaintings.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can I purchase an original painting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you wish to purchase a painting, please contact Emma Hall directly using the inquiry form or via Instagram. Once you submit an inquiry, shipping details and payment options will be arranged together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the shipping details and delivery costs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Free delivery is included anywhere in France. Each painting is professionally packed and shipped with a tracking number. Worldwide shipping can also be arranged upon request."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What payment methods are accepted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Direct bank transfers and secure PayPal payments are accepted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I commission a custom piece or request a sold painting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If a painting you love is already sold, a similar piece can be painted again upon request (custom sizes available). Custom commissions, including pet portraits and personalized landscapes, are also available."
+            }
+          }
+        ]
       }
     ]
   }
