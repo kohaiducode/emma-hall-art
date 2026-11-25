@@ -4,37 +4,35 @@ import re
 with open("index.html", "r", encoding="utf-8") as f:
     content = f.read()
 
+# 1. Title & Meta
+title_m = re.search(r'<title>(.*?)</title>', content)
+title = title_m.group(1) if title_m else ""
+desc_m = re.search(r'<meta name="description" content="(.*?)" />', content)
+desc = desc_m.group(1) if desc_m else ""
+
+print(f"Title: \"{title}\" (Length: {len(title)} chars - ideal is 40-60)")
+print(f"Meta description: \"{desc}\" (Length: {len(desc)} chars - ideal is 130-160)")
+
+# 2. H1 check
+h1_tags = re.findall(r'<h1[^>]*>(.*?)</h1>', content, re.DOTALL)
+print(f"H1 tags count: {len(h1_tags)}")
+for h in h1_tags:
+    print(f"  H1: {re.sub(r'<[^>]+>', '', h).strip()}")
+
+# 3. Heading structure check (h5 tags)
+h5_count = len(re.findall(r'<h5', content))
+print(f"H5 tags count: {h5_count}")
+
+# 4. JSON-LD Schemas
 schemas = re.findall(r'<script type="application/ld\+json".*?>(.*?)</script>', content, re.DOTALL)
-print(f"Total JSON-LD schemas found: {len(schemas)}")
-for i, s in enumerate(schemas):
-    try:
-        data = json.loads(s.strip())
-        schema_type = data.get("@type", "Graph" if "@graph" in data else "Unknown")
-        print(f"  Schema #{i+1}: Valid JSON (Type: {schema_type})")
-        if "@graph" in data:
-            print(f"    Graph contains {len(data['@graph'])} entities: {[e.get('@type') for e in data['@graph']]}")
-        elif schema_type == "ItemList":
-            print(f"    ItemList contains {data.get('numberOfItems')} artwork items.")
-    except Exception as e:
-        print(f"  Schema #{i+1}: ERROR - {e}")
+print(f"Total JSON-LD schemas: {len(schemas)}")
 
-# Check noscript
-has_noscript = '<noscript id="noscript-gallery-catalog">' in content
-print(f"Noscript catalog present: {has_noscript}")
-if has_noscript:
-    # count items inside noscript
-    items = re.findall(r'<li style=', content)
-    print(f"Noscript catalog contains {len(items)} items.")
+# 5. Alt Uniqueness in works.json
+data = json.load(open("assets/works/works.json", encoding="utf-8"))
+alts = [item["alt"] for item in data["_metadata"].values()]
+print(f"Artwork Alt text count: {len(alts)}, Unique: {len(set(alts))}")
 
-# Check meta description
-m_desc = re.search(r'<meta name="description" content="(.*?)" />', content)
-if m_desc:
-    print(f"Meta description: {m_desc.group(1)[:80]}...")
-
-# Check sitemap
+# 6. Sitemap check
 with open("sitemap.xml", "r", encoding="utf-8") as f:
     sitemap = f.read()
-img_count = sitemap.count("<image:image>")
-url_count = sitemap.count("<url>")
-has_fragments = "#" in sitemap
-print(f"Sitemap check: {url_count} <url> entries, {img_count} images. Has fragments: {has_fragments}")
+print(f"Sitemap: {sitemap.count('<image:image>')} images, {sitemap.count('<url>')} url tags, Has '#' fragments: {'#' in sitemap}")

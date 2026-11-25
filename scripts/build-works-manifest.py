@@ -232,6 +232,30 @@ def main():
 
             manifest[cat].append(filename)
 
+    # 2.5 Ensure all alt texts are 100% unique across the catalog
+    seen_alts = {}
+    for meta_key, item in metadata.items():
+        alt = item['alt']
+        if alt in seen_alts:
+            seen_alts[alt] += 1
+            cat_name, fname = meta_key.split('/', 1)
+            raw_base = os.path.splitext(fname)[0]
+            clean_fname = re.sub(r'[-_]+', ' ', raw_base).strip()
+            
+            diff = ""
+            if clean_fname.lower() != item['name'].lower() and len(clean_fname) > len(item['name']):
+                diff = clean_fname
+            else:
+                diff = f"Study {seen_alts[alt]}"
+                
+            if " (" in alt and alt.endswith(" cm)"):
+                base, size_part = alt.rsplit(" (", 1)
+                item['alt'] = f"{base} ({diff}) ({size_part}"
+            else:
+                item['alt'] = f"{alt} ({diff})"
+        else:
+            seen_alts[alt] = 1
+
     # 3. Sort files inside each category by visual priority
     for cat in CATEGORIES:
         files = manifest[cat]

@@ -153,7 +153,7 @@ def build_noscript_catalog(data):
             
             lines.append('        <li style="background: #fffaf3; border: 1px solid #e6dccf; border-radius: 4px; overflow: hidden; padding: 10px;">')
             lines.append(f'          <img src="{img_rel}" alt="{alt}" loading="lazy" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 2px; margin-bottom: 8px;" />')
-            lines.append(f'          <h5 style="margin: 0 0 4px 0; font-size: 15px; color: #2f2a28;">{name}</h5>')
+            lines.append(f'          <span style="display: block; margin: 0 0 4px 0; font-size: 15px; font-weight: 600; color: #2f2a28;">{name}</span>')
             if meta_str:
                 lines.append(f'          <p style="margin: 0; font-size: 13px; color: #6f635d;">{meta_str}</p>')
             lines.append('        </li>')
@@ -172,9 +172,9 @@ def update_index_seo():
     with open(INDEX_PATH, "r", encoding="utf-8") as f:
         html = f.read()
         
-    # 1. Update Head Meta Tags
-    title_text = "Emma Hall — Original Oil &amp; Watercolour Paintings | Landscapes, Botanicals &amp; Portraits"
-    desc_text = "Explore original oil and watercolour paintings by Emma Hall. Featuring Italian &amp; Japanese landscapes, English roses, botanical floral art, fine art portraits, and custom pet commissions."
+    # 1. Update Head Meta Tags (optimized length: title ~50 chars, desc ~150 chars)
+    title_text = "Emma Hall — Original Oil &amp; Watercolour Paintings"
+    desc_text = "Explore original oil &amp; watercolour paintings by Emma Hall. Featuring world landscapes, botanical florals, fine art portraits, and custom pet commissions."
     keywords_text = "Emma Hall, Emma Hall paintings, original oil paintings, watercolour paintings, palette knife art, Italian landscapes, Japan paintings, botanical floral art, English roses, fine art portraits, custom pet portraits, art commissions"
     
     html = re.sub(r'<title>.*?</title>', f'<title>{title_text}</title>', html, count=1)
