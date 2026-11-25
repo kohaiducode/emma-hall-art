@@ -93,9 +93,20 @@ def format_price(p):
         return "Price on demand"
     return formatted
 
-def generate_alt_text(name, cat):
+def generate_alt_text(name, cat, size=None):
+    size_str = f" ({size} cm)" if size and str(size).strip().lower() not in ('', 'x', 'none') else ""
+    if cat == "watercolours":
+        return f"{name} - Original watercolour painting on paper by visual artist Emma Hall{size_str}"
+    elif cat == "flowers":
+        return f"{name} - Original botanical floral oil painting by Emma Hall{size_str}"
+    elif cat == "landscapes":
+        return f"{name} - Original palette knife landscape oil painting on canvas by Emma Hall{size_str}"
+    elif cat == "portraits":
+        return f"{name} - Original fine art oil portrait painting by Emma Hall{size_str}"
+    elif cat == "pets":
+        return f"{name} - Original custom pet portrait oil painting by Emma Hall{size_str}"
     medium = "watercolour" if cat == "watercolours" else "oil"
-    return f"{name} - Original {medium} painting by Emma Hall"
+    return f"{name} - Original {medium} painting by Emma Hall{size_str}"
 
 def main():
     # 1. Read Excel rows
@@ -197,7 +208,8 @@ def main():
             # Construct metadata
             meta_key = f"{cat}/{filename}"
             final_name = matched_row['name'] if (matched_row and matched_row.get('name')) else humanize_name(filename)
-            alt_text = generate_alt_text(final_name, cat)
+            matched_size = matched_row['size'] if matched_row else ""
+            alt_text = generate_alt_text(final_name, cat, matched_size)
             if matched_row:
                 metadata[meta_key] = {
                     'name': final_name,
@@ -301,6 +313,17 @@ def main():
             generate_sitemap()
         except Exception as e:
             print(f"Note: Could not run generate_sitemap: {e}")
+
+    # 7. Automatically update SEO tags and structured data in index.html
+    try:
+        from update_index_seo import update_index_seo
+        update_index_seo()
+    except ImportError:
+        try:
+            from scripts.update_index_seo import update_index_seo
+            update_index_seo()
+        except Exception as e:
+            print(f"Note: Could not run update_index_seo: {e}")
 
 if __name__ == "__main__":
     main()

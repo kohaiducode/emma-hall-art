@@ -92,33 +92,13 @@ def generate_sitemap():
         xml_lines.append('    </image:image>')
 
     xml_lines.append('  </url>')
-
-    # Section / Anchor URLs for crawlers
-    sections = [
-        ("works", "weekly", "0.9"),
-        ("flowers", "weekly", "0.8"),
-        ("landscapes", "weekly", "0.8"),
-        ("watercolors", "weekly", "0.8"),
-        ("portraits", "weekly", "0.8"),
-        ("pets", "weekly", "0.8"),
-        ("bio", "monthly", "0.8"),
-        ("contact", "monthly", "0.8")
-    ]
-    for sec, freq, prio in sections:
-        xml_lines.append('  <url>')
-        xml_lines.append(f'    <loc>{BASE_URL}/#{sec}</loc>')
-        xml_lines.append(f'    <lastmod>{today}</lastmod>')
-        xml_lines.append(f'    <changefreq>{freq}</changefreq>')
-        xml_lines.append(f'    <priority>{prio}</priority>')
-        xml_lines.append('  </url>')
-
     xml_lines.append('</urlset>')
     xml_lines.append('')
 
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(xml_lines))
 
-    print(f"Generated {SITEMAP_PATH} with {len(images)} images and {len(sections) + 1} URLs.")
+    print(f"Generated {SITEMAP_PATH} with {len(images)} images.")
 
 if __name__ == "__main__":
     generate_sitemap()
