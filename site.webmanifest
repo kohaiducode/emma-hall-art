@@ -1,0 +1,17 @@
+{
+  "name": "Emma Hall Paintings",
+  "short_name": "Emma Hall",
+  "description": "Original oil and watercolour paintings by Emma Hall — Landscapes, Botanicals, Portraits, and Custom Pet Commissions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf7f2",
+  "theme_color": "#b86b5e",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

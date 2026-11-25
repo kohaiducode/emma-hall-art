@@ -8,14 +8,21 @@
   <meta name="description" content="Explore original oil and watercolour paintings by Emma Hall. Featuring Italian &amp; Japanese landscapes, English roses, botanical floral art, fine art portraits, and custom pet commissions." />
   <meta name="keywords" content="Emma Hall, Emma Hall paintings, original oil paintings, watercolour paintings, palette knife art, Italian landscapes, Japan paintings, botanical floral art, English roses, fine art portraits, custom pet portraits, art commissions" />
   <meta name="author" content="Emma Hall" />
+  <meta name="theme-color" content="#faf7f2" />
   <link rel="canonical" href="https://www.emmahallpaintings.com/" />
-  <!-- Use a relative path so GitHub Pages project sites don't break -->
-  <link rel="icon" href="favicon.ico" />
+  <!-- Favicon and App Manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- Performance Hints: Preload LCP hero image -->
+  <link rel="preload" as="image" href="assets/profile/ems.jpg" />
 
   <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Pinterest -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.emmahallpaintings.com/" />
   <meta property="og:site_name" content="Emma Hall Paintings" />
+  <meta name="pinterest-rich-pin" content="true" />
+  <meta property="article:author" content="https://www.emmahallpaintings.com/#artist" />
   <meta property="og:title" content="Emma Hall — Original Oil &amp; Watercolour Paintings | Landscapes, Botanicals &amp; Portraits" />
   <meta property="og:description" content="Explore original oil and watercolour paintings by Emma Hall. Featuring Italian &amp; Japanese landscapes, English roses, botanical floral art, fine art portraits, and custom pet commissions." />
   <meta property="og:image" content="https://www.emmahallpaintings.com/assets/profile/ems.jpg" />
@@ -6475,8 +6482,36 @@
     const closeBtn = document.querySelector('.lightbox-close');
 
     let currentInquiredPainting = null;
+    let lastCategoryHash = '#works';
 
-    function openLightbox(img) {
+    function toPieceSlug(name) {
+      return (name || '').toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    }
+
+    function updateDocumentTitle(hash, filter) {
+      if (hash && hash.startsWith('#piece=')) return;
+      const isFr = CURRENT_LANG === 'fr';
+      if (hash === '#bio') {
+        document.title = isFr ? "Biographie — Emma Hall Artiste Peintre" : "Biography — Emma Hall Visual Artist";
+      } else if (hash === '#contact') {
+        document.title = isFr ? "Contact & Commandes — Emma Hall" : "Contact & Commissions — Emma Hall";
+      } else {
+        const titles = {
+          flowers: isFr ? "Fleurs & Botanique — Emma Hall Peintures" : "Botanical & Floral Oil Paintings — Emma Hall",
+          landscapes: isFr ? "Paysages à l'Huile — Emma Hall Peintures" : "Landscape & Travel Oil Paintings — Emma Hall",
+          watercolours: isFr ? "Aquarelles Originales — Emma Hall Peintures" : "Original Watercolour Paintings — Emma Hall",
+          portraits: isFr ? "Portraits d'Art — Emma Hall Peintures" : "Fine Art & Figurative Portraits — Emma Hall",
+          pets: isFr ? "Portraits d'Animaux sur Commande — Emma Hall" : "Custom Pet Portrait Commissions — Emma Hall"
+        };
+        document.title = titles[filter] || (isFr 
+          ? "Emma Hall — Peintures à l'Huile & Aquarelles Originales | Paysages, Fleurs, Portraits" 
+          : "Emma Hall — Original Oil & Watercolour Paintings | Landscapes, Botanicals & Portraits");
+      }
+    }
+
+    function openLightbox(img, updateUrl = true) {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt || `${img.name} - Original ${img.cat === 'watercolours' ? 'watercolour' : 'oil'} painting by Emma Hall`;
       
@@ -6533,14 +6568,27 @@
       lightbox.offsetHeight;
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
+
+      if (updateUrl) {
+        const curHash = window.location.hash || '#works';
+        if (!curHash.startsWith('#piece=')) {
+          lastCategoryHash = curHash;
+        }
+        history.replaceState(null, '', `#piece=${toPieceSlug(img.name)}`);
+      }
+      document.title = `${img.name} — Emma Hall Original Art`;
     }
 
-    function closeLightbox() {
+    function closeLightbox(restoreUrl = true) {
       lightbox.classList.remove('active');
       const mobileMenu = document.getElementById('mobileMenu');
       const isMobileMenuOpen = mobileMenu && mobileMenu.classList.contains('open');
       if (!isMobileMenuOpen) {
         document.body.style.overflow = '';
+      }
+      if (restoreUrl && window.location.hash.startsWith('#piece=')) {
+        history.replaceState(null, '', lastCategoryHash || '#works');
+        updateDocumentTitle(lastCategoryHash, CURRENT_FILTER);
       }
       setTimeout(() => {
         if (!lightbox.classList.contains('active')) {
@@ -6641,6 +6689,11 @@
     function handleRouting() {
       const hash = window.location.hash || '#works';
       
+      // If closing lightbox on route change to non-piece
+      if (!hash.startsWith('#piece=') && lightbox && lightbox.classList.contains('active')) {
+        closeLightbox(false);
+      }
+      
       // Hide all dynamic views
       document.getElementById('works-section').style.display = 'none';
       document.getElementById('bio-section').style.display = 'none';
@@ -6649,15 +6702,33 @@
       // Reset active states for links in both Desktop Sidebar and Mobile Navigation
       document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
       
+      if (hash.startsWith('#piece=')) {
+        const pieceSlug = hash.replace('#piece=', '').trim();
+        document.getElementById('works-section').style.display = 'block';
+        document.querySelectorAll(`.nav-link[data-route="all"]`).forEach(el => el.classList.add('active'));
+        updateActivePageIndicator();
+        
+        if (FULL_LIST.length > 0) {
+          const match = FULL_LIST.find(p => toPieceSlug(p.name) === pieceSlug);
+          if (match) {
+            refreshImagesForFilter();
+            openLightbox(match, false);
+            return;
+          }
+        }
+      }
+      
       if (hash === '#bio') {
         document.getElementById('bio-section').style.display = 'block';
         document.querySelectorAll('.nav-link[data-route="bio"]').forEach(el => el.classList.add('active'));
         updateActivePageIndicator();
+        updateDocumentTitle(hash, 'bio');
         window.scrollTo(0, 0);
       } else if (hash === '#contact') {
         document.getElementById('contact-section').style.display = 'block';
         document.querySelectorAll('.nav-link[data-route="contact"]').forEach(el => el.classList.add('active'));
         updateActivePageIndicator();
+        updateDocumentTitle(hash, 'contact');
         window.scrollTo(0, 0);
       } else {
         // Works / Gallery view
@@ -6671,11 +6742,13 @@
         else if (hash === '#pets') filter = 'pets';
         
         CURRENT_FILTER = filter;
+        lastCategoryHash = hash.startsWith('#piece=') ? lastCategoryHash : hash;
         
         const routeName = filter === 'watercolours' ? 'watercolors' : filter;
         document.querySelectorAll(`.nav-link[data-route="${routeName}"]`).forEach(el => el.classList.add('active'));
         
         updateActivePageIndicator();
+        updateDocumentTitle(hash, filter);
         
         if (FULL_LIST.length > 0) {
           refreshImagesForFilter();
